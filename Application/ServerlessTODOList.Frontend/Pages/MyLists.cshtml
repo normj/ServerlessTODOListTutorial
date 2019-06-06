@@ -1,0 +1,55 @@
+﻿@page
+@model ServerlessTODOList.Frontend.Pages.MyListsModel
+@{
+    ViewData["Title"] = "My Lists";
+}
+
+<h2>TODO Lists</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Created</th>
+            <th scope="col">Updated</th>
+            <th scope="col">Task Completed</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (this.Model?.TODOLists != null)
+        {
+            @foreach (var list in this.Model.TODOLists.OrderBy(x => x.Name))
+            {
+                <tr>
+                    <td><a asp-page="EditList" asp-route-id="@list.ListId">@list.Name</a></td>
+                    <td>@list.CreateDate</td>
+                    <td>@list.UpdateDate</td>
+                    <td>@MyListsModel.FormattedCompleteCount(list)</td>
+                    <td><button type="button" class="btn btn-danger btn-sm" onclick="deleteList('@list.ListId')">&times;</button></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+<div class="row mt-3">
+    <div class="col-sm form-group">
+        <a class="btn btn-link" asp-page="/CreateList">Create New List</a>
+    </div>
+</div>
+
+<form method="POST" id="deleteListForm" asp-page-handler="delete">
+    <input type="hidden" id="listIdToDelete" name="listIdToDelete" />
+</form>
+
+<script type='text/javascript'>
+
+    function deleteList(listId) {
+        $("#listIdToDelete").val(listId);
+
+        $("#deleteListForm").submit();
+    }
+
+</script>

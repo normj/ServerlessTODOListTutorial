@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotnetTry", "DotnetTry", "{B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}"
+	ProjectSection(SolutionItems) = preProject
+		..\CreateTable.md = ..\CreateTable.md
+		..\DDBServiceClientAPI.md = ..\DDBServiceClientAPI.md
+		..\DotNetDynamoDBAPIs.md = ..\DotNetDynamoDBAPIs.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippets", "Snippets.csproj", "{D2D41056-9439-47D1-9699-3207865C12CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2D41056-9439-47D1-9699-3207865C12CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D41056-9439-47D1-9699-3207865C12CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D41056-9439-47D1-9699-3207865C12CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D41056-9439-47D1-9699-3207865C12CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A94325C0-2B38-44AF-9ADD-C61FC1079E15}
+	EndGlobalSection
+EndGlobal
