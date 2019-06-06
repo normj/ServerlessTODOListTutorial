@@ -31,6 +31,19 @@ namespace Snippets
                     case "delete_table":
                         CreateTable.DeleteTableAsync().Wait();
                         break;
+
+                    case "service_client_save":
+                        DDBServiceClientAPI.SaveItemAsync().Wait();
+                        break;
+                    case "service_client_get":
+                        DDBServiceClientAPI.GetItemAsync().Wait();
+                        break;
+                    case "service_client_query":
+                        DDBServiceClientAPI.QueryItemsAsync().Wait();
+                        break;
+                    case "service_client_delete":
+                        DDBServiceClientAPI.DeleteItemAsync().Wait();
+                        break;
                 }
             }
             catch (AggregateException e)

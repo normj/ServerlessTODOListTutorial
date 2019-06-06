@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="package_designTimeBuild.binlog" />
+    <None Remove="package_fullBuild.binlog" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.101.20" />
   </ItemGroup>
 
