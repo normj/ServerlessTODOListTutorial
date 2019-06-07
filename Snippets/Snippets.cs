@@ -47,6 +47,21 @@ namespace Snippets
                     case "service_client_delete":
                         DDBServiceClientAPI.DeleteItemAsync().Wait();
                         break;
+                    
+                    case "datamodel_construct_client":
+                        new DotNetDynamoDBDataModel();
+                        break;
+                    case "datamodel_construct_save":
+                        new DotNetDynamoDBDataModel().SaveTODOListAsync().Wait();
+                        break;
+                }
+
+                switch (session)
+                {
+                    case "datamodel":
+                        var d = new DotNetDynamoDBDataModel();
+                        d.SaveTODOListAsync().Wait();
+                        break;
                 }
             }
             catch (AggregateException e)
