@@ -32,8 +32,11 @@ namespace Snippets
                         CreateTable.DeleteTableAsync().Wait();
                         break;
 
-                    case "service_client_save":
-                        DDBServiceClientAPI.SaveItemAsync().Wait();
+                    case "service_client_put":
+                        DDBServiceClientAPI.PutItemAsync().Wait();
+                        break;
+                    case "service_client_update":
+                        DDBServiceClientAPI.UpdateItemAsync().Wait();
                         break;
                     case "service_client_get":
                         DDBServiceClientAPI.GetItemAsync().Wait();

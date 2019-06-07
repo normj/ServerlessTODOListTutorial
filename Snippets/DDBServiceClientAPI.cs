@@ -10,9 +10,9 @@ namespace Snippets
 {
     public class DDBServiceClientAPI
     {
-        public static async Task SaveItemAsync()
+        public static async Task PutItemAsync()
         {
-            #region service_client_save
+            #region service_client_put
             using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
             {
                 var request = new PutItemRequest
@@ -41,6 +41,37 @@ namespace Snippets
             }
             #endregion
         }
+        
+        public static async Task UpdateItemAsync()
+        {
+            #region service_client_update
+            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            {
+                var request = new UpdateItemRequest()
+                {
+                    TableName = "TODOList",
+                    Key = new Dictionary<string, AttributeValue>
+                    {
+                        { "User", new AttributeValue{S = "testuser" } },
+                        { "ListId", new AttributeValue{S = "generated-list-id" } },
+                    },
+                    UpdateExpression = "SET #n = :name REMOVE #c",
+                    ExpressionAttributeNames = new Dictionary<string, string>
+                    {
+                        {"#n", "Name"},
+                        {"#c", "Complete"}
+                    },
+                    ExpressionAttributeValues = new Dictionary<string, AttributeValue>
+                    {
+                        {":name", new AttributeValue{S = "Updated List"}}
+                    }
+                };
+
+                var response = await ddbClient.UpdateItemAsync(request);
+                Console.WriteLine($"TODO List updated");
+            }
+            #endregion
+        }        
 
         public static async Task GetItemAsync()
         {
@@ -68,7 +99,6 @@ namespace Snippets
                 {
                     Console.WriteLine("TODO List item not found");
                 }
-
             }
             #endregion
         }
@@ -92,13 +122,18 @@ namespace Snippets
                     }
                 };
 
-                var response = await ddbClient.QueryAsync(request);
-                Console.WriteLine($"Items found: {response.Items.Count}");
-                foreach(var item in response.Items)
+                QueryResponse response = null;
+                do
                 {
-                    Console.WriteLine("");
-                    PrintItem(item);
-                }
+                    request.ExclusiveStartKey = response?.LastEvaluatedKey;
+                    response = await ddbClient.QueryAsync(request);
+                    Console.WriteLine($"Items found: {response.Items.Count}");
+                    foreach(var item in response.Items)
+                    {
+                        Console.WriteLine("");
+                        PrintItem(item);
+                    }
+                } while (response.LastEvaluatedKey.Count > 0);
             }
             #endregion
         }
