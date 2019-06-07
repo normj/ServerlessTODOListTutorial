@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Amazon;
@@ -28,13 +29,14 @@ namespace Snippets
         
         public async Task SaveTODOListAsync()
         {
+            Console.WriteLine("----- Executing Save -----");
             #region datamodel_construct_save
             var list = new TODOList
             {
                 User =  "testuser",
                 ListId = "generated-list-id",
                 Complete =  false,
-                Name = "List from DataModel",
+                Name = "ExampleList",
                 CreateDate = DateTime.UtcNow,
                 UpdateDate = DateTime.UtcNow,
                 Items = new List<TODOListItem>
@@ -45,10 +47,67 @@ namespace Snippets
             };
             
             await this.Context.SaveAsync(list);
-            Console.WriteLine("TODO List item saves");
+            Console.WriteLine("List saved");
             #endregion
-        }        
-        
+            Console.WriteLine();
+        }
+
+        public async Task LoadTODOListAsync()
+        {
+            Console.WriteLine("----- Executing Load -----");
+            #region datamodel_construct_load
+
+            var list = await this.Context.LoadAsync<TODOList>("testuser", "generated-list-id");
+            if(list != null)
+            {
+                Console.WriteLine($"Found list {list.Name}");
+                foreach(var task in list.Items)
+                {
+                    Console.WriteLine($"\t{task.Description}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("List not found");
+            }
+            #endregion
+            Console.WriteLine();
+        }
+
+        public async Task QueryTODOListAsync()
+        {
+            Console.WriteLine("----- Executing Query -----");
+            #region datamodel_construct_query
+
+            AsyncSearch<TODOList> search = this.Context.QueryAsync<TODOList>("testuser");
+
+            var lists = await search.GetRemainingAsync();
+
+            Console.WriteLine($"Total lists found: {lists.Count}");
+            foreach(var list in lists)
+            {
+                Console.WriteLine($"List {list.Name}");
+                foreach (var task in list.Items)
+                {
+                    Console.WriteLine($"\t{task.Description}");
+                }
+            }
+            #endregion
+            Console.WriteLine();
+        }
+
+        public async Task DeleteTODOListAsync()
+        {
+            Console.WriteLine("----- Executing Delete -----");
+            #region datamodel_construct_delete
+
+            await this.Context.DeleteAsync<TODOList>("testuser", "generated-list-id");
+            Console.WriteLine("Deleted list");
+
+            #endregion
+            Console.WriteLine();
+        }
+
     }
     
     #region data_model_classes
@@ -72,6 +131,8 @@ namespace Snippets
     public class TODOListItem
     {
         public string Description { get; set; }
+
+        public string AssignedEmail { get; set; }
 
         public bool Complete { get; set; }
     }    

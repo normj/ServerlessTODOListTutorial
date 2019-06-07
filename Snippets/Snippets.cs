@@ -59,8 +59,7 @@ namespace Snippets
                 switch (session)
                 {
                     case "datamodel":
-                        var d = new DotNetDynamoDBDataModel();
-                        d.SaveTODOListAsync().Wait();
+                        ExecuteDataModelSession().Wait();
                         break;
                 }
             }
@@ -69,6 +68,15 @@ namespace Snippets
 //                throw e.InnerException;
                 throw;
             }
+        }
+
+        private static async Task ExecuteDataModelSession()
+        {
+            var d = new DotNetDynamoDBDataModel();
+            await d.SaveTODOListAsync();
+            await d.LoadTODOListAsync();
+            await d.QueryTODOListAsync();
+            await d.DeleteTODOListAsync();
         }
     }
 }

@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotnetTry", "DotnetTry", "{
 		..\CreateTable.md = ..\CreateTable.md
 		..\DDBServiceClientAPI.md = ..\DDBServiceClientAPI.md
 		..\DotNetDynamoDBAPIs.md = ..\DotNetDynamoDBAPIs.md
+		..\DotNetDynamoDBDataModel.md = ..\DotNetDynamoDBDataModel.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippets", "Snippets.csproj", "{D2D41056-9439-47D1-9699-3207865C12CE}"
