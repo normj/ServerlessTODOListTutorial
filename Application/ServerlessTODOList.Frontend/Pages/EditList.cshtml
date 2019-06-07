@@ -20,6 +20,7 @@
         <thead>
             <tr>
                 <th scope="col">Task</th>
+                <th scope="col">Assigned Email</th>
                 <th scope="col">Complete</th>
                 <th></th>
             </tr>
@@ -29,11 +30,12 @@
             {
                 @foreach (var item in this.Model.TODOList.Items)
                 {
-                    <tr class="task">
-                        <td><input class="taskDescription" type="text" value="@item.Description" /></td>
-                        <td><input class="taskComplete" type="checkbox" @(item.Complete ? "checked" : "" ) /></td>
-                        <td><button type="button" class="btn btn-danger btn-sm" onclick="deleteTask(this)">&times;</button></td>
-                    </tr>
+            <tr class="task">
+                <td><input class="taskDescription" type="text" value="@item.Description" /></td>
+                <td><input class="taskAssignedEmail" type="text" value="@item.AssignedEmail" /></td>
+                <td><input class="taskComplete" type="checkbox" @(item.Complete ? "checked" : "") /></td>
+                <td><button type="button" class="btn btn-danger btn-sm" onclick="deleteTask(this)">&times;</button></td>
+            </tr>
                 }
             }
         </tbody>
@@ -45,7 +47,7 @@
 <script type='text/javascript'>
 
     function addEmptyTask() {
-        $('#taskItems > tbody').append('<tr class="task"><td><input class="taskDescription" type="text" value="" /></td><td><input class="taskComplete" type="checkbox" )" /></td><td><button type="button" class="btn btn-danger btn-sm" onclick="deleteTask(this)">&times;</button></td></tr>');
+        $('#taskItems > tbody').append('<tr class="task"><td><input class="taskDescription" type="text" value="" /></td><td><input class="taskAssignedEmail" type="text" value="" /></td><td><input class="taskComplete" type="checkbox" )" /></td><td><button type="button" class="btn btn-danger btn-sm" onclick="deleteTask(this)">&times;</button></td></tr>');
         return false;
     }
 
@@ -60,6 +62,7 @@
             $this = $(this);
             var task = {} 
             task.Description = $this.find("input.taskDescription").val();
+            task.AssignedEmail = $this.find("input.taskAssignedEmail").val();
             task.Complete = $this.find("input.taskComplete").is(":checked");
             tasks.push(task);
         });

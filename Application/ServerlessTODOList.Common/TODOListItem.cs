@@ -8,6 +8,9 @@ namespace ServerlessTODOList.Common
     {
         public string Description { get; set; }
 
+        public string AssignedEmail { get; set; }
+
         public bool Complete { get; set; }
+
     }
 }
