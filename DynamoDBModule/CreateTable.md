@@ -31,7 +31,7 @@ request instead of for provision requests. The guidance is to use provisioned mo
 is difficult to predict.
 
 
-```cs --source-file ./Snippets/CreateTable.cs --project ./Snippets/Snippets.csproj --region create_table
+```cs --source-file ../Snippets/CreateTable.cs --project ../Snippets/Snippets.csproj --region create_table
 ```
 
 
@@ -40,7 +40,7 @@ is difficult to predict.
 When a table is created or modified the change does not happen instantly. We can describe the table to get details about the table as 
 well as it's current status.
 
-```cs --source-file ./Snippets/CreateTable.cs --project ./Snippets/Snippets.csproj --region check_status
+```cs --source-file ../Snippets/CreateTable.cs --project ../Snippets/Snippets.csproj --region check_status
 ```
 
 ## Update Table
@@ -48,7 +48,7 @@ well as it's current status.
 Once a table is created the provisioning can be updated. The table will go into an **UPDATING** status while the DynamoDB service takes
 care of the reprovisioning. The table will still be accessible during the reprovisioning process.
 
-```cs --source-file ./Snippets/CreateTable.cs --project ./Snippets/Snippets.csproj --region update_table
+```cs --source-file ../Snippets/CreateTable.cs --project ../Snippets/Snippets.csproj --region update_table
 ```
 
 
@@ -63,5 +63,5 @@ When you delete a table all of its data and indexes will be deleted as well.
 
 **Note:** Only do this step if you are not going to continue through the tutorial.
 
-```cs --source-file ./Snippets/CreateTable.cs --project ./Snippets/Snippets.csproj --region delete_table
+```cs --source-file ../Snippets/CreateTable.cs --project ../Snippets/Snippets.csproj --region delete_table
 ```

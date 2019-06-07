@@ -4,7 +4,7 @@ The Data Model api uses .NET classes to model data that will be stored in and re
 TODO list application a list is modeled by the **TODOList** class which contains a collection of **TODOListItem** 
 for each task in the list.
 
-```cs --source-file ./Snippets/DotNetDynamoDBDataModel.cs --project ./Snippets/Snippets.csproj --region data_model_classes --session datamodel
+```cs --source-file ../Snippets/DotNetDynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region data_model_classes --session datamodel
 ```
 
 ## Context Object
@@ -28,14 +28,14 @@ the data from the properties on the **TODOList** and **TODOListItem** to the ser
 be set for all new applications as it supports the BOOL, L and M DynamoDB types. The original V1 conversion was 
 created before those types existed and switching the default to V2 would be a breaking change to existing users.
 
-```cs --source-file ./Snippets/DotNetDynamoDBDataModel.cs --project ./Snippets/Snippets.csproj --region datamodel_construct_client --session datamodel
+```cs --source-file ../Snippets/DotNetDynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region datamodel_construct_client --session datamodel
 ```
 
 ## Save a TODOList
 
 To save a TODOList we need to create the TODOList object and then call the SaveAsync method on the context.
 
-```cs --source-file ./Snippets/DotNetDynamoDBDataModel.cs --project ./Snippets/Snippets.csproj --region datamodel_construct_save --session datamodel
+```cs --source-file ../Snippets/DotNetDynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region datamodel_construct_save --session datamodel
 ```
 
 ## Load a TODOList
@@ -43,7 +43,7 @@ To save a TODOList we need to create the TODOList object and then call the SaveA
 To load an object we need to call the LoadAsync method passing in the values for the key.
 
 
-```cs --source-file ./Snippets/DotNetDynamoDBDataModel.cs --project ./Snippets/Snippets.csproj --region datamodel_construct_load --session datamodel
+```cs --source-file ../Snippets/DotNetDynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region datamodel_construct_load --session datamodel
 ```
 
 ## Query
@@ -53,7 +53,7 @@ by calling the **GetNextSetAsync**. Since we want all of the lists for the user 
 pagination and call **GetRemainingAsync** to get all of the lists.
 
 
-```cs --source-file ./Snippets/DotNetDynamoDBDataModel.cs --project ./Snippets/Snippets.csproj --region datamodel_construct_query --session datamodel
+```cs --source-file ../Snippets/DotNetDynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region datamodel_construct_query --session datamodel
 ```
 
 ## Delete a TODOList
@@ -61,5 +61,5 @@ pagination and call **GetRemainingAsync** to get all of the lists.
 To delete an object we need to call the DeleteAsync method passing in the values for the key.
 
 
-```cs --source-file ./Snippets/DotNetDynamoDBDataModel.cs --project ./Snippets/Snippets.csproj --region datamodel_construct_delete --session datamodel
+```cs --source-file ../Snippets/DotNetDynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region datamodel_construct_delete --session datamodel
 ```

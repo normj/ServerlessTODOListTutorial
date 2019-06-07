@@ -25,13 +25,13 @@ one property should be set.
 
 The **PutItem** operation either creates a new item or replaces an existing item with the item in the request. 
 
-```cs --source-file ./Snippets/DDBServiceClientAPI.cs --project ./Snippets/Snippets.csproj --region service_client_put
+```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_put
 ```
 ## Update Item
 
 The **UpdateItem** operation can be used to do a partial update of the item in DynamoDB. This is really useful when you are only changing a few fields and can save you from consuming write units for attributes that you are changing.
 
-```cs --source-file ./Snippets/DDBServiceClientAPI.cs --project ./Snippets/Snippets.csproj --region service_client_update
+```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_update
 ```
 
 ## Get Item
@@ -48,7 +48,7 @@ DynamoDB is an eventually consistent system. Which means after a write operation
 GetItemRequest to true. Using **ConsistentRead** does consume additional read unit from
 the provision capacity.
 
-```cs --source-file ./Snippets/DDBServiceClientAPI.cs --project ./Snippets/Snippets.csproj --region service_client_get
+```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_get
 ```
 
 ## Query
@@ -67,7 +67,7 @@ property from the response object to the same request object and call the operat
 request.ExclusiveStartKey = response?.LastEvaluatedKey;
 ```
 
-```cs --source-file ./Snippets/DDBServiceClientAPI.cs --project ./Snippets/Snippets.csproj --region service_client_query
+```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_query
 ```
 
 
@@ -75,5 +75,5 @@ request.ExclusiveStartKey = response?.LastEvaluatedKey;
 
 To delete the item pass in the table name and the key information.
 
-```cs --source-file ./Snippets/DDBServiceClientAPI.cs --project ./Snippets/Snippets.csproj --region service_client_delete
+```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_delete
 ```
