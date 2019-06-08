@@ -1,0 +1,12 @@
+# TODO List AWS Services Used
+
+The TODO List application that we will build and deploy will using the following services.
+
+|||
+|-|-|
+| Amazon DynamoDB | To store the the TODO Lists |
+| Amazon Simple Email Service | Send emails for task assignment |
+| Amazon Cognito | Application identity |
+| Parameter Store from AWS System Manager | Store and retrieve application configuration |
+| AWS Lambda | Compute processing |
+| Amazon API Gateway | Expose Lambda functions to the web |
