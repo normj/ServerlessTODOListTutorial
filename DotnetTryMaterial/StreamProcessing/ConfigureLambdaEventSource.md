@@ -13,6 +13,7 @@ you can create the event source mapping by:
 2. Push the **Add** button
 3. Select **Amazon DynamoDB Stream** for the Source Type
 4. Make sure the Stream we enabled previously is selected for the DynamoDB Stream
+5. Set the **Starting Position** to **LATEST**
 5. Push OK
 
 Note: Batch Size and Starting Position can be left at the default values. Starting Position has 2 possible values. 
