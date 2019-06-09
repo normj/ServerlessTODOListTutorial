@@ -4,7 +4,7 @@ The Data Model api uses .NET classes to model data that will be stored in and re
 TODO list application a list is modeled by the **TODOList** class which contains a collection of **TODOListItem** 
 for each task in the list.
 
-```cs --source-file ../Snippets/DotNetDynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region data_model_classes --session datamodel
+```cs --source-file ../Snippets/DataModelTypes.cs --project ../Snippets/Snippets.csproj --region data_model_classes --session datamodel
 ```
 
 ## Context Object

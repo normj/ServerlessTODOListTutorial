@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Markdown", "Markdown", "{B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}"
+	ProjectSection(SolutionItems) = preProject
+		CommonServerlessServices.md = CommonServerlessServices.md
+		StreamProcessing\DynamoDBStreams.md = StreamProcessing\DynamoDBStreams.md
+		..\README.md = ..\README.md
+		TODOListServices.md = TODOListServices.md
+		WhatIsServerless.md = WhatIsServerless.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippets", "Snippets\Snippets.csproj", "{D2D41056-9439-47D1-9699-3207865C12CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamoDBModule", "DynamoDBModule", "{2F57FDB5-7F10-41FD-A6DE-02999A529F99}"
+	ProjectSection(SolutionItems) = preProject
+		DynamoDBModule\CreateTable.md = DynamoDBModule\CreateTable.md
+		DynamoDBModule\DDBServiceClientAPI.md = DynamoDBModule\DDBServiceClientAPI.md
+		DynamoDBModule\DotNetDynamoDBAPIs.md = DynamoDBModule\DotNetDynamoDBAPIs.md
+		DynamoDBModule\DotNetDynamoDBDataModel.md = DynamoDBModule\DotNetDynamoDBDataModel.md
+		DynamoDBModule\WhatIsDynamoDB.md = DynamoDBModule\WhatIsDynamoDB.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StreamProcessing", "StreamProcessing", "{30097844-18BC-435D-905C-4C4FD5B5A3E9}"
+	ProjectSection(SolutionItems) = preProject
+		StreamProcessing\DeployLambdaFunction.md = StreamProcessing\DeployLambdaFunction.md
+		StreamProcessing\EnableDynamoDBStream.md = StreamProcessing\EnableDynamoDBStream.md
+		StreamProcessing\LookAtLambdaFunction.md = StreamProcessing\LookAtLambdaFunction.md
+		StreamProcessing\ServiceEvents.md = StreamProcessing\ServiceEvents.md
+		StreamProcessing\TODOTaskListAssignment.md = StreamProcessing\TODOTaskListAssignment.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2D41056-9439-47D1-9699-3207865C12CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D41056-9439-47D1-9699-3207865C12CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D41056-9439-47D1-9699-3207865C12CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D41056-9439-47D1-9699-3207865C12CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F57FDB5-7F10-41FD-A6DE-02999A529F99} = {B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}
+		{30097844-18BC-435D-905C-4C4FD5B5A3E9} = {B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A94325C0-2B38-44AF-9ADD-C61FC1079E15}
+	EndGlobalSection
+EndGlobal

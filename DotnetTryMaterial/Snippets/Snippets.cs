@@ -15,58 +15,58 @@ namespace Snippets
             string project = null,
             string[] args = null)
         {
-            try
+            switch (region)
             {
-                switch (region)
-                {
-                    case "create_table":
-                        CreateTable.CreateTableAsync().Wait();
-                        break;
-                    case "check_status":
-                        CreateTable.CheckStatusAsync().Wait();
-                        break;
-                    case "update_table":
-                        CreateTable.UpdateTableAsync().Wait();
-                        break;
-                    case "delete_table":
-                        CreateTable.DeleteTableAsync().Wait();
-                        break;
+                case "create_table":
+                    CreateTable.CreateTableAsync().Wait();
+                    break;
+                case "check_status":
+                    CreateTable.CheckStatusAsync().Wait();
+                    break;
+                case "update_table":
+                    CreateTable.UpdateTableAsync().Wait();
+                    break;
+                case "delete_table":
+                    CreateTable.DeleteTableAsync().Wait();
+                    break;
 
-                    case "service_client_put":
-                        DDBServiceClientAPI.PutItemAsync().Wait();
-                        break;
-                    case "service_client_update":
-                        DDBServiceClientAPI.UpdateItemAsync().Wait();
-                        break;
-                    case "service_client_get":
-                        DDBServiceClientAPI.GetItemAsync().Wait();
-                        break;
-                    case "service_client_query":
-                        DDBServiceClientAPI.QueryItemsAsync().Wait();
-                        break;
-                    case "service_client_delete":
-                        DDBServiceClientAPI.DeleteItemAsync().Wait();
-                        break;
-                    
-                    case "datamodel_construct_client":
-                        new DotNetDynamoDBDataModel();
-                        break;
-                    case "datamodel_construct_save":
-                        new DotNetDynamoDBDataModel().SaveTODOListAsync().Wait();
-                        break;
-                }
+                case "service_client_put":
+                    DDBServiceClientAPI.PutItemAsync().Wait();
+                    break;
+                case "service_client_update":
+                    DDBServiceClientAPI.UpdateItemAsync().Wait();
+                    break;
+                case "service_client_get":
+                    DDBServiceClientAPI.GetItemAsync().Wait();
+                    break;
+                case "service_client_query":
+                    DDBServiceClientAPI.QueryItemsAsync().Wait();
+                    break;
+                case "service_client_delete":
+                    DDBServiceClientAPI.DeleteItemAsync().Wait();
+                    break;
 
-                switch (session)
-                {
-                    case "datamodel":
-                        ExecuteDataModelSession().Wait();
-                        break;
-                }
+                case "enable_stream_status":
+                    EnableDynamoDBStream.EnableAsync().Wait();
+                    break;
+                case "check_stream_status":
+                    EnableDynamoDBStream.CheckStatusAsync().Wait();
+                    break;
+                case "test_stream_read":
+                    EnableDynamoDBStream.TestStreamAsync().Wait();
+                    break;
+
+
+                case "setup_streamprocessor_role":
+                    IAMRoleSetups.SetupStreamProcessorRoleAsync().Wait();
+                    break;
             }
-            catch (AggregateException e)
+
+            switch (session)
             {
-//                throw e.InnerException;
-                throw;
+                case "datamodel":
+                    ExecuteDataModelSession().Wait();
+                    break;
             }
         }
 
