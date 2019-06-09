@@ -1,0 +1,29 @@
+[
+    "WhatIsServerless.md",
+    "CommonServerlessServices.md",
+    "TODOListServices.md",
+    {
+        "Name" : "Using DynamoDB to Store Lists",
+        "FolderName" : "DynamoDBModule",
+        "RootPage" : "WhatIsDynamoDB.md",
+        "Pages" : [            
+            "CreateTable.md",
+            "DotNetDynamoDBAPIs.md",
+            "DDBServiceClientAPI.md",
+            "DotNetDynamoDBDataModel.md"    
+        ]
+    },
+    {
+        "Name" : "Handling Service Events with Lambda",
+        "FolderName" : "StreamProcessing",
+        "RootPage" : "ServiceEvents.md",
+        "Pages" : [
+            "TODOTaskListAssignment.md",
+            "EnableDynamoDBStream.md",
+            "LookAtLambdaFunction.md",
+            "DeployLambdaFunction.md",
+            "SettingUpSES.md"
+        ]
+    }
+
+]

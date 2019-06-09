@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StreamProcessing", "StreamP
 		StreamProcessing\TODOTaskListAssignment.md = StreamProcessing\TODOTaskListAssignment.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOCBuilder", "TOCBuilder\TOCBuilder.csproj", "{6988D981-6A9F-400F-BF75-985BF1740193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{D2D41056-9439-47D1-9699-3207865C12CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2D41056-9439-47D1-9699-3207865C12CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2D41056-9439-47D1-9699-3207865C12CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6988D981-6A9F-400F-BF75-985BF1740193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6988D981-6A9F-400F-BF75-985BF1740193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6988D981-6A9F-400F-BF75-985BF1740193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6988D981-6A9F-400F-BF75-985BF1740193}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
