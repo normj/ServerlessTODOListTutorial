@@ -18,10 +18,17 @@ To get started with this tutorial follow the following steps.
   * https://dotnet.microsoft.com/download/dotnet-core/2.1
 * Ensure .NET Core 3.0 SDK is installed. The tool dotnet try requires .NET Core 3.0
   * https://dotnet.microsoft.com/download/dotnet-core/3.0
+* Either the AWS Toolkit for Visual Studio or [Amazon.Lambda.Tools](https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools) .NET Core Global Tool
+  * [AWS Toolkit for Visual Studio Download](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017)
+  * Amazon.Lambda.Tools .NET Core Global Tool - `dotnet tool install -g Amazon.Lambda.Tools`
 * Clone this repository
   * `git clone https://github.com/normj/ServerlessTODOListTutorial.git`
 * Install dotnet try
   * `dotnet tool install -g dotnet-try`
 * Start dotnet try in the directory the repo was cloned
-  * `dotnet try .`
-  
+  * `dotnet try`
+
+
+## Let's Start
+
+If you are seeing this page after running `dotnet try` then click [here to get started](./DotnetTryMaterial/WhatIsServerless.md).  
