@@ -110,7 +110,7 @@ namespace ServerlessTODOList.StreamProcessor
                 if (string.IsNullOrWhiteSpace(task.AssignedEmail) || task.Complete || string.IsNullOrWhiteSpace(task.Description))
                     continue;
 
-                if(oldVersion.Items.FirstOrDefault(x => string.Equals(x.Description, task.Description)) == null)
+                if(oldVersion?.Items?.FirstOrDefault(x => string.Equals(x.Description, task.Description)) == null)
                 {
                     List<string> tasks = null;
                     if(!emailsToTasks.TryGetValue(task.AssignedEmail, out tasks))
