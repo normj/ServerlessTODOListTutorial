@@ -17,6 +17,7 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.101.20" />
     <PackageReference Include="AWSSDK.IdentityManagement" Version="3.3.101.21" />
+    <PackageReference Include="AWSSDK.Lambda" Version="3.3.102.13" />
     <PackageReference Include="AWSSDK.SimpleEmail" Version="3.3.101.1" />
   </ItemGroup>
 

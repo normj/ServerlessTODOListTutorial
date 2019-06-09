@@ -60,6 +60,10 @@ namespace Snippets
                     SESSnippets.SendVerificationAsync().Wait();
                     break;
 
+                case "add_dynamodb_event_source":
+                    ConfigureEventSourceMapping.AddEventSourceAsync().Wait();
+                    break;
+
                 case "setup_streamprocessor_role":
                     IAMRoleSetups.SetupStreamProcessorRoleAsync().Wait();
                     break;
