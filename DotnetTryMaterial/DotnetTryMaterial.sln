@@ -29,6 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StreamProcessing", "StreamP
 		StreamProcessing\EnableDynamoDBStream.md = StreamProcessing\EnableDynamoDBStream.md
 		StreamProcessing\LookAtLambdaFunction.md = StreamProcessing\LookAtLambdaFunction.md
 		StreamProcessing\ServiceEvents.md = StreamProcessing\ServiceEvents.md
+		StreamProcessing\SettingUpSES.md = StreamProcessing\SettingUpSES.md
 		StreamProcessing\TODOTaskListAssignment.md = StreamProcessing\TODOTaskListAssignment.md
 	EndProjectSection
 EndProject

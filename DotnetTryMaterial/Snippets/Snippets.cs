@@ -56,6 +56,9 @@ namespace Snippets
                     EnableDynamoDBStream.TestStreamAsync().Wait();
                     break;
 
+                case "send_verification_email":
+                    SESSnippets.SendVerificationAsync().Wait();
+                    break;
 
                 case "setup_streamprocessor_role":
                     IAMRoleSetups.SetupStreamProcessorRoleAsync().Wait();
