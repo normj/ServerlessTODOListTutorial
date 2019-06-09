@@ -21,7 +21,7 @@ TRIM_HORIZON basically means start reading from the stream at the earliest point
 This is at most 24 hours in the past.
 LATEST means start reading items starting from the point the mapping event source was made.
 
-![Publish from solution explorer](./images/ToolkitAddEventSource.png)
+![View Event Sources](./images/ToolkitAddEventSource.png)
 
 ## Configuring with AWS Lambda Console
 
@@ -57,4 +57,9 @@ set the name of the function that you deployed earlier to the **functionName** v
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
   * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
   * **Configuring DynamoDB as an event source**
+  * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
+  * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
+  * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
+
+Continue on to next page: [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
 

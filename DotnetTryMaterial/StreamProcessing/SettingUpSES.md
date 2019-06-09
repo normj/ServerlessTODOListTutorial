@@ -33,6 +33,9 @@ emails either through the [AWS console](https://console.aws.amazon.com/ses/home?
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
   * **Setting up Amazon Simple Email Service (SES)**
   * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
+  * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
+  * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
+  * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
 
 Continue on to next page: [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
 

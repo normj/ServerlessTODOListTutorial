@@ -25,7 +25,7 @@ namespace Snippets
                 var functionName = "";
                 if(string.IsNullOrEmpty(functionName))
                 {
-                    Console.Error.WriteLine("You must set the name of the Lambda function you deployed to the \"functionName\" local variable");
+                    Console.Error.WriteLine("You must set the name of the Lambda function you deployed to the \"functionName\" variable");
                     return;
                 }
 

@@ -98,6 +98,9 @@ section is not necessary
   * **Deploy Lambda Function**
   * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
   * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
+  * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
+  * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
+  * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
 
 Continue on to next page: [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
 

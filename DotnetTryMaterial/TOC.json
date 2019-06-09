@@ -23,7 +23,10 @@
         "LookAtLambdaFunction.md",
         "DeployLambdaFunction.md",
         "SettingUpSES.md",
-        "ConfigureLambdaEventSource.md"
+        "ConfigureLambdaEventSource.md",
+        "TestingLambdaFunction.md",
+        "TroubleshootingLambda.md",
+        "StreamProcessingWrapup.md"
       ]
     }
 

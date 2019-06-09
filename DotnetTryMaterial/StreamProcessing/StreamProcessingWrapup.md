@@ -1,11 +1,16 @@
-# TODO List Task Assignments
+# Stream processing wrap up
 
-In our TODO List application each task in a TODO list can be assigned to a user. We want to use a Lambda function
-to notifiy users when they have been assigned a task. To implement this we need to implement the following steps.
+Now we have completed deploying a Lambda function that handles processing service events. In this example we 
+are handling changes done to or DynamoDB Stream but we could just easily used Lambda to handle events 
+for when our applications upload objects to S3 or send messages to SQS queues. Lambda takes care of 
+our scaling needs so all we had focus on was our business logic.
 
-* Enable a DynamoDB Stream for our TODOList table
-* Write and Deploy a Lambda function
-* Configure DynamoDB Stream as a source for Lambda function
+To recap in this section we covered:
+
+* DynamoDB Streams
+* Deploying Lambda Functions
+* Configuring Event Sources for Lambda Functions
+* Testing and Troubleshooting of Lambda functions
 
 <!-- Generated Navigation -->
 ---
@@ -15,7 +20,7 @@ to notifiy users when they have been assigned a task. To implement this we need 
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Using Lambda to Handle Service Events](../StreamProcessing/ServiceEvents.md)
-  * **TODO List Task Assignments**
+  * [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
   * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
@@ -23,7 +28,5 @@ to notifiy users when they have been assigned a task. To implement this we need 
   * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
   * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
-  * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
-
-Continue on to next page: [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
+  * **Stream processing wrap up**
 

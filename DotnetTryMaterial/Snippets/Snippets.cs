@@ -64,6 +64,10 @@ namespace Snippets
                     ConfigureEventSourceMapping.AddEventSourceAsync().Wait();
                     break;
 
+                case "test_save_lambda_todo":
+                    TestDynamoDBLambdaFunction.SaveTODOListAsync().Wait();
+                    break;
+
                 case "setup_streamprocessor_role":
                     IAMRoleSetups.SetupStreamProcessorRoleAsync().Wait();
                     break;

@@ -1,11 +1,11 @@
-# TODO List Task Assignments
+# Testing Lambda Function
 
-In our TODO List application each task in a TODO list can be assigned to a user. We want to use a Lambda function
-to notifiy users when they have been assigned a task. To implement this we need to implement the following steps.
+Now that everything is deployed and configured lets test our Lambda function. To do that lets save a TODO List to DynamoDB.
 
-* Enable a DynamoDB Stream for our TODOList table
-* Write and Deploy a Lambda function
-* Configure DynamoDB Stream as a source for Lambda function
+Be sure in the code below to set the **assignedEmail** to an email address that you have verified with Amazon Simple Email Service.
+
+```cs --source-file ../Snippets/TestDynamoDBLambdaFunction.cs --project ../Snippets/Snippets.csproj --region test_save_lambda_todo
+```
 
 <!-- Generated Navigation -->
 ---
@@ -15,15 +15,15 @@ to notifiy users when they have been assigned a task. To implement this we need 
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Using Lambda to Handle Service Events](../StreamProcessing/ServiceEvents.md)
-  * **TODO List Task Assignments**
+  * [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
   * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
   * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
   * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
-  * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
+  * **Testing Lambda Function**
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
 
-Continue on to next page: [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
+Continue on to next page: [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
 
