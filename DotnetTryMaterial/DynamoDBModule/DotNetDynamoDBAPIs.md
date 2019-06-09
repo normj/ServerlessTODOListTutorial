@@ -21,6 +21,8 @@ The NuGet package [AWSSDK.DynamoDBv2](https://www.nuget.org/packages/AWSSDK.Dyna
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+* [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
 

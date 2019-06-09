@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove=".trydotnet-builderror" />
     <None Remove="package_designTimeBuild.binlog" />
     <None Remove="package_fullBuild.binlog" />
   </ItemGroup>

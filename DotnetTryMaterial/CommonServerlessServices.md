@@ -5,21 +5,21 @@ common AWS services used that provide the foundation building blocks for a serve
 
 ## Data Services
 
-|||
+|Service|Description|
 |----|---|
 | Amazon S3 | Object storage |
 | Amazon DynamoDB | Managed NoSQL |
 | Amazon Aurora Serverless | On-Demand relational database |
 
 ## Communication / Messaging
-|||
+|Service|Description|
 |---|---|
-| Amazon Simple Notification Service (SNS) | |
-| Amazon Simple Queue Service (SQS) | |
-| Amazon Simple Email Service (SES) | |
+| Amazon Simple Notification Service (SNS) |A pub/sub messaging service|
+| Amazon Simple Queue Service (SQS) |Fully managed message queuing|
+| Amazon Simple Email Service (SES) |SES is a cloud-based email sending service|
 
 ## Compute
-|||
+|Service|Description|
 |-|-|
 | AWS Lambda | Event driven continuous scaling serverless platform |
 | AWS Fargate | Fully managed containers within Amazon Elastic Container Service (ECS) |
@@ -32,6 +32,8 @@ common AWS services used that provide the foundation building blocks for a serve
 * [TODO List AWS Services Used](./TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)
+* [Building the ASP.NET Core Frontend](./ASP.NETCoreFrontend/TheFrontend.md)
+* [Final Wrap Up](./FinalWrapup.md)
 
 Continue on to next page: [TODO List AWS Services Used](./TODOListServices.md)
 

@@ -78,6 +78,8 @@ When you delete a table all of its data and indexes will be deleted as well.
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+* [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
 

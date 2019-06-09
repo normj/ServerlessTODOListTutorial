@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Markdown", "Markdown", "{B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}"
 	ProjectSection(SolutionItems) = preProject
 		CommonServerlessServices.md = CommonServerlessServices.md
+		FinalWrapup.md = FinalWrapup.md
 		..\README.md = ..\README.md
 		TOC.json = TOC.json
 		TODOListServices.md = TODOListServices.md
@@ -39,6 +40,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StreamProcessing", "StreamP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOCBuilder", "TOCBuilder\TOCBuilder.csproj", "{6988D981-6A9F-400F-BF75-985BF1740193}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NETCoreFrontend", "ASP.NETCoreFrontend", "{3FD8F50A-2214-4087-AC67-2655DA6B03CE}"
+	ProjectSection(SolutionItems) = preProject
+		ASP.NETCoreFrontend\TheFrontend.md = ASP.NETCoreFrontend\TheFrontend.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +66,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2F57FDB5-7F10-41FD-A6DE-02999A529F99} = {B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}
 		{30097844-18BC-435D-905C-4C4FD5B5A3E9} = {B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}
+		{3FD8F50A-2214-4087-AC67-2655DA6B03CE} = {B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A94325C0-2B38-44AF-9ADD-C61FC1079E15}

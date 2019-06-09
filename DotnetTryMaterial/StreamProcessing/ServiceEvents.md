@@ -31,6 +31,8 @@ configured to trigger Lambda functions for their events.
   * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
+* [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
 
