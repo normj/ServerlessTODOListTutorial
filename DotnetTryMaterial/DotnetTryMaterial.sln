@@ -42,7 +42,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOCBuilder", "TOCBuilder\TO
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NETCoreFrontend", "ASP.NETCoreFrontend", "{3FD8F50A-2214-4087-AC67-2655DA6B03CE}"
 	ProjectSection(SolutionItems) = preProject
+		ASP.NETCoreFrontend\FrontendWrapup.md = ASP.NETCoreFrontend\FrontendWrapup.md
+		ASP.NETCoreFrontend\ParameterStoreConfigurationProvider.md = ASP.NETCoreFrontend\ParameterStoreConfigurationProvider.md
+		ASP.NETCoreFrontend\ParameterStoreDataProtection.md = ASP.NETCoreFrontend\ParameterStoreDataProtection.md
 		ASP.NETCoreFrontend\TheFrontend.md = ASP.NETCoreFrontend\TheFrontend.md
+		ASP.NETCoreFrontend\WebIdentity.md = ASP.NETCoreFrontend\WebIdentity.md
 	EndProjectSection
 EndProject
 Global

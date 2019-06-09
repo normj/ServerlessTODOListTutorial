@@ -34,6 +34,10 @@
     "FolderName": "ASP.NETCoreFrontend",
     "RootPage": "TheFrontend.md",
     "Pages": [
+      "WebIdentity.md",
+      "ParameterStoreDataProtection.md",
+      "ParameterStoreConfigurationProvider.md",
+      "FrontendWrapup.md"
     ]
   },
   "FinalWrapup.md"
