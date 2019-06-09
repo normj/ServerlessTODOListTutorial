@@ -77,3 +77,19 @@ To delete the item pass in the table name and the key information.
 
 ```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_delete
 ```
+
+<!-- Generated Navigation -->
+---
+
+* [What is a serverless application?](../WhatIsServerless.md)
+* [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [TODO List AWS Services Used](../TODOListServices.md)
+* [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
+  * [Using the AWS SDK for .NET](../DynamoDBModule/CreateTable.md)
+  * [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
+  * **CRUD operations with Amazon DynamoDB Service Client**
+  * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
+* [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+
+Continue on to next page: [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
+

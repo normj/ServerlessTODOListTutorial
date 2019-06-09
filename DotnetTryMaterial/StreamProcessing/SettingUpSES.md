@@ -18,3 +18,18 @@ emails either through the [AWS console](https://console.aws.amazon.com/ses/home?
 
 ```cs --source-file ../Snippets/SESSnippets.cs --project ../Snippets/Snippets.csproj --region send_verification_email
 ```
+
+<!-- Generated Navigation -->
+---
+
+* [What is a serverless application?](../WhatIsServerless.md)
+* [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [TODO List AWS Services Used](../TODOListServices.md)
+* [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
+* [Using Lambda to Handle Service Events](../StreamProcessing/ServiceEvents.md)
+  * [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
+  * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
+  * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
+  * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
+  * **Setting up Amazon Simple Email Service (SES)**
+

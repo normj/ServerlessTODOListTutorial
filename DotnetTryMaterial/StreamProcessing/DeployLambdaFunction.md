@@ -83,3 +83,20 @@ section is not necessary
 
 ```cs --source-file ../Snippets/IAMRoleSetups.cs --project ../Snippets/Snippets.csproj --region setup_streamprocessor_role
 ```
+
+<!-- Generated Navigation -->
+---
+
+* [What is a serverless application?](../WhatIsServerless.md)
+* [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [TODO List AWS Services Used](../TODOListServices.md)
+* [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
+* [Using Lambda to Handle Service Events](../StreamProcessing/ServiceEvents.md)
+  * [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
+  * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
+  * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
+  * **Deploy Lambda Function**
+  * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
+
+Continue on to next page: [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
+

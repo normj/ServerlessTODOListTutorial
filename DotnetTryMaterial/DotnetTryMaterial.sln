@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Markdown", "Markdown", "{B0
 		CommonServerlessServices.md = CommonServerlessServices.md
 		StreamProcessing\DynamoDBStreams.md = StreamProcessing\DynamoDBStreams.md
 		..\README.md = ..\README.md
+		TOC.json = TOC.json
 		TODOListServices.md = TODOListServices.md
 		WhatIsServerless.md = WhatIsServerless.md
 	EndProjectSection
@@ -33,7 +34,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StreamProcessing", "StreamP
 		StreamProcessing\TODOTaskListAssignment.md = StreamProcessing\TODOTaskListAssignment.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOCBuilder", "TOCBuilder\TOCBuilder.csproj", "{6988D981-6A9F-400F-BF75-985BF1740193}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOCBuilder", "TOCBuilder\TOCBuilder.csproj", "{6988D981-6A9F-400F-BF75-985BF1740193}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,7 +3,7 @@
     "CommonServerlessServices.md",
     "TODOListServices.md",
     {
-        "Name" : "Using DynamoDB to Store Lists",
+        "Name" : "Using DynamoDB to store TODO Lists",
         "FolderName" : "DynamoDBModule",
         "RootPage" : "WhatIsDynamoDB.md",
         "Pages" : [            
@@ -14,7 +14,7 @@
         ]
     },
     {
-        "Name" : "Handling Service Events with Lambda",
+        "Name" : "Handling service events with Lambda",
         "FolderName" : "StreamProcessing",
         "RootPage" : "ServiceEvents.md",
         "Pages" : [

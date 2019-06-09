@@ -38,3 +38,20 @@ for the shards of a DynamoDB Stream.
 
 ```cs --source-file ../Snippets/EnableDynamoDBStream.cs --project ../Snippets/Snippets.csproj --region test_stream_read
 ```
+
+<!-- Generated Navigation -->
+---
+
+* [What is a serverless application?](../WhatIsServerless.md)
+* [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [TODO List AWS Services Used](../TODOListServices.md)
+* [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
+* [Using Lambda to Handle Service Events](../StreamProcessing/ServiceEvents.md)
+  * [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
+  * **Enable DynamoDB Stream**
+  * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
+  * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
+  * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
+
+Continue on to next page: [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
+

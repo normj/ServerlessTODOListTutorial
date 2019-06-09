@@ -63,3 +63,19 @@ To delete an object we need to call the DeleteAsync method passing in the values
 
 ```cs --source-file ../Snippets/DotNetDynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region datamodel_construct_delete --session datamodel
 ```
+
+<!-- Generated Navigation -->
+---
+
+* [What is a serverless application?](../WhatIsServerless.md)
+* [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [TODO List AWS Services Used](../TODOListServices.md)
+* [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
+  * [Using the AWS SDK for .NET](../DynamoDBModule/CreateTable.md)
+  * [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
+  * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
+  * **CRUD operations with Data Model API**
+* [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+
+Continue on to next page: [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+

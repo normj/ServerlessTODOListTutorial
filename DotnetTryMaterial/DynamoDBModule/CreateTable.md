@@ -65,3 +65,19 @@ When you delete a table all of its data and indexes will be deleted as well.
 
 ```cs --source-file ../Snippets/CreateTable.cs --project ../Snippets/Snippets.csproj --region delete_table
 ```
+
+<!-- Generated Navigation -->
+---
+
+* [What is a serverless application?](../WhatIsServerless.md)
+* [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [TODO List AWS Services Used](../TODOListServices.md)
+* [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
+  * **Using the AWS SDK for .NET**
+  * [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
+  * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
+  * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
+* [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+
+Continue on to next page: [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
+

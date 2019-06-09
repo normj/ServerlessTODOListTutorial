@@ -22,7 +22,16 @@ common AWS services used that provide the foundation building blocks for a serve
 |||
 |-|-|
 | AWS Lambda | Event driven continuous scaling serverless platform |
-| AWS Fargate | Fully managed containers within Amazon Elastic Container Service (ECS) | 
+| AWS Fargate | Fully managed containers within Amazon Elastic Container Service (ECS) |
 
+<!-- Generated Navigation -->
+---
 
+* [What is a serverless application?](./WhatIsServerless.md)
+* **Common AWS Serverless Services**
+* [TODO List AWS Services Used](./TODOListServices.md)
+* [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
+* [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+
+Continue on to next page: [TODO List AWS Services Used](./TODOListServices.md)
 

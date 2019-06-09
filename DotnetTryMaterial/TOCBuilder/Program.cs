@@ -24,7 +24,7 @@ namespace TOCBuilder
                 if (item.Type == JTokenType.String)
                 {
                     var toc = BuildTOC(root, item.ToString(), null);
-                    PrintTOC(item.ToString(), toc);
+                    WriteTOC(item.ToString(), null, toc);
 
                 }
                 else if (item.Type == JTokenType.Object)
@@ -35,16 +35,34 @@ namespace TOCBuilder
 
                     {
                         var toc = BuildTOC(root, rootPage, folder);
-                        PrintTOC(rootPage.ToString(), toc);
+                        WriteTOC(rootPage.ToString(), folder, toc);
                     }
 
                     foreach (var page in pages)
                     {
                         var toc = BuildTOC(root, page.ToString(), folder);
-                        PrintTOC(page.ToString(), toc);
+                        WriteTOC(page.ToString(), folder, toc);
                     }
                 }
             }
+        }
+
+        static void WriteTOC(string fileName, string folder, string toc)
+        {
+            const string navHeader = "<!-- Generated Navigation -->";
+            PrintTOC(fileName, toc);
+            var fullPath = Path.Combine(contentRoot, folder ?? "", fileName);
+
+            var content = File.ReadAllText(fullPath);
+
+            var pos = content.IndexOf(navHeader);
+            if(pos != -1)
+            {
+                content = content.Substring(0, pos).Trim();
+            }
+
+            content += $"\n\n{navHeader}\n---\n\n{toc}";
+            File.WriteAllText(fullPath, content.Replace("\r\n", "\n"));
         }
 
         static string BuildTOC(JArray root, string currentFile, string currentFolder)
@@ -56,7 +74,7 @@ namespace TOCBuilder
                 if (item.Type == JTokenType.String)
                 {
                     var isSelected = string.Equals(currentFile, item.ToString());
-                    sb.AppendLine($"* {GetLine(isSelected, item.ToString(), null, null)}");
+                    sb.AppendLine($"* {GetLine(isSelected, currentFolder != null, item.ToString(), null, null)}");
                 }   
                 else if (item.Type == JTokenType.Object)
                 {
@@ -68,18 +86,27 @@ namespace TOCBuilder
                     
                     if (string.Equals(folder, currentFolder))
                     {
-                        sb.AppendLine($"* {GetLine(string.Equals(currentFile, rootPage.ToString()), rootPage.ToString(), folder, null)}");
+                        sb.AppendLine($"* {GetLine(string.Equals(currentFile, rootPage.ToString()), currentFolder != null, rootPage.ToString(), folder, null)}");
                         foreach (var page in pages)
                         {
-                            sb.AppendLine($"** {GetLine(string.Equals(currentFile, page.ToString()), page.ToString(), folder, null)}");
+                            sb.AppendLine($"  * {GetLine(string.Equals(currentFile, page.ToString()), currentFolder != null, page.ToString(), folder, null)}");
                         }
                     }
                     else
                     {
-                        sb.AppendLine($"* {CreateLink(rootPage, folder, name)}");
+                        sb.AppendLine($"* {CreateLink(true, rootPage, folder, name)}");
                     }
                 }
             }
+
+            var links = GetPreviousAndNextPageLinks(root, currentFile, currentFolder);
+
+            sb.AppendLine("");
+
+            if (!string.IsNullOrEmpty(links.nextLink))
+                sb.AppendLine($"Continue on to next page: {links.nextLink}\n");
+            //if (!string.IsNullOrEmpty(links.previousLink))
+            //    sb.AppendLine($"Return to previous page: {links.previousLink}\n");
 
             return sb.ToString();
         }
@@ -101,7 +128,7 @@ namespace TOCBuilder
             return null;
         }
 
-        private static string GetLine(bool isSelected,  string fileName, string folder, string overrideTile = null)
+        private static string GetLine(bool isSelected, bool currentlyInDirectory, string fileName, string folder, string overrideTile = null)
         {
             if (isSelected)
             {
@@ -109,7 +136,7 @@ namespace TOCBuilder
             }
             else
             {
-                return CreateLink(fileName, folder, overrideTile);
+                return CreateLink(currentlyInDirectory, fileName, folder, overrideTile);
             }            
         }
 
@@ -121,17 +148,20 @@ namespace TOCBuilder
             return $"**{title}**";
         }
 
-        private static string CreateLink(string fileName, string folder, string overrideTile = null)
+        private static string CreateLink(bool currentlyInDirectory, string fileName, string folder, string overrideTile = null)
         {
             var fullPath = Path.Combine(contentRoot, folder ?? "", fileName);
             var title = overrideTile ?? GetTitle(fullPath);
             
-            StringBuilder sb = new StringBuilder("./");
-            sb.Append($"[{title}]");
+            StringBuilder sb = new StringBuilder("");
+            sb.Append($"[{title}](");
+
+            sb.Append(currentlyInDirectory ? "../" : "./");                
+
             if (!string.IsNullOrEmpty(folder))
                 sb.Append($"{folder}/");
 
-            sb.Append(fileName);
+            sb.Append(fileName + ")");
             return sb.ToString();
         }
 
@@ -142,40 +172,51 @@ namespace TOCBuilder
             return titleLine.Replace("#", "").Trim();
         }
 
-        static void GetPreviousAndNextPageLinks(JArray root, string currentFile, string currentFolder, out string previousLink, out string nextLink)
+        static (string previousLink, string nextLink) GetPreviousAndNextPageLinks(JArray root, string currentFile, string currentFolder)
         {
-            previousLink = null;
-            nextLink = null;
+            string previousLink = null;
+            string nextLink = null;
             bool pageFound = false;
+
+            Action<string, string, string> processPage = (page, folder, overrideTitle) =>
+            {
+                var isSelected = string.Equals(currentFile, page);
+                if (!isSelected && !pageFound)
+                {
+                    previousLink = CreateLink(currentFolder != null, page, folder, overrideTitle);
+                }
+                else if (isSelected)
+                {
+                    pageFound = true;
+                }
+                else if (pageFound && nextLink == null)
+                {
+                    nextLink = CreateLink(currentFolder != null, page, folder, overrideTitle);
+                }
+            };
+
             foreach (JToken item in root)
             {
                 if (item.Type == JTokenType.String)
                 {
-                    var isSelected = string.Equals(currentFile, item.ToString());
-                    if (!isSelected && !pageFound)
-                    {
-                        previousLink = CreateLink(item.ToString(), null);
-                    }
-                    else if (isSelected)
-                    {
-                        pageFound = true;
-                    }
-                    else if (pageFound && nextLink == null)
-                    {
-                        nextLink = CreateLink(item.ToString(), null);
-                        return;
-                    }
+                    processPage(item.ToString(), null, null);
                 }   
                 else if (item.Type == JTokenType.Object)
                 {
+                    var name = item["Name"].ToString();
                     var folder = item["FolderName"].ToString();
                     var rootPage = item["RootPage"].ToString();
-                    var pages = item["Pages"] as JArray;
+                    processPage(rootPage, folder, name);
 
-                    
-                    
+                    var pages = item["Pages"] as JArray;
+                    foreach(var page in pages)
+                    {
+                        processPage(page.ToString(), folder, null);
+                    }
                 }
-            }            
+            }
+
+            return (previousLink, nextLink);
         }
         
         static void PrintTOC(string page, string toc)
