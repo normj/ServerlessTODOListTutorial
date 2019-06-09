@@ -52,6 +52,7 @@ for the shards of a DynamoDB Stream.
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
   * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
+  * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
 
 Continue on to next page: [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
 

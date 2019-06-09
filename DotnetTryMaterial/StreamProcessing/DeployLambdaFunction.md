@@ -10,7 +10,7 @@ that can be used to access other AWS services. When you construct a service clie
 AWS SDK for .NET without specifing credentials the SDK will locate the credentials for the assigned role.
 
 All roles used for Lambda should have access to CloudWatch Logs to support Lambda saving logs. In this Lambda
-function we also need to access to Amazon Simple Email Service to send emails.
+function we also need to access to Amazon Simple Email Service to send emails and read access for the DynamoDB Stream.
 
 If you don't have an IAM role that has the required permissions skipped the [Create Role](#create-role)
 section of this page to create an IAM role and then return back here.
@@ -97,6 +97,7 @@ section is not necessary
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * **Deploy Lambda Function**
   * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
+  * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
 
 Continue on to next page: [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
 

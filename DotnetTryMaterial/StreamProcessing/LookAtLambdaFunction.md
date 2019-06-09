@@ -62,6 +62,7 @@ public async Task FunctionHandler(DynamoDBEvent dynamoEvent, ILambdaContext cont
   * **Assign Task Lambda Function**
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
   * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
+  * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
 
 Continue on to next page: [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
 

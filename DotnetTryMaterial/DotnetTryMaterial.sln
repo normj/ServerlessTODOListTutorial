@@ -6,7 +6,6 @@ MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Markdown", "Markdown", "{B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}"
 	ProjectSection(SolutionItems) = preProject
 		CommonServerlessServices.md = CommonServerlessServices.md
-		StreamProcessing\DynamoDBStreams.md = StreamProcessing\DynamoDBStreams.md
 		..\README.md = ..\README.md
 		TOC.json = TOC.json
 		TODOListServices.md = TODOListServices.md
@@ -26,6 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamoDBModule", "DynamoDBM
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StreamProcessing", "StreamProcessing", "{30097844-18BC-435D-905C-4C4FD5B5A3E9}"
 	ProjectSection(SolutionItems) = preProject
+		StreamProcessing\ConfigureLambdaEventSource.md = StreamProcessing\ConfigureLambdaEventSource.md
 		StreamProcessing\DeployLambdaFunction.md = StreamProcessing\DeployLambdaFunction.md
 		StreamProcessing\EnableDynamoDBStream.md = StreamProcessing\EnableDynamoDBStream.md
 		StreamProcessing\LookAtLambdaFunction.md = StreamProcessing\LookAtLambdaFunction.md

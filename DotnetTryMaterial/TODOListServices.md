@@ -17,8 +17,8 @@ The TODO List application that we will build and deploy will using the following
 * [What is a serverless application?](./WhatIsServerless.md)
 * [Common AWS Serverless Services](./CommonServerlessServices.md)
 * **TODO List AWS Services Used**
-* [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
-* [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+* [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
+* [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)
 
 Continue on to next page: [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 

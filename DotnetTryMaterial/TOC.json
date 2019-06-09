@@ -17,13 +17,14 @@
         "Name" : "Handling service events with Lambda",
         "FolderName" : "StreamProcessing",
         "RootPage" : "ServiceEvents.md",
-        "Pages" : [
-            "TODOTaskListAssignment.md",
-            "EnableDynamoDBStream.md",
-            "LookAtLambdaFunction.md",
-            "DeployLambdaFunction.md",
-            "SettingUpSES.md"
-        ]
+      "Pages": [
+        "TODOTaskListAssignment.md",
+        "EnableDynamoDBStream.md",
+        "LookAtLambdaFunction.md",
+        "DeployLambdaFunction.md",
+        "SettingUpSES.md",
+        "ConfigureLambdaEventSource.md"
+      ]
     }
 
 ]

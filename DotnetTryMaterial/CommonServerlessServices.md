@@ -30,8 +30,8 @@ common AWS services used that provide the foundation building blocks for a serve
 * [What is a serverless application?](./WhatIsServerless.md)
 * **Common AWS Serverless Services**
 * [TODO List AWS Services Used](./TODOListServices.md)
-* [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
-* [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+* [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
+* [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)
 
 Continue on to next page: [TODO List AWS Services Used](./TODOListServices.md)
 

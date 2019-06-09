@@ -27,6 +27,7 @@ configured to trigger Lambda functions for their events.
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
   * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
+  * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
 
 Continue on to next page: [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
 

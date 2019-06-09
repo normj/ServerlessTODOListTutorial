@@ -94,7 +94,7 @@ namespace TOCBuilder
                     }
                     else
                     {
-                        sb.AppendLine($"* {CreateLink(true, rootPage, folder, name)}");
+                        sb.AppendLine($"* {CreateLink(currentFolder != null, rootPage, folder, name)}");
                     }
                 }
             }

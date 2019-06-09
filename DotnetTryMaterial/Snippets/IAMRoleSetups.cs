@@ -42,7 +42,7 @@ namespace Snippets
 
                     var policies = new string[]
                     {
-                        "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+                        "arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole",
                         "arn:aws:iam::aws:policy/AmazonSESFullAccess"
                     };
                     foreach (var policy in policies)

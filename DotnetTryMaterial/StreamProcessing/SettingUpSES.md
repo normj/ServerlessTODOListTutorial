@@ -32,4 +32,7 @@ emails either through the [AWS console](https://console.aws.amazon.com/ses/home?
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
   * **Setting up Amazon Simple Email Service (SES)**
+  * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
+
+Continue on to next page: [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
 
