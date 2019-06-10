@@ -28,7 +28,7 @@ namespace Snippets
                 }
                 else
                 {
-                    Console.Error.WriteLine("You must set an email in the request send the verification email");
+                    Console.Error.WriteLine("You must set an email in the request to send the verification email");
                 }
             }
             #endregion
