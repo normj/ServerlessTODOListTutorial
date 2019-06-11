@@ -1,4 +1,4 @@
-# AWS SDK for .NET Data Plane APIs
+# Accessing DynamoDB items with the AWS SDK for .NET
 
 The NuGet package [AWSSDK.DynamoDBv2](https://www.nuget.org/packages/AWSSDK.DynamoDBv2/) contains 3 different APIs save and get items from tables. 
 
