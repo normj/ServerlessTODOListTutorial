@@ -21,7 +21,7 @@ namespace Snippets
                 Conversion = DynamoDBEntryConversion.V2,
                 ConsistentRead = true
             };
-            Context = new DynamoDBContext(new AmazonDynamoDBClient(RegionEndpoint.USEast2));  
+            Context = new DynamoDBContext(new AmazonDynamoDBClient());  
             
             Console.WriteLine("Constructed DynamoDBContext");
             #endregion

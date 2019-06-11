@@ -18,7 +18,7 @@ namespace Snippets
                 Conversion = DynamoDBEntryConversion.V2,
                 ConsistentRead = true
             };
-            var Context = new DynamoDBContext(new AmazonDynamoDBClient(RegionEndpoint.USEast2));
+            var Context = new DynamoDBContext(new AmazonDynamoDBClient());
 
             #region test_save_lambda_todo
 

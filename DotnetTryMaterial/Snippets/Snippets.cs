@@ -17,6 +17,20 @@ namespace Snippets
         {
             switch (region)
             {
+                case "current_aws_profile":
+                    SetConfiguration.SetAWSProfile();
+                    return;
+                case "current_aws_region":
+                    SetConfiguration.SetAWSRegion();
+                    return;
+            }
+            
+            Environment.SetEnvironmentVariable("AWS_PROFILE", SetConfiguration.GetAWSProfile());
+            Environment.SetEnvironmentVariable("AWS_REGION", SetConfiguration.GetAWSRegion());
+            
+            
+            switch (region)
+            {
                 case "create_table":
                     CreateTable.CreateTableAsync().Wait();
                     break;

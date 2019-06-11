@@ -14,7 +14,7 @@ namespace Snippets
         public static async Task CreateTableAsync()
         {
             #region create_table
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new CreateTableRequest
                 {
@@ -41,7 +41,7 @@ namespace Snippets
         public static async Task UpdateTableAsync()
         {
             #region update_table
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new UpdateTableRequest
                 {
@@ -59,7 +59,7 @@ namespace Snippets
         public static async Task CheckStatusAsync()
         {
             #region check_status
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new DescribeTableRequest
                 {
@@ -84,7 +84,7 @@ namespace Snippets
         public static async Task DeleteTableAsync()
         {
             #region delete_table
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new DeleteTableRequest
                 {

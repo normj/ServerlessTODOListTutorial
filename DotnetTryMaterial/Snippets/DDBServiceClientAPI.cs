@@ -13,7 +13,7 @@ namespace Snippets
         public static async Task PutItemAsync()
         {
             #region service_client_put
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new PutItemRequest
                 {
@@ -45,7 +45,7 @@ namespace Snippets
         public static async Task UpdateItemAsync()
         {
             #region service_client_update
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new UpdateItemRequest()
                 {
@@ -76,7 +76,7 @@ namespace Snippets
         public static async Task GetItemAsync()
         {
             #region service_client_get
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new GetItemRequest
                 {
@@ -106,7 +106,7 @@ namespace Snippets
         public static async Task QueryItemsAsync()
         {
             #region service_client_query
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new QueryRequest
                 {
@@ -141,7 +141,7 @@ namespace Snippets
         public static async Task DeleteItemAsync()
         {
             #region service_client_delete
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new DeleteItemRequest
                 {

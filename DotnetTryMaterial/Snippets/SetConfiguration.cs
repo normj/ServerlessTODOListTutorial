@@ -32,7 +32,7 @@ namespace Snippets
             string AWS_REGION;
             
             #region current_aws_region
-            AWS_REGION = "us-east-1";
+            AWS_REGION = "us-west-2";
             #endregion
 
             return  AWS_REGION;
@@ -83,7 +83,7 @@ namespace Snippets
                 if (inRegion && line.Contains(property))
                 {
                     var startPos = line.IndexOf("\"") + 1;
-                    line = line.Substring(0, startPos) + "\"";
+                    line = line.Substring(0, startPos) + value + "\";";
                 }
 
                 sb.AppendLine(line);

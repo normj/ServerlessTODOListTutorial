@@ -18,8 +18,8 @@ namespace Snippets
         public static async Task AddEventSourceAsync()
         {
             #region add_dynamodb_event_source
-            using (var streamClient = new AmazonDynamoDBStreamsClient(RegionEndpoint.USEast2))
-            using (var lambdaClient = new AmazonLambdaClient(RegionEndpoint.USEast2))
+            using (var streamClient = new AmazonDynamoDBStreamsClient())
+            using (var lambdaClient = new AmazonLambdaClient())
             {
                 // TODO: Enter Lambda function name;
                 var functionName = "";

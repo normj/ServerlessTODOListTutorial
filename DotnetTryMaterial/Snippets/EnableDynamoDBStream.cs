@@ -17,7 +17,7 @@ namespace Snippets
         public static async Task EnableAsync()
         {
             #region enable_stream_status
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new UpdateTableRequest
                 {
@@ -45,7 +45,7 @@ namespace Snippets
         public static async Task CheckStatusAsync()
         {
             #region check_stream_status
-            using (var ddbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2))
+            using (var ddbClient = new AmazonDynamoDBClient())
             {
                 var request = new DescribeTableRequest
                 {
@@ -73,7 +73,7 @@ namespace Snippets
                 Conversion = DynamoDBEntryConversion.V2,
                 ConsistentRead = true
             };
-            var Context = new DynamoDBContext(new AmazonDynamoDBClient(RegionEndpoint.USEast2));
+            var Context = new DynamoDBContext(new AmazonDynamoDBClient());
 
             #region test_stream_read
 
@@ -95,7 +95,7 @@ namespace Snippets
 
             await Context.SaveAsync(list);
             
-            using (var streamClient = new AmazonDynamoDBStreamsClient(RegionEndpoint.USEast2))
+            using (var streamClient = new AmazonDynamoDBStreamsClient())
             {
                 // Function for reading records continuously from a shard.
                 Func<string, CancellationToken, Task> shardReader = async (iterator, token) =>
