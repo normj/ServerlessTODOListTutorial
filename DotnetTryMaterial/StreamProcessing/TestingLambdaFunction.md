@@ -10,6 +10,7 @@ Be sure in the code below to set the **assignedEmail** to an email address that 
 <!-- Generated Navigation -->
 ---
 
+* [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
 * [TODO List AWS Services Used](../TODOListServices.md)

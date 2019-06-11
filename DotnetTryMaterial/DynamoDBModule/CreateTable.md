@@ -1,4 +1,4 @@
-# Using the AWS SDK for .NET
+# Creating DynamoDB table
 
 The NuGet package [AWSSDK.DynamoDBv2](https://www.nuget.org/packages/AWSSDK.DynamoDBv2/) is used to access all of the operations the DynamoDB service
 provides. This includes both the control plane API like creating tables as well as the data plane API for putting and getting items from tables.
@@ -69,11 +69,12 @@ When you delete a table all of its data and indexes will be deleted as well.
 <!-- Generated Navigation -->
 ---
 
+* [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
-  * **Using the AWS SDK for .NET**
+  * **Creating DynamoDB table**
   * [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)

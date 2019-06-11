@@ -10,6 +10,7 @@ to notifiy users when they have been assigned a task. To implement this we need 
 <!-- Generated Navigation -->
 ---
 
+* [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
 * [TODO List AWS Services Used](../TODOListServices.md)

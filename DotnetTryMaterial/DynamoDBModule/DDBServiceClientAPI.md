@@ -81,11 +81,12 @@ To delete the item pass in the table name and the key information.
 <!-- Generated Navigation -->
 ---
 
+* [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
-  * [Using the AWS SDK for .NET](../DynamoDBModule/CreateTable.md)
+  * [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)
   * [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * **CRUD operations with Amazon DynamoDB Service Client**
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)

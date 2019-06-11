@@ -19,6 +19,7 @@ Serverless provides built-in availability and fault tolerance. You don't need to
 <!-- Generated Navigation -->
 ---
 
+* [Getting Started](./GettingStarted.md)
 * **What is a serverless application?**
 * [Common AWS Serverless Services](./CommonServerlessServices.md)
 * [TODO List AWS Services Used](./TODOListServices.md)

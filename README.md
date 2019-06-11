@@ -31,4 +31,4 @@ To get started with this tutorial follow the following steps.
 
 ## Let's Start
 
-If you are seeing this page after running `dotnet try` then click [here to get started](./DotnetTryMaterial/WhatIsServerless.md).  
+If you are seeing this page after running `dotnet try` then click [here to get started](./DotnetTryMaterial/GettingStarted.md).  

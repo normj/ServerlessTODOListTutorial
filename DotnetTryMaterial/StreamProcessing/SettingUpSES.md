@@ -22,6 +22,7 @@ emails either through the [AWS console](https://console.aws.amazon.com/ses/home?
 <!-- Generated Navigation -->
 ---
 
+* [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
