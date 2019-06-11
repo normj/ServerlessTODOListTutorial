@@ -9,3 +9,5 @@
 
 **/.idea
 **/*.trydotnet-builderror
+
+.vscode/*
