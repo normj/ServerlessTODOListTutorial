@@ -1,6 +1,6 @@
 # The Serverless TODO List Frontend
 
-Now that we have learned how DynamoDB and Lambda works lets take a deeper look of the application we are building.
+Now that we have learned how DynamoDB and Lambda works lets take a deeper look atwq the application we are building.
 
 In our solution folder we have already taken a look at the Lambda project **ServerlessTODOList.StreamProcessor**. 
 Now lets take a look at the other projects.
@@ -11,7 +11,7 @@ Now lets take a look at the other projects.
 |ServerlessTODOList.DataAccess|Uses the Data Model API to save and retrieve the .NET Types defined in ServerlessTODOList.Common|
 |ServerlessTODOList.Frontend|Our ASP.NET Core Application that we can use to view and edit our TODO Lists|
 
-In this section we are going to focus on **ServerlessTODOList.Frontend**. The basic ASP.NET Core components are written but there
+In this section we are going to focus on **ServerlessTODOList.Frontend**. The basic ASP.NET Core UI components are written but there
 are a few more changes we want to make to have our ASP.NET Core application take better advantage of AWS services.
 
 <!-- Generated Navigation -->

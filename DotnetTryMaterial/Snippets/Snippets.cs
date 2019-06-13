@@ -82,6 +82,14 @@ namespace Snippets
                     TestDynamoDBLambdaFunction.SaveTODOListAsync().Wait();
                     break;
 
+                
+                case "add_parameter_store_values":
+                    ParameterStoreSetup.AddParametersAsync().Wait();
+                    break;
+                case "test_parameter_store_values":
+                    ParameterStoreSetup.TestParametersAsync().Wait();
+                    break;
+                
                 case "setup_streamprocessor_role":
                     IAMRoleSetups.SetupStreamProcessorRoleAsync().Wait();
                     break;
