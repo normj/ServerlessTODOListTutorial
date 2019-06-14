@@ -34,6 +34,7 @@ up GitHub issues for feedback or fork the repo and send those PRs to fix my typo
 * [Getting Started](./GettingStarted.md)
 * [What is a serverless application?](./WhatIsServerless.md)
 * [Common AWS Serverless Services](./CommonServerlessServices.md)
+* [What are we going to build in this tutorial](./WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](./TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)

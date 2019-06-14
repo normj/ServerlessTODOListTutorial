@@ -22,6 +22,7 @@ Serverless provides built-in availability and fault tolerance. You don't need to
 * [Getting Started](./GettingStarted.md)
 * **What is a serverless application?**
 * [Common AWS Serverless Services](./CommonServerlessServices.md)
+* [What are we going to build in this tutorial](./WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](./TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)

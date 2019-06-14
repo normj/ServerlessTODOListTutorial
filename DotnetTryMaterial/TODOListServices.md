@@ -1,8 +1,8 @@
 # TODO List AWS Services Used
 
-The TODO List application that we will build and deploy will using the following services.
+The TODO list application that we will build and deploy will use the following services.
 
-|||
+| Services | Description |
 |-|-|
 | Amazon DynamoDB | To store the the TODO Lists |
 | Amazon Simple Email Service | Send emails for task assignment |
@@ -17,6 +17,7 @@ The TODO List application that we will build and deploy will using the following
 * [Getting Started](./GettingStarted.md)
 * [What is a serverless application?](./WhatIsServerless.md)
 * [Common AWS Serverless Services](./CommonServerlessServices.md)
+* [What are we going to build in this tutorial](./WhatAreWeBuilding.md)
 * **TODO List AWS Services Used**
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)

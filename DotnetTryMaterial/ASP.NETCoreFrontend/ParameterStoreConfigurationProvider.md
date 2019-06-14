@@ -84,13 +84,14 @@ well as configuring an auto reload of data from Parameter store.
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
 * [The Serverless TODO List Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
   * [Using Amazon Cognito for Identity](../ASP.NETCoreFrontend/WebIdentity.md)
   * [Persisting ASP.NET Core Data Protection Keys](../ASP.NETCoreFrontend/ParameterStoreDataProtection.md)
-  * **AWS Parameter Store for Managing Configuration**
+  * **AWS Systems Manager Parameter Store for Managing Configuration**
   * [ASP.NET Core wrap up](../ASP.NETCoreFrontend/FrontendWrapup.md)
 * [Final Wrap Up](../FinalWrapup.md)
 

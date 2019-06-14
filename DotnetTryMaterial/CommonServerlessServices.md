@@ -1,7 +1,7 @@
 # Common AWS Serverless Services
 
 There are many AWS services that can be considered serverless. Here are some of the most 
-common AWS services used that provide the foundation building blocks for a serverless application.
+common AWS services used that provide the foundational building blocks for a serverless application.
 
 ## Data Services
 
@@ -30,11 +30,12 @@ common AWS services used that provide the foundation building blocks for a serve
 * [Getting Started](./GettingStarted.md)
 * [What is a serverless application?](./WhatIsServerless.md)
 * **Common AWS Serverless Services**
+* [What are we going to build in this tutorial](./WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](./TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)
 * [Building the ASP.NET Core Frontend](./ASP.NETCoreFrontend/TheFrontend.md)
 * [Final Wrap Up](./FinalWrapup.md)
 
-Continue on to next page: [TODO List AWS Services Used](./TODOListServices.md)
+Continue on to next page: [What are we going to build in this tutorial](./WhatAreWeBuilding.md)
 

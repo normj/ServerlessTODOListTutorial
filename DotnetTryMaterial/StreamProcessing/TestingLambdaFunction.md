@@ -13,6 +13,7 @@ Be sure in the code below to set the **assignedEmail** to an email address that 
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Using Lambda to Handle Service Events](../StreamProcessing/ServiceEvents.md)

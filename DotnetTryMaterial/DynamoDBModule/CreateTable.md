@@ -1,16 +1,13 @@
 # Creating DynamoDB table
 
-The NuGet package [AWSSDK.DynamoDBv2](https://www.nuget.org/packages/AWSSDK.DynamoDBv2/) is used to access all of the operations the DynamoDB service
-provides. This includes both the control plane API like creating tables as well as the data plane API for putting and getting items from tables.
-
 ## Create Table
 
-Before we can start saving TODO lists into DynamoDB we first have to create a table. A table does not require a schema but the key 
+Before we can start saving TODO lists into DynamoDB we first have to create a table. A table does not have a schema but the key 
 attributes must be defined.
 
 ### Table Key
 
-A key is made of 2 parts. The first is a **Hash key** which is used by DynamoDB to partition the data. For best performance choose an attribute
+A table key is made of 2 parts. The first is a **Hash key** which is used by DynamoDB to partition the data. For best performance choose an attribute
 that evenly distributes the data to avoid having large partitions that can cause hot spots. The second part of the key is optional 
 which is a **Range key**. The range key can be used to do queries within a hash key.
 
@@ -25,7 +22,7 @@ we will not use indexes.
 ### Provisioning
 
 A table has 2 possible billing modes. The first mode called Provisioned where you set the read and write capacity needed for the table. Amazon CloudWatch and Autoscaling can be
-used to monitor the usage versus provisioned and automatically adjust the provisioning. The second mode is called 
+used to monitor the usage versus what has been provisioned and automatically adjust the provisioning. The second mode is called 
 [On-Demand](https://aws.amazon.com/blogs/aws/amazon-dynamodb-on-demand-no-capacity-planning-and-pay-per-request-pricing/) where you pay per
 request instead of for provision requests. The guidance is to use provisioned mode if the usage is predictable and on-demand when the traffic
 is difficult to predict.
@@ -72,15 +69,16 @@ When you delete a table all of its data and indexes will be deleted as well.
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
   * **Creating DynamoDB table**
-  * [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
+  * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
 * [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
-Continue on to next page: [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
+Continue on to next page: [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
 

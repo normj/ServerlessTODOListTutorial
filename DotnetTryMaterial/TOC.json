@@ -2,6 +2,7 @@
   "GettingStarted.md",
   "WhatIsServerless.md",
   "CommonServerlessServices.md",
+  "WhatAreWeBuilding.md",
   "TODOListServices.md",
   {
     "Name": "Using DynamoDB to store TODO Lists",

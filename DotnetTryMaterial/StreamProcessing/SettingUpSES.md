@@ -25,6 +25,7 @@ emails either through the [AWS console](https://console.aws.amazon.com/ses/home?
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Using Lambda to Handle Service Events](../StreamProcessing/ServiceEvents.md)

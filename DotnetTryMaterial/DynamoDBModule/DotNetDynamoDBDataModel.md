@@ -20,9 +20,9 @@ the data from the properties on the **TODOList** and **TODOListItem** to the ser
 | CreateDate | S |
 | UpdateDate | S |
 | Items | L |
-| TODOListItem.Description | S |
-| TODOListItem.AssignedEmail | S |
-| TODOListItem.Complete | BOOL |
+| -> TODOListItem.Description | S |
+| -> TODOListItem.AssignedEmail | S |
+| -> TODOListItem.Complete | BOOL |
 
 **Note:** In this example the **DynamoDBContextConfig.Conversion** is set to **DynamoDBEntryConversion.V2**. This should
 be set for all new applications as it supports the BOOL, L and M DynamoDB types. The original V1 conversion was 
@@ -70,10 +70,11 @@ To delete an object we need to call the DeleteAsync method passing in the values
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
+* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
   * [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)
-  * [AWS SDK for .NET Data Plane APIs](../DynamoDBModule/DotNetDynamoDBAPIs.md)
+  * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
   * **CRUD operations with Data Model API**
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
