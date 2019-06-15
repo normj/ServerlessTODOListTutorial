@@ -1,6 +1,6 @@
 # Assign Task Lambda Function
 
-In our application's solution the **ServerlessTODOList.StreamProcessor** project contains the .NET Core Lambda function.
+In our application's solution the **ServerlessTODOList.StreamProcessor** project contains the .NET Core Lambda function that will respond to events from the stream.
 You can see none of the shard management code is here, we just implement the `foreach` statement.
 
 ```csharp

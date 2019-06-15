@@ -5,7 +5,7 @@ to notifiy users when they have been assigned a task. To implement this we need 
 
 * Enable a DynamoDB Stream for our TODOList table
 * Write and Deploy a Lambda function
-* Configure DynamoDB Stream as a source for Lambda function
+* Configure DynamoDB Stream as an event source for Lambda function
 
 <!-- Generated Navigation -->
 ---
