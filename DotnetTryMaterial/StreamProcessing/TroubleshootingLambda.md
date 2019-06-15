@@ -24,8 +24,8 @@ checkout the [README.md](https://github.com/aws/aws-lambda-dotnet/tree/master/To
 on how to configure the tool for it.
 
 To capture the Lambda JSON event object so that it can be replayed locally, redeploy the Lambda function
-with the **LAMBDA_NET_SERIALIZER_DEBUG** variable set to **true**. Once this environment variable is set the 
-JSON event will be written to the CloudWatch Log. Copy the event from the log and pasted into **Function Input** 
+with the **LAMBDA_NET_SERIALIZER_DEBUG** environment variable set to **true**. Once this environment variable is set the 
+JSON event will be written to the CloudWatch Log. Copy the event from the log and past it into the **Function Input** 
 text box and push **Execute Function**.
 
 <!-- Generated Navigation -->

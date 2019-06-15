@@ -6,6 +6,8 @@ or the AWS Toolkit for Visual Studio.
 
 ## Configuring with AWS Toolkit for Visual Studio
 
+![View Event Sources](./images/ToolkitAddEventSource.png)
+
 After the Lambda function was deployed the Lambda function view was displayed from the AWS Explorer. From this view
 you can create the event source mapping by:
 
@@ -21,8 +23,6 @@ TRIM_HORIZON basically means start reading from the stream at the earliest point
 This is at most 24 hours in the past.
 LATEST means start reading items starting from the point the mapping event source was made.
 
-![View Event Sources](./images/ToolkitAddEventSource.png)
-
 ## Configuring with AWS Lambda Console
 
 Instructions for configuring with the AWS Lambda Console:
@@ -37,8 +37,7 @@ Instructions for configuring with the AWS Lambda Console:
 
 ## Configuring with the AWS SDK for .NET
 
-As an example of how to use the AWS SDK for .NET the code below shows how to add the event source. You must
-set the name of the function that you deployed earlier to the **functionName** variable.
+The code below uses the AWS SDK for .NET to add the event source. You must set the name of the function to the name that you deployed with earlier to the **functionName** variable.
 
 ```cs --source-file ../Snippets/ConfigureEventSourceMapping.cs --project ../Snippets/Snippets.csproj --region add_dynamodb_event_source
 ```

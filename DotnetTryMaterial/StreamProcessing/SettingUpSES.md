@@ -12,9 +12,9 @@ Checkout the developer guide about [setting up email](https://docs.aws.amazon.co
 
 ## Verifing Email Address
 
-Since your account is most likely in the sandbox mode to see the emails our Lambda function send you
-need to verify each of the emails you plan on testing with for both the From and To. You can verify
-emails either through the [AWS console](https://console.aws.amazon.com/ses/home?region=us-east-1#verified-senders-email:) or by enter an email in the code snippet below and executing it.
+Your account is most likely in the sandbox mode. To see the emails our Lambda function will send, you
+need to verify each of the emails you plan on testing with for both the From and To addresses. You can verify
+emails either through the [AWS console](https://console.aws.amazon.com/ses/home?region=us-east-1#verified-senders-email:) or by entering an email in the code snippet below and executing it.
 
 ```cs --source-file ../Snippets/SESSnippets.cs --project ../Snippets/Snippets.csproj --region send_verification_email
 ```
