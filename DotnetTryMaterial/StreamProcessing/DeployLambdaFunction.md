@@ -45,9 +45,15 @@ the **Amazon.Lambda.Tools** .NET Core global tool.
 
 ![Lambda Wizard Page 2](./images/LambdaWizardPage2.png)
 
-### IAM Role
-The only required field that must be set is the IAM role that you want to use to 
+### IAM Role (Required)
+The IAM role that you want to use to 
 provide AWS credentials to the Lambda function.
+
+### Environment (Required for Tutorial)
+Configuration values can be set as environment variables for the Lambda function. For our Lambda function the **FROM_EMAIL** variable must be set
+to the address that the email will be sent from._
+
+
 
 ### Memory
 This controls how much memory will be allocated to Lambda function while it is processing an event. The amount of memory you allocate also controls
@@ -65,8 +71,6 @@ permissions are required for the IAM role to create the ENI. Check out the Lambd
 ### DLQ Resource
 Dead Letter Queue (DLQ) can be either an SQS queue or SNS Topic. When a Lambda function throws an unhandled exception while processing an event Lambda will retry the event a few times. If the function still fails Lambda will send the event to the DLQ if one is assigned. This can be useful troubleshooting and debugging failed events.
 
-### Environment
-Configuration values can be set as environment variables for the Lambda function.
 
 ## Push Upload
 
@@ -89,8 +93,11 @@ to create the Lambda function. The only values that need to set are the Lambda f
 To deploy the function execute the command from the directory of **ServerlessTODOList.StreamProcessor** execute the following command.
 
 ```
-dotnet lambda deploy-function ServerlessTODOListStreamProcessor --function-role <iam-role-name>
+dotnet lambda deploy-function ServerlessTODOListStreamProcessor --environment-variable FROM_EMAIL=<from email address> --function-role <iam-role-name>
 ```
+
+**Notice** the FROM_EMAIL environment variable is set with the `--environment-variable` switch. The format of this switch is 
+`<env-name1>=<env-value1>;<env-name2>=<env-name2>`.
 
 
 

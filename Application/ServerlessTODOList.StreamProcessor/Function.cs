@@ -26,7 +26,8 @@ namespace ServerlessTODOList.StreamProcessor
 {
     public class Function
     {
-        const string FROM_EMAIL = "normj@amazon.com";
+        const string FROM_EMAIL_ENV_NAME = "FROM_EMAIL";
+        string fromEmail;
 
         DynamoDBContext Context { get; set; }
 
@@ -40,6 +41,13 @@ namespace ServerlessTODOList.StreamProcessor
             });
 
             this.SESClient = new AmazonSimpleEmailServiceClient(Amazon.RegionEndpoint.USEast1);
+
+            if(string.IsNullOrEmpty(Environment.GetEnvironmentVariable(FROM_EMAIL_ENV_NAME)))
+            {
+                throw new Exception($"The {FROM_EMAIL_ENV_NAME} environment variable to the email address that will be the from address for the emails.");
+            }
+
+            fromEmail = Environment.GetEnvironmentVariable(FROM_EMAIL_ENV_NAME);
         }
 
         public async Task FunctionHandler(DynamoDBEvent dynamoEvent, ILambdaContext context)
@@ -63,7 +71,7 @@ namespace ServerlessTODOList.StreamProcessor
 
                         var request = new SendEmailRequest
                         {
-                            Source = FROM_EMAIL,
+                            Source = fromEmail,
                             Destination = new Destination { ToAddresses = new List<string> { kvp.Key } },
                             Message = new Message
                             {
@@ -76,7 +84,7 @@ namespace ServerlessTODOList.StreamProcessor
                         };
 
                         await this.SESClient.SendEmailAsync(request);
-                        context.Logger.LogLine($"Sent email to {request.Destination.ToAddresses[0]}");
+                        context.Logger.LogLine($"Sent email to {request.Destination.ToAddresses[0]} from {request.Source}");
                         context.Logger.LogLine(emailBody);
                     }
                 }

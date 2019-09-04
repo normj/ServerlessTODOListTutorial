@@ -3,50 +3,87 @@
 In our application's solution the **ServerlessTODOList.StreamProcessor** project contains the .NET Core Lambda function that will respond to events from the stream.
 You can see none of the shard management code is here, we just implement the `foreach` statement.
 
+## Passed in Configuration
+Notice in the constructor **FROM_EMAIL** environment variable is read. This is set during deployment time
+to configure the from address for the emails that are being sent through Simple Email Service.
+
 ```csharp
-public async Task FunctionHandler(DynamoDBEvent dynamoEvent, ILambdaContext context)
+public class Function
 {
-    foreach (var record in dynamoEvent.Records)
+    const string FROM_EMAIL_ENV_NAME = "FROM_EMAIL";
+    string fromEmail;
+
+    DynamoDBContext Context { get; set; }
+
+    IAmazonSimpleEmailService SESClient { get; set; }
+
+    public Function()
     {
-        try
+        this.Context = new DynamoDBContext(new AmazonDynamoDBClient(), new DynamoDBContextConfig
         {
-            context.Logger.LogLine($"Event ID: {record.EventID}");
-            context.Logger.LogLine($"Event Name: {record.EventName}");
+            Conversion = DynamoDBEntryConversion.V2
+        });
 
-            var oldVersion = ConvertToTODOList(record.Dynamodb.OldImage);
-            var newVersion = ConvertToTODOList(record.Dynamodb.NewImage);
+        this.SESClient = new AmazonSimpleEmailServiceClient(Amazon.RegionEndpoint.USEast1);
 
-            var emailsToTasks = CompareVersions(oldVersion, newVersion);
-            foreach (var kvp in emailsToTasks)
+        if(string.IsNullOrEmpty(Environment.GetEnvironmentVariable(FROM_EMAIL_ENV_NAME)))
+        {
+            throw new Exception($"The {FROM_EMAIL_ENV_NAME} environment variable to the email address that will be the from address for the emails.");
+        }
+
+        fromEmail = Environment.GetEnvironmentVariable(FROM_EMAIL_ENV_NAME);
+    }
+
+    public async Task FunctionHandler(DynamoDBEvent dynamoEvent, ILambdaContext context)
+    {
+        context.Logger.LogLine($"Beginning to process {dynamoEvent.Records.Count} records...");
+
+        foreach (var record in dynamoEvent.Records)
+        {
+            try
             {
-                var emailBody = CreateEmailBody(kvp.Value);
+                context.Logger.LogLine($"Event ID: {record.EventID}");
+                context.Logger.LogLine($"Event Name: {record.EventName}");
 
-                var request = new SendEmailRequest
+                var oldVersion = ConvertToTODOList(record.Dynamodb.OldImage);
+                var newVersion = ConvertToTODOList(record.Dynamodb.NewImage);
+
+                var emailsToTasks = CompareVersions(oldVersion, newVersion);
+                foreach (var kvp in emailsToTasks)
                 {
-                    Source = FROM_EMAIL,
-                    Destination = new Destination { ToAddresses = new List<string> { kvp.Key } },
-                    Message = new Message
-                    {
-                        Subject = new Content { Data = "New tasks have been assigned to you." },
-                        Body = new Body
-                        {
-                            Text = new Content { Data = emailBody }
-                        }
-                    }
-                };
+                    var emailBody = CreateEmailBody(kvp.Value);
 
-                await this.SESClient.SendEmailAsync(request);
-                context.Logger.LogLine($"Sent email to {request.Destination.ToAddresses[0]}");
-                context.Logger.LogLine(emailBody);
+                    var request = new SendEmailRequest
+                    {
+                        Source = fromEmail,
+                        Destination = new Destination { ToAddresses = new List<string> { kvp.Key } },
+                        Message = new Message
+                        {
+                            Subject = new Content { Data = "New tasks have been assigned to you." },
+                            Body = new Body
+                            {
+                                Text = new Content { Data = emailBody }
+                            }
+                        }
+                    };
+
+                    await this.SESClient.SendEmailAsync(request);
+                    context.Logger.LogLine($"Sent email to {request.Destination.ToAddresses[0]} from {request.Source}");
+                    context.Logger.LogLine(emailBody);
+                }
+            }
+            catch(Exception e)
+            {
+                context.Logger.LogLine($"Error processing record: {e.Message}");
+                context.Logger.LogLine(e.StackTrace);
             }
         }
-        catch(Exception e)
-        {
-            context.Logger.LogLine($"Error processing record: {e.Message}");
-            context.Logger.LogLine(e.StackTrace);
-        }
+
+        context.Logger.LogLine("Stream processing complete.");
     }
-}
+
+ ...
+
 ```
 
 <!-- Generated Navigation -->
