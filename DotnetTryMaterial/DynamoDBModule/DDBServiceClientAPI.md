@@ -103,7 +103,6 @@ Search for items based on any attributes. This will cause a full table scan so u
 
 Backup tables on demand and restore them to new tables.
 
-
 <!-- Generated Navigation -->
 ---
 
@@ -117,6 +116,7 @@ Backup tables on demand and restore them to new tables.
   * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * **CRUD operations with Amazon DynamoDB Service Client**
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
+  * [Amazon DynamoDB wrap up](../DynamoDBModule/DynamoDBWrapUp.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
 * [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)

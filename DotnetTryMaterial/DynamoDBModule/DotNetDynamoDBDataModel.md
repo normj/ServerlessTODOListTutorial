@@ -77,9 +77,10 @@ To delete an object we need to call the DeleteAsync method passing in the values
   * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
   * **CRUD operations with Data Model API**
+  * [Amazon DynamoDB wrap up](../DynamoDBModule/DynamoDBWrapUp.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
 * [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
-Continue on to next page: [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
+Continue on to next page: [Amazon DynamoDB wrap up](../DynamoDBModule/DynamoDBWrapUp.md)
 
