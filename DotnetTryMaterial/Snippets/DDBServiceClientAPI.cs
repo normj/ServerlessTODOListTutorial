@@ -67,8 +67,15 @@ namespace Snippets
                     }
                 };
 
-                var response = await ddbClient.UpdateItemAsync(request);
-                Console.WriteLine($"TODO List updated");
+                try
+                {
+                    var response = await ddbClient.UpdateItemAsync(request);
+                    Console.WriteLine("TODO List updated");
+                }
+                catch(ConditionalCheckFailedException)
+                {
+                    Console.WriteLine("TODO List not updated because it failed the conditional update.");
+                }
             }
             #endregion
         }        

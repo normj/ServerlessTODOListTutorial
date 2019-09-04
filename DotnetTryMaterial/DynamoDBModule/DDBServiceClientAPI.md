@@ -27,12 +27,6 @@ The **PutItem** operation either creates a new item or replaces an existing item
 
 ```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_put
 ```
-## Update Item
-
-The **UpdateItem** operation can be used to do a partial update of the item in DynamoDB. This is really useful when you are only changing a few fields and can save you from consuming write units for attributes that you are not changing.
-
-```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_update
-```
 
 ## Get Item
 
@@ -70,6 +64,23 @@ request.ExclusiveStartKey = response?.LastEvaluatedKey;
 ```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_query
 ```
 
+## Update Item
+
+The **UpdateItem** operation can be used to do a partial update of the item in DynamoDB. This is really useful when you are only changing a few fields and can save you from consuming write units for attributes that you are not changing.
+Items are updated using expressions that define how to update attributes. Expressions can also be used to do conditional updates.
+
+### Expression Operators
+| Name | Description |
+| -- | -- |
+| SET | Sets an attribute. |
+| REMOVE | Remove an attribute from an item |
+| ADD | Adds the value to an item. If the type is 'number' then adds the value to existing value. If the type is a `set` then adds to the collection. |
+| DELETE | deletes an element from a `set` |
+
+```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_update
+```
+
+For more information about DynamoDB expressions check out the [Developer Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.html)
 
 ## Delete Item
 
@@ -77,6 +88,21 @@ To delete the item pass in the table name and the key information.
 
 ```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_delete
 ```
+
+## Further Topics
+
+### [Indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html)
+
+Allows fast queries on other attributes besides hash key.
+ 
+### [Scan](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html) 
+
+Search for items based on any attributes. This will cause a full table scan so use sparingly.
+
+### [Backup and Restore](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html)
+
+Backup tables on demand and restore them to new tables.
+
 
 <!-- Generated Navigation -->
 ---
