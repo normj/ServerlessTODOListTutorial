@@ -21,7 +21,7 @@ namespace Snippets
                 Conversion = DynamoDBEntryConversion.V2,
                 ConsistentRead = true
             };
-            Context = new DynamoDBContext(new AmazonDynamoDBClient());  
+            Context = new DynamoDBContext(new AmazonDynamoDBClient(), config);  
             
             Console.WriteLine("Constructed DynamoDBContext");
             #endregion
@@ -33,7 +33,7 @@ namespace Snippets
             #region datamodel_construct_save
             var list = new TODOList
             {
-                User =  "testuser",
+                User =  "dm-testuser",
                 ListId = "generated-list-id",
                 Complete =  false,
                 Name = "ExampleList",
@@ -57,7 +57,7 @@ namespace Snippets
             Console.WriteLine("----- Executing Load -----");
             #region datamodel_construct_load
 
-            var list = await this.Context.LoadAsync<TODOList>("testuser", "generated-list-id");
+            var list = await this.Context.LoadAsync<TODOList>("dm-testuser", "generated-list-id");
             if(list != null)
             {
                 Console.WriteLine($"Found list {list.Name}");
@@ -79,7 +79,7 @@ namespace Snippets
             Console.WriteLine("----- Executing Query -----");
             #region datamodel_construct_query
 
-            AsyncSearch<TODOList> search = this.Context.QueryAsync<TODOList>("testuser");
+            AsyncSearch<TODOList> search = this.Context.QueryAsync<TODOList>("dm-testuser");
 
             var lists = await search.GetRemainingAsync();
 
@@ -101,7 +101,7 @@ namespace Snippets
             Console.WriteLine("----- Executing Delete -----");
             #region datamodel_construct_delete
 
-            await this.Context.DeleteAsync<TODOList>("testuser", "generated-list-id");
+            await this.Context.DeleteAsync<TODOList>("dm-testuser", "generated-list-id");
             Console.WriteLine("Deleted list");
 
             #endregion

@@ -20,7 +20,7 @@ namespace Snippets
                     TableName = "TODOList",
                     Item = new Dictionary<string, AttributeValue>
                     {
-                        { "User", new AttributeValue{S = "testuser" } },
+                        { "User", new AttributeValue{S = "serviceclient-testuser" } },
                         { "ListId", new AttributeValue{S = "generated-list-id" } },
                         { "Name", new AttributeValue{S = "Test List" } },
                         { "Complete", new AttributeValue{BOOL = false } },
@@ -52,7 +52,7 @@ namespace Snippets
                     TableName = "TODOList",
                     Key = new Dictionary<string, AttributeValue>
                     {
-                        { "User", new AttributeValue{S = "testuser" } },
+                        { "User", new AttributeValue{S = "serviceclient-testuser" } },
                         { "ListId", new AttributeValue{S = "generated-list-id" } },
                     },
                     UpdateExpression = "SET #n = :name REMOVE #c",
@@ -90,7 +90,7 @@ namespace Snippets
                     TableName = "TODOList",
                     Key = new Dictionary<string, AttributeValue>
                     {
-                        { "User", new AttributeValue{ S = "testuser" } },
+                        { "User", new AttributeValue{ S = "serviceclient-testuser" } },
                         { "ListId", new AttributeValue{ S = "generated-list-id" } }
                     }
                 };
@@ -125,7 +125,7 @@ namespace Snippets
                     },
                     ExpressionAttributeValues = new Dictionary<string, AttributeValue>
                     {
-                        {":hashKey", new AttributeValue{ S = "testuser" } } 
+                        {":hashKey", new AttributeValue{ S = "serviceclient-testuser" } } 
                     }
                 };
 
@@ -155,7 +155,7 @@ namespace Snippets
                     TableName = "TODOList",
                     Key = new Dictionary<string, AttributeValue>
                     {
-                        { "User", new AttributeValue{ S = "testuser" } },
+                        { "User", new AttributeValue{ S = "serviceclient-testuser" } },
                         { "ListId", new AttributeValue{ S = "generated-list-id" } }
                     }
                 };
