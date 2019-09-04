@@ -9,8 +9,8 @@ When this function is deployed an IAM role is required. The role provides AWS cr
 that can be used to access other AWS services. When you construct a service client from the 
 AWS SDK for .NET without specifing credentials the SDK will locate the credentials for the assigned role.
 
-All roles used for Lambda should have access to CloudWatch Logs to support Lambda saving logs. In this Lambda
-function we also need to access to Amazon Simple Email Service to send emails and read access for the DynamoDB Stream.
+All roles used for Lambda should have access to **CloudWatch Logs** to support Lambda saving logs. In this Lambda
+function we also need to access to **Amazon Simple Email Service** to send emails and read access for the **DynamoDB Stream**.
 
 If you don't have an IAM role that has the required permissions then skip down to the [Create Role](#create-role)
 section at the bottom of this page to create an IAM role and then return back here.
@@ -80,7 +80,7 @@ If you don't have Visual Studio or you want to automate the deployment the **Ama
 To ensure you have installed Amazon.Lambda.Tools execute the following command.
 
 ```
-dotnet tool -g Amazon.Lambda.Tools
+dotnet tool install -g Amazon.Lambda.Tools
 ```
 
 The **aws-lambda-tools-defaults.json** will already have defaults for most all of the values required
