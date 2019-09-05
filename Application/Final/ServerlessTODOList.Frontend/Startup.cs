@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ServerlessTODOList.DataAccess;
+using ServerlessTODOList.Frontend.Data;
 
 namespace ServerlessTODOList.Frontend
 {
@@ -36,10 +37,13 @@ namespace ServerlessTODOList.Frontend
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            // AddAWSService is provided by the AWSSDK.Extensions.NETCore.Setup NuGet package.
             services.AddAWSService<Amazon.DynamoDBv2.IAmazonDynamoDB>();
             services.AddSingleton(typeof(ITODOListDataAccess), typeof(TODOListDataAccess));
 
+
             services.AddCognitoIdentity();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
