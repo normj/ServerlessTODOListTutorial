@@ -1,0 +1,17 @@
+﻿@page
+@model ServerlessTODOList.Frontend.Pages.CreateListModel
+@{
+    ViewData["Title"] = "Create List";
+}
+
+<h2>Create List</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-sm form-group">
+            <label class="control-label">List Name</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+    </div>
+    <input type="submit" value="Save" class="btn btn-primary" />
+</form>

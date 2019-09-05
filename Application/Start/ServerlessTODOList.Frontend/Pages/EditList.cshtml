@@ -1,0 +1,76 @@
+﻿@page
+@model ServerlessTODOList.Frontend.Pages.EditListModel
+@{
+    ViewData["Title"] = "EditList";
+}
+
+<h2>@this.Model.TODOList?.Name</h2>
+
+<form method="POST" onsubmit="formatTaskItems()">
+    <div class="row mt-3">
+        <div class="col-sm form-group">
+            <a class="btn btn-link" onclick="return addEmptyTask()">Add Task</a>
+        </div>
+    </div>
+
+    <input type="hidden" id="listId" name="listId" value="@this.Model.TODOList.ListId" />
+    <input type="hidden" id="tasks" name="tasks" value="" />
+
+    <table class="table" id="taskItems">
+        <thead>
+            <tr>
+                <th scope="col">Task</th>
+                <th scope="col">Assigned Email</th>
+                <th scope="col">Complete</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (this.Model?.TODOList?.Items != null)
+            {
+                @foreach (var item in this.Model.TODOList.Items)
+                {
+            <tr class="task">
+                <td><input class="taskDescription" type="text" value="@item.Description" /></td>
+                <td><input class="taskAssignedEmail" type="text" value="@item.AssignedEmail" /></td>
+                <td><input class="taskComplete" type="checkbox" @(item.Complete ? "checked" : "") /></td>
+                <td><button type="button" class="btn btn-danger btn-sm" onclick="deleteTask(this)">&times;</button></td>
+            </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+</form>
+
+<script type='text/javascript'>
+
+    function addEmptyTask() {
+        $('#taskItems > tbody').append('<tr class="task"><td><input class="taskDescription" type="text" value="" /></td><td><input class="taskAssignedEmail" type="text" value="" /></td><td><input class="taskComplete" type="checkbox" )" /></td><td><button type="button" class="btn btn-danger btn-sm" onclick="deleteTask(this)">&times;</button></td></tr>');
+        return false;
+    }
+
+    function deleteTask(btn) {
+        btn.parentElement.parentElement.remove();
+    }
+
+    function formatTaskItems() {
+
+        var tasks = [];
+        $("tr.task").each(function() {
+            $this = $(this);
+            var task = {} 
+            task.Description = $this.find("input.taskDescription").val();
+            task.AssignedEmail = $this.find("input.taskAssignedEmail").val();
+            task.Complete = $this.find("input.taskComplete").is(":checked");
+            tasks.push(task);
+        });
+
+        var formattedTasks = JSON.stringify(tasks);
+        $("#tasks").val(formattedTasks);
+
+        return true;
+    }
+
+</script>
