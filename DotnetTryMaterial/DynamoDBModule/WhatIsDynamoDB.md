@@ -11,7 +11,7 @@ fast access to our data, it simplifies our development with its schemaless desig
 
 ## Fast performance
 * Provides single-digit millisecond performance
-* Amazon DynamoDB Accelerator (DAX) provides a fast in-memory cache to improve performance.
+* Amazon DynamoDB Accelerator (DAX) for even faster performance.
   * .NET NuGet package: [AWSSDK.DAX.Client](https://www.nuget.org/packages/AWSSDK.DAX.Client/)
 
 ## Support multi region
