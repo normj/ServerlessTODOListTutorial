@@ -30,11 +30,11 @@ In the first page we need to specify the name of the Lambda function and identif
 To identify the .NET method we have to set the Assembly, Type and Method name. To Lambda this will
 get translated to the **Handler** field with a value of &lt;assembly-name>::&lt;type-name>::&lt;method-name>.
 
-### Profile and Region
+#### Profile and Region
 Be sure the profile and region are set to the profile and region that was set at the beginning of the tutorial and is where
 the DynamoDB table was created.
 
-### Persist Settings
+#### Persist Settings
 Note the bottom checkbox to **"Save settings to aws-lambda-tools-defaults.json for future deployments"**.
 With this value checked all of the settings made in the wizard will be persisted into the aws-lambda-tools-defaults.json
 file. This makes it so redeployments can reuse all of the previous settings as well make it easy to switch to
@@ -45,34 +45,34 @@ the **Amazon.Lambda.Tools** .NET Core global tool.
 
 ![Lambda Wizard Page 2](./images/LambdaWizardPage2.png)
 
-### IAM Role (Required)
+#### IAM Role (Required)
 The IAM role that you want to use to 
 provide AWS credentials to the Lambda function.
 
-### Environment (Required for Tutorial)
+#### Environment (Required for Tutorial)
 Configuration values can be set as environment variables for the Lambda function. For our Lambda function the **FROM_EMAIL** variable must be set
 to the address that the email will be sent from._
 
 
 
-### Memory
+#### Memory
 This controls how much memory will be allocated to Lambda function while it is processing an event. The amount of memory you allocate also controls
 how much CPU power the Lambda function will get. If a Lambda function is not processing fast enough for your requirements try increasing the
 memory settings for the function.
 
-### Timeout
+#### Timeout
 How much time a Lambda function will have to process an event before Lambda will cancel the process.
 
-### VPC Subnets and Security Groups
+#### VPC Subnets and Security Groups
 If a function needs to access resources that are inside a VPC, like an RDS database, then select subnets and security groups for the VPC to allow
 the Lambda function to access the resources. An Elastic Network Interface (ENI) will be attached to the VPC to provide access into the VPC. Additional IAM
 permissions are required for the IAM role to create the ENI. Check out the Lambda [developer guide](https://docs.aws.amazon.com/lambda/latest/dg/vpc.html) for more info.
 
-### DLQ Resource
+#### DLQ Resource
 Dead Letter Queue (DLQ) can be either an SQS queue or SNS Topic. When a Lambda function throws an unhandled exception while processing an event Lambda will retry the event a few times. If the function still fails Lambda will send the event to the DLQ if one is assigned. This can be useful troubleshooting and debugging failed events.
 
 
-## Push Upload
+### Push Upload
 
 Once you push upload under the covers the tooling will execute the `dotnet publish` command to build
 the project and then create zip file of the .NET assembly and all of its required dependencies.
