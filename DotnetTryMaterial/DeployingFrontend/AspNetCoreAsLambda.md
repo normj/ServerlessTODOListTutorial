@@ -43,7 +43,7 @@ This package contains a method similar to the one above that takes in the **APIG
 The method converts the APIGatewayProxyRequest into an ASP.NET Core request. Then forwards the request into our ASP.NET Core application and
 transforms the ASP.NET Core response into the required **APIGatewayProxyResponse**.
 
-At a high level it basically changes the typical ASP.NET Core Kestral server scenario
+At a high level it basically changes the typical ASP.NET Core Kestrel server scenario
 
 ![Normal Flow](./images/request-normal-flow.png)
 
