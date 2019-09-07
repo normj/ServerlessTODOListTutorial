@@ -1,0 +1,59 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "Transform" : "AWS::Serverless-2016-10-31",
+    "Description" : "Template to deploy ASP.NET Core application for the Serverless TODO List application",
+
+    "Parameters" : {
+    },
+
+    "Conditions" : {
+    },
+
+    "Resources" : {
+
+        "AspNetCoreFunction" : {
+            "Type" : "AWS::Serverless::Function",
+            "Properties": {
+                "Handler": "ServerlessTODOList.Frontend::ServerlessTODOList.Frontend.LambdaEntryPoint::FunctionHandlerAsync",
+                "Runtime": "dotnetcore2.1",
+                "CodeUri": "",
+                "MemorySize": 512,
+                "Timeout": 30,
+                "Role": null,
+                "Policies": [ 
+                    "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+                    "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
+                    "arn:aws:iam::aws:policy/AmazonSSMFullAccess",
+					"arn:aws:iam::aws:policy/AmazonCognitoPowerUser"
+                ],
+                "Environment" : {
+                    "Variables" : {
+                    }
+                },
+                "Events": {
+                    "ProxyResource": {
+                        "Type": "Api",
+                        "Properties": {
+                            "Path": "/{proxy+}",
+                            "Method": "ANY"
+                        }
+                    },
+                    "RootResource": {
+                        "Type": "Api",
+                        "Properties": {
+                            "Path": "/",
+                            "Method": "ANY"
+                        }
+                    }
+                }
+            }   
+        }
+    },
+
+    "Outputs" : {
+        "ApiURL" : {
+            "Description" : "API endpoint URL for Prod environment",
+            "Value" : { "Fn::Sub" : "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/" }
+        }
+    }
+}
