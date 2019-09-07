@@ -19,6 +19,10 @@ namespace ServerlessTODOList.Frontend
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration(builder =>
+                {
+                    builder.AddSystemsManager("/ServerlessTODOList/");
+                })
                 .UseStartup<Startup>();
     }
 }
