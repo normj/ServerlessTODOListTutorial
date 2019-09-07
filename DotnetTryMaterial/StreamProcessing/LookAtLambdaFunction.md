@@ -105,7 +105,7 @@ public class Function
   * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
-* [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)

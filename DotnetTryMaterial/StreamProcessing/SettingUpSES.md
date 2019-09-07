@@ -38,7 +38,7 @@ emails either through the [AWS console](https://console.aws.amazon.com/ses/home?
   * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
-* [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)

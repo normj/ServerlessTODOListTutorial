@@ -38,7 +38,7 @@ To access DynamoDB with .NET the NuGet package [AWSSDK.DynamoDBv2](https://www.n
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
   * [Amazon DynamoDB wrap up](../DynamoDBModule/DynamoDBWrapUp.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
-* [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)

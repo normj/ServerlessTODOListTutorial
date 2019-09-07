@@ -63,7 +63,6 @@ the webservers supporting our application will share their keys through paramete
 
 ![Parameter Store](./images/KeyStoredInParameterStore.png)
 
-
 <!-- Generated Navigation -->
 ---
 
@@ -74,7 +73,8 @@ the webservers supporting our application will share their keys through paramete
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
-* [The Serverless TODO List Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
+  * [Dependency Injection](../ASP.NETCoreFrontend/DependencyInjection.md)
   * [Using Amazon Cognito for Identity](../ASP.NETCoreFrontend/WebIdentity.md)
   * **Persisting ASP.NET Core Data Protection Keys**
   * [AWS Systems Manager Parameter Store for Managing Configuration](../ASP.NETCoreFrontend/ParameterStoreConfigurationProvider.md)

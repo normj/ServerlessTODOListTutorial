@@ -88,7 +88,8 @@ well as configuring an auto reload of data from Parameter store.
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
-* [The Serverless TODO List Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
+  * [Dependency Injection](../ASP.NETCoreFrontend/DependencyInjection.md)
   * [Using Amazon Cognito for Identity](../ASP.NETCoreFrontend/WebIdentity.md)
   * [Persisting ASP.NET Core Data Protection Keys](../ASP.NETCoreFrontend/ParameterStoreDataProtection.md)
   * **AWS Systems Manager Parameter Store for Managing Configuration**

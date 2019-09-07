@@ -11,11 +11,11 @@ Here we are going to do a brief setup to configure our application to use Cognit
 
 ## Add config settings
 
-Before we create our user pool lets add the empty configuration fields to the **appsettings.Development.json** file. To do this:
+Before we create our user pool lets add the empty user pool configuration fields to the **appsettings.Development.json** file. To do this:
 
 * Open the **appsettings.Development.json** file.
-* Copy the AWS section from the sample below to your **appsettings.Development.json**
-* Set the Region and Profile fields to the values set in this tutorial at the beginning.
+* In the AWS section add the **UserPoolId, UserPoolClientId and UserPoolClientSecret** fields.
+* Be sure to leave Region and Profile fields set to the values previously set in the tutorial.
 
 Don't worry about the user pool config fields for now, we will fill them in as we setup the user pool.
 
@@ -39,7 +39,6 @@ Don't worry about the user pool config fields for now, we will fill them in as w
     "UserPoolClientSecret": ""
   }
 }
-
 ```
 
 
@@ -156,7 +155,6 @@ Enter the confirmation code received in the email and click **Confirm Account**.
 
 Now you should be logged in and can create TODO lists. You can log out and log back in with the user name and password set during registration.
 
-
 <!-- Generated Navigation -->
 ---
 
@@ -167,7 +165,8 @@ Now you should be logged in and can create TODO lists. You can log out and log b
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
-* [The Serverless TODO List Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
+  * [Dependency Injection](../ASP.NETCoreFrontend/DependencyInjection.md)
   * **Using Amazon Cognito for Identity**
   * [Persisting ASP.NET Core Data Protection Keys](../ASP.NETCoreFrontend/ParameterStoreDataProtection.md)
   * [AWS Systems Manager Parameter Store for Managing Configuration](../ASP.NETCoreFrontend/ParameterStoreConfigurationProvider.md)

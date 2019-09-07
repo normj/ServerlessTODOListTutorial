@@ -26,7 +26,7 @@ Be sure in the code below to set the **assignedEmail** to an email address that 
   * **Testing Lambda Function**
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
-* [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)

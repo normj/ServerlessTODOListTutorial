@@ -92,30 +92,6 @@ namespace ServerlessTODOList.DataAccess
 }
 ```
 
-## Service Collection and ASP.NET Core Dependency Injection
-
-The **TODOListDataAccess** class implements the **ITODOListDataAccess** interface. As part of the ASP.NET Core application used as the frontend of the application the 
-**ITODOListDataAccess** is added to the service collection. This allows us to inject our data access to our ASP.NET Core controller and razor pages.
-
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    services.Configure<CookiePolicyOptions>(options =>
-    {
-        // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-        options.CheckConsentNeeded = context => true;
-        options.MinimumSameSitePolicy = SameSiteMode.None;
-    });
-
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-    services.AddAWSService<Amazon.DynamoDBv2.IAmazonDynamoDB>();
-    services.AddSingleton(typeof(ITODOListDataAccess), typeof(TODOListDataAccess));
-
-    services.AddCognitoIdentity();
-}
-```
-
 <!-- Generated Navigation -->
 ---
 
@@ -131,7 +107,7 @@ public void ConfigureServices(IServiceCollection services)
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
   * **Amazon DynamoDB wrap up**
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
-* [Building the ASP.NET Core Frontend](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)

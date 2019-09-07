@@ -13,7 +13,7 @@
       "DotNetDynamoDBAPIs.md",
       "DDBServiceClientAPI.md",
       "DotNetDynamoDBDataModel.md",
-	  "DynamoDBWrapUp.md"
+      "DynamoDBWrapUp.md"
     ]
   },
   {
@@ -33,10 +33,11 @@
     ]
   },
   {
-    "Name": "Building the ASP.NET Core Frontend",
+    "Name": "Getting ASP.NET Core ready for Serverless",
     "FolderName": "ASP.NETCoreFrontend",
     "RootPage": "TheFrontend.md",
     "Pages": [
+      "DependencyInjection.md",
       "WebIdentity.md",
       "ParameterStoreDataProtection.md",
       "ParameterStoreConfigurationProvider.md",
