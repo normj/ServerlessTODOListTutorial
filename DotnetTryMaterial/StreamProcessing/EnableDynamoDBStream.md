@@ -59,6 +59,7 @@ for the shards of a DynamoDB Stream.
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
 * [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)

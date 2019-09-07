@@ -121,6 +121,7 @@ public void ConfigureServices(IServiceCollection services)
   * [Persisting ASP.NET Core Data Protection Keys](../ASP.NETCoreFrontend/ParameterStoreDataProtection.md)
   * [AWS Systems Manager Parameter Store for Managing Configuration](../ASP.NETCoreFrontend/ParameterStoreConfigurationProvider.md)
   * [ASP.NET Core wrap up](../ASP.NETCoreFrontend/FrontendWrapup.md)
+* [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Using Amazon Cognito for Identity](../ASP.NETCoreFrontend/WebIdentity.md)

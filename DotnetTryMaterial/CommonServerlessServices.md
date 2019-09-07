@@ -35,6 +35,7 @@ common AWS services used that provide the foundational building blocks for a ser
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)
 * [Getting ASP.NET Core ready for Serverless](./ASP.NETCoreFrontend/TheFrontend.md)
+* [Deploying ASP.NET Core as a Serverless Application](./DeployingFrontend/DeployingFrontend.md)
 * [Final Wrap Up](./FinalWrapup.md)
 
 Continue on to next page: [What are we going to build in this tutorial](./WhatAreWeBuilding.md)

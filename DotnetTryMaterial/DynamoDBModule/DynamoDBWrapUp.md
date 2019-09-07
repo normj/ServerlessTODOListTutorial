@@ -108,6 +108,7 @@ namespace ServerlessTODOList.DataAccess
   * **Amazon DynamoDB wrap up**
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
 * [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)

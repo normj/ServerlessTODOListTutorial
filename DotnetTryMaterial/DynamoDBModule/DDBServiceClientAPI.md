@@ -119,6 +119,7 @@ Backup tables on demand and restore them to new tables.
   * [Amazon DynamoDB wrap up](../DynamoDBModule/DynamoDBWrapUp.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
 * [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)

@@ -27,6 +27,7 @@ to notifiy users when they have been assigned a task. To implement this we need 
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
 * [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
+* [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)

@@ -44,6 +44,18 @@
       "FrontendWrapup.md"
     ]
   },
+  {
+    "Name": "Deploying ASP.NET Core as a Serverless Application",
+    "FolderName": "DeployingFrontend",
+    "RootPage": "DeployingFrontend.md",
+    "Pages": [
+      "AspNetCoreAsLambda.md",
+      "LambdaPrepare.md",
+      "LambdaDeploy.md",
+      "FargatePrepare.md",
+      "FargateDeploy.md"
+    ]
+  },
   "FinalWrapup.md"
 
 ]

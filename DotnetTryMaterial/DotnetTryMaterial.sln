@@ -52,6 +52,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NETCoreFrontend", "ASP.
 		ASP.NETCoreFrontend\WebIdentity.md = ASP.NETCoreFrontend\WebIdentity.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeployingFrontend", "DeployingFrontend", "{9632FF2C-A027-4575-88C2-D56448FDBFB6}"
+	ProjectSection(SolutionItems) = preProject
+		DeployingFrontend\AspNetCoreAsLambda.md = DeployingFrontend\AspNetCoreAsLambda.md
+		DeployingFrontend\DeployingFrontend.md = DeployingFrontend\DeployingFrontend.md
+		DeployingFrontend\FargateDeploy.md = DeployingFrontend\FargateDeploy.md
+		DeployingFrontend\FargatePrepare.md = DeployingFrontend\FargatePrepare.md
+		DeployingFrontend\LambdaDeploy.md = DeployingFrontend\LambdaDeploy.md
+		DeployingFrontend\LambdaPrepare.md = DeployingFrontend\LambdaPrepare.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +84,7 @@ Global
 		{2F57FDB5-7F10-41FD-A6DE-02999A529F99} = {B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}
 		{30097844-18BC-435D-905C-4C4FD5B5A3E9} = {B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}
 		{3FD8F50A-2214-4087-AC67-2655DA6B03CE} = {B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}
+		{9632FF2C-A027-4575-88C2-D56448FDBFB6} = {B09B3DA6-C802-4EBC-8C7F-161DD5C4E4F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A94325C0-2B38-44AF-9ADD-C61FC1079E15}

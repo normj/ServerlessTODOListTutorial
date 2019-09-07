@@ -22,6 +22,7 @@ The TODO list application that we will build and deploy will use the following s
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)
 * [Getting ASP.NET Core ready for Serverless](./ASP.NETCoreFrontend/TheFrontend.md)
+* [Deploying ASP.NET Core as a Serverless Application](./DeployingFrontend/DeployingFrontend.md)
 * [Final Wrap Up](./FinalWrapup.md)
 
 Continue on to next page: [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
