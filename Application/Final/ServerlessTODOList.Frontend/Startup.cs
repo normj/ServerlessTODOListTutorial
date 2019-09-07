@@ -41,9 +41,12 @@ namespace ServerlessTODOList.Frontend
             services.AddAWSService<Amazon.DynamoDBv2.IAmazonDynamoDB>();
             services.AddSingleton(typeof(ITODOListDataAccess), typeof(TODOListDataAccess));
 
-
+            // Register Cognito Identity services.
             services.AddCognitoIdentity();
 
+            // Register AWS System Manager's parameter store as the persistence for data protection keys.
+            services.AddDataProtection()
+                .PersistKeysToAWSSystemsManager("/ServerlessTODOList/DataProtection");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
