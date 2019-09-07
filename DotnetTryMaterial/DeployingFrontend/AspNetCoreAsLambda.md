@@ -11,7 +11,7 @@ For this tutorial we will use API Gateway to expose our Lambda function.
 ## Basic API Gateway Lambda Function
 
 Typically if you are writing a Lambda function to be exposed through API Gateway you write a function that takes in a **APIGatewayProxyRequest**
-and returns back a **APIGatewayProxyResponse**. If the method is using async operations it would return back **Task<APIGatewayProxyResponse>**. 
+and returns back a **APIGatewayProxyResponse**. If the method is using async operations it would return back **Task&lt;APIGatewayProxyResponse&gt;**. 
 
 ```csharp
 public APIGatewayProxyResponse Get(APIGatewayProxyRequest request, ILambdaContext context)
