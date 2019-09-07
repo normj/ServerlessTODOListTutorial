@@ -78,7 +78,8 @@ In our project add a file called `serverless.template` and add the following JSO
             "Policies":[
                "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
                "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
-               "arn:aws:iam::aws:policy/AmazonSSMFullAccess"
+               "arn:aws:iam::aws:policy/AmazonSSMFullAccess",
+               "arn:aws:iam::aws:policy/AmazonCognitoPowerUser"
             ],
             "Environment":{
                "Variables":{
@@ -116,7 +117,7 @@ In our project add a file called `serverless.template` and add the following JSO
 ```
 
 Notice how the **Handler** property is pointing to our `LambdaEntryPoint` class and the `FunctionHandlerAsync` method from the base class. 
-Also we have defined the Identity and Access Management (IAM) policies we need to get access to DynamoDB and Systems Manager's Parameter Store.
+Also we have defined the Identity and Access Management (IAM) policies we need to get access to DynamoDB, Systems Manager's Parameter Store and Cognito.
 These policies are fairly broad, we could create custom policies to reduce the applications permissions but that is out of the scope of this tutorial.
 
 The API Gateway REST API is configured by the events section. In the ASP.NET Core case we don't want to use API Gateway to handle routing we
@@ -126,7 +127,7 @@ for all other requests.
 ## Updating the Project Type
 
 The last thing we need to do to turn on the Lambda deployment features in Visual Studio is edit the project file for ServerlessTODOList.Frontend and
-add the property `AWSProjectType` with a value of Lambda to a `PropertyGroup`. Below is an example.
+add the property `AWSProjectType` with a value of **Lambda** to a `PropertyGroup`. Below is an example.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
