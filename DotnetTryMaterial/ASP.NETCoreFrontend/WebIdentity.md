@@ -48,6 +48,8 @@ Don't worry about the user pool config fields for now, we will fill them in as w
 Cognito User pools have a lot of features that you can use to customize the login process. For this tutorial we are going to use the Cognito web console to create the user 
 pool using the default settings. Use the following steps to create the user pool and update the application's configuration.
 
+![Create User Pool](./images/CreateUserPool.gif)
+
 * Login to the [Cognito web console](https://console.aws.amazon.com/cognito/home)
 * Ensure region is set to the correct region
 * In **Find Services** text box enter **Cognito** and press enter
@@ -62,6 +64,8 @@ Now that the user pool is created we need to create an app client for the pool. 
 and web application client. For each client a client id and a client secret is generated which the clients will use to access the user pool for user registration and login.
 
 Lets create a client for our web application.
+
+![Create User Pool App Client](./images/CreateUserPoolAppClient.gif)
 
 * Click on **App clients** under **General Settings**
 * Click **Add an app client**
