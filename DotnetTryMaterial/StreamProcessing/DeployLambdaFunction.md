@@ -93,11 +93,14 @@ to create the Lambda function. The only values that need to set are the Lambda f
 To deploy the function execute the command from the directory of **ServerlessTODOList.StreamProcessor** execute the following command.
 
 ```
-dotnet lambda deploy-function ServerlessTODOListStreamProcessor --environment-variable FROM_EMAIL=<from email address> --function-role <iam-role-name>
+dotnet lambda deploy-function ServerlessTODOListStreamProcessor --environment-variable FROM_EMAIL=<from email address> --function-role <iam-role-name> --profile <profile-name> --region <region-name>
 ```
 
 **Notice** the FROM_EMAIL environment variable is set with the `--environment-variable` switch. The format of this switch is 
 `<env-name1>=<env-value1>;<env-name2>=<env-name2>`.
+
+If you also add `--persist-config-file true` to the command then all of the settings set during deployment will be saved in the 
+**aws-lambda-tools-defaults.json** file. That way future invocations can be done by just using the command `dotnet lambda deploy-function`.
 
 
 

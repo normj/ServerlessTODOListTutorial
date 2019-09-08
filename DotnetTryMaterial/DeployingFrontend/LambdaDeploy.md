@@ -43,7 +43,41 @@ After the wizard initiates the CloudFormation stack creation the wizard disappea
 resources from the template start getting created.  Once the stack is created the URL to our deployed serverless application will be displayed. Go ahead and click on the link
 and test out our serverless TODO list application.
 
-![Wizard Gif](./images/cloudformation-view.png)
+![CloudFormation Stack View](./images/cloudformation-view.png)
+
+## Amazon.Lambda.Tools .NET Core Global Tool
+
+If you don't have Visual Studio or you want to automate the deployment the **Amazon.Lambda.Tools** .NET Core Global Tool can be used.
+
+You should have **Amazon.Lambda.Tools** already installed from the DynamoDB Stream section but if not execute the following command.
+
+```
+dotnet tool install -g Amazon.Lambda.Tools
+```
+
+When the DynamoDB Stream function was deployed we use the subcommand `deploy-function` to deploy straight to the Lambda service. Now
+that we are deploy with CloudFormation we need to use the `deploy-serverless` subcommand.
+
+The command below will deploy the function and create a CloudFormation stack called ServerlessTODOList.
+
+Before we run this lets look at the arguments passed into the **deploy-serverless** subcommand.
+
+| Argument | Description|
+|-|-|
+| `--s3-bucket <bucket-name>` | The name of an S3 bucket in the same region the application will be deployed to. The bucket is used to store the compiled project that the CloudFormation template will point to. |
+| `--profile <profile-name>` | The name of the AWS profile set at the beginning of the tutorial. |
+| `--region <region-name>` | The AWS region that the application will be deploy in like us-east-1 |
+| `--persist-config-file true` | Optional argument so that all of the arguments used during deployment will be saved into the **aws-lambda-tools-defaults.json** file.
+
+
+Now run the following command in the directory of ServerlessTODOList.Frontend filling in the values 
+for --s3-bucket, --profile and --region.
+
+```
+dotnet lambda deploy-serverless ServerlessTODOList --s3-bucket <bucket-name> --profile <profile-name> --region <region-name> --persist-config-file true
+```
+
+![Wizard Gif](./images/DeployServerless.gif)
 
 <!-- Generated Navigation -->
 ---
