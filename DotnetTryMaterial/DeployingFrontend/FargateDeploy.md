@@ -62,6 +62,8 @@ see a new menu item to **Publish Container to AWS...**.
 
 ### Wizard page 1 - Set deployment type
 
+![Wizard Page 1](./images/ecs-wizard-page1.png)
+
 In the first page of the wizard you will configure the Docker repository in the Amazon Elastic Container Registry (ECR) where
 the docker image that is about to be create will be pushed.
 
@@ -78,10 +80,10 @@ are:
 For our tutorial we can leave everything at the default which will push the new container image to the **serverlesstodolistfrontend**
 repository in ECR and choose to run the image as a service.
 
-![Wizard Page 1](./images/ecs-wizard-page1.png)
-
 
 ### Wizard page 2 - Fargate configuration
+
+![Wizard Page 2](./images/ecs-wizard-page2.png)
 
 Here the ECS cluster that will run the project must be picked. For the tutorial select **Create an empty cluster** and set the 
 name to **ServerlessTODOList**. The term empty here refers to the fact that no EC2 instances will be added to the cluster. 
@@ -96,9 +98,9 @@ the minimum compute power and the default VPC and security group.
 As long as you have a default VPC in your account you can leave everything on this page except ECS Cluster being set to 
 **Create an empty cluster** and set the name to **ServerlessTODOList**.
 
-![Wizard Page 2](./images/ecs-wizard-page2.png)
-
 ### Wizard page 3 - ECS service configuration
+
+![Wizard Page 3](./images/ecs-wizard-page3.png)
 
 Here we we are going to select **Create new** for the Service and set the name to **ServerlessTODOListFrontend**.
 
@@ -110,9 +112,9 @@ existing tasks until at least one new task using the new container image has lau
 set to 200 allows ECS to add 2 new tasks running the project before shutting down the old ones getting the total count of task
 temporary up to 4. Once the 2 new tasks are running ECS will shutdown the older 2 tasks.
 
-![Wizard Page 3](./images/ecs-wizard-page3.png)
-
 ### Wizard page 4 - Application Load Balancer configuration
+
+![Wizard Page 4](./images/ecs-wizard-page4.png)
 
 Since we have a web application that is going to be supported by multiple Fargate tasks and we need a constant
 HTTP endpoint we will enable **Configure Application Load Balancer**. 
@@ -131,10 +133,9 @@ Note: If you want a HTTPS endpoint use the [Elastic Load Balancer web console](h
 to create a the load balancer and listener. When you create the listener in the console you can configure HTTPS and the
 certificate used. Once the load balancer and listener are created you can select them in the Visual Studio publishing wizard.
 
-
-![Wizard Page 4](./images/ecs-wizard-page4.png)
-
 ### Wizard page 5 - Task Definition configuration
+
+![Wizard Page 5](./images/ecs-wizard-page5.png)
 
 ECS deploys docker images through a Task Definition. The Task definition allows multiple docker images to deployed together as 
 a unit similar to a docker compose file. The Task Definition allows you to configure many settings for the containers such as
@@ -155,8 +156,6 @@ Values to set on this page:
 | Environment Variables | Environment variables to set before the container is run. For convenience the Visual Studio publishing wizard presets ASPNETCORE_ENVIRONMENT to production for ASP.NET Core projects. |
 
 When all of the fields are set push the **Publish** button to start deploying our application.
-
-![Wizard Page 5](./images/ecs-wizard-page5.png)
 
 ## ECS Cluster View
 
