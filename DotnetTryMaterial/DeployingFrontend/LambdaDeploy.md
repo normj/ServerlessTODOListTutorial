@@ -79,6 +79,9 @@ dotnet lambda deploy-serverless ServerlessTODOList --s3-bucket <bucket-name> --p
 
 ![Wizard Gif](./images/DeployServerless.gif)
 
+Once the `dotnet-serverless` command is complete we can visit the URL output at the end to see our Serverless TODO List
+application.
+
 <!-- Generated Navigation -->
 ---
 
