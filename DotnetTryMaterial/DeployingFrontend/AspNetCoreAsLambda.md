@@ -79,7 +79,6 @@ One final recommendation. The ASP.NET Core adaptor is most commonly used for Web
 of static content I recommend pushing the static content to an S3 bucket. The API Gateway REST API can be configured to forward request to the S3 
 Bucket for static content resource paths like **images**, **lib**  and **css** to forward to the S3 bucket. That is beyond the scope of this tutorial.
 
-
 <!-- Generated Navigation -->
 ---
 
@@ -95,7 +94,7 @@ Bucket for static content resource paths like **images**, **lib**  and **css** t
   * **ASP.NET Core as a Lambda Function?**
   * [Preparing for Lambda Deployment](../DeployingFrontend/LambdaPrepare.md)
   * [Deploy to Lambda using CloudFormation](../DeployingFrontend/LambdaDeploy.md)
-  * [Preparing for Fargate (Container) Deployment](../DeployingFrontend/FargatePrepare.md)
+  * [What is for Fargate](../DeployingFrontend/WhatIsFargate.md)
   * [Deploying to Fargate](../DeployingFrontend/FargateDeploy.md)
 * [Final Wrap Up](../FinalWrapup.md)
 

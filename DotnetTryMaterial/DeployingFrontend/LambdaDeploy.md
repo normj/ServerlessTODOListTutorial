@@ -62,8 +62,8 @@ The command below will deploy the function and create a CloudFormation stack cal
 
 Before we run this lets look at the arguments passed into the **deploy-serverless** subcommand.
 
-| Argument | Description|
-|-|-|
+| <div style="width:240px">Argument</div> | Description|
+|---------------------------------|-|
 | `--s3-bucket <bucket-name>` | The name of an S3 bucket in the same region the application will be deployed to. The bucket is used to store the compiled project that the CloudFormation template will point to. |
 | `--profile <profile-name>` | The name of the AWS profile set at the beginning of the tutorial. |
 | `--region <region-name>` | The AWS region that the application will be deploy in like us-east-1 |
@@ -77,7 +77,7 @@ for --s3-bucket, --profile and --region.
 dotnet lambda deploy-serverless ServerlessTODOList --s3-bucket <bucket-name> --profile <profile-name> --region <region-name> --persist-config-file true
 ```
 
-![Wizard Gif](./images/DeployServerless.gif)
+![Console Deploy Gif](./images/DeployServerless.gif)
 
 Once the `dotnet-serverless` command is complete we can visit the URL output at the end to see our Serverless TODO List
 application.
@@ -97,9 +97,9 @@ application.
   * [ASP.NET Core as a Lambda Function?](../DeployingFrontend/AspNetCoreAsLambda.md)
   * [Preparing for Lambda Deployment](../DeployingFrontend/LambdaPrepare.md)
   * **Deploy to Lambda using CloudFormation**
-  * [Preparing for Fargate (Container) Deployment](../DeployingFrontend/FargatePrepare.md)
+  * [What is for Fargate](../DeployingFrontend/WhatIsFargate.md)
   * [Deploying to Fargate](../DeployingFrontend/FargateDeploy.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
-Continue on to next page: [Preparing for Fargate (Container) Deployment](../DeployingFrontend/FargatePrepare.md)
+Continue on to next page: [What is for Fargate](../DeployingFrontend/WhatIsFargate.md)
 

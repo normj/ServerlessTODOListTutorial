@@ -17,7 +17,7 @@ With our ASP.NET Core application
   * [ASP.NET Core as a Lambda Function?](../DeployingFrontend/AspNetCoreAsLambda.md)
   * [Preparing for Lambda Deployment](../DeployingFrontend/LambdaPrepare.md)
   * [Deploy to Lambda using CloudFormation](../DeployingFrontend/LambdaDeploy.md)
-  * [Preparing for Fargate (Container) Deployment](../DeployingFrontend/FargatePrepare.md)
+  * [What is for Fargate](../DeployingFrontend/WhatIsFargate.md)
   * [Deploying to Fargate](../DeployingFrontend/FargateDeploy.md)
 * [Final Wrap Up](../FinalWrapup.md)
 

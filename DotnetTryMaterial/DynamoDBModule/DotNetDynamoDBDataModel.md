@@ -72,7 +72,7 @@ To delete an object we need to call the DeleteAsync method passing in the values
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
 * [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
-* [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
+* [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
   * [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)
   * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)

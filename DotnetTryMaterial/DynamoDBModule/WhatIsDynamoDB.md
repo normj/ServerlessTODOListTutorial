@@ -1,4 +1,4 @@
-# What is Amazon DynamoDB
+# Using DynamoDB to store TODO Lists
 
 As we mentioned before we are going to use [DynamoDB](https://aws.amazon.com/dynamodb/) to store our TODO list. DynamoDB was chosen because it provides us
 fast access to our data, it simplifies our development with its schemaless design and provisioning without managing servers.
@@ -31,7 +31,7 @@ To access DynamoDB with .NET the NuGet package [AWSSDK.DynamoDBv2](https://www.n
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
 * [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
-* **What is Amazon DynamoDB**
+* **Using DynamoDB to store TODO Lists**
   * [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)
   * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)

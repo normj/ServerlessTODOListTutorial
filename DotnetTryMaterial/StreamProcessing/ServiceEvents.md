@@ -1,4 +1,4 @@
-# Using Lambda to Handle Service Events
+# Handling service events with Lambda
 
 Many AWS services trigger events when something changes. For example with Amazon S3 when a new object is uploaded 
 to an S3 bucket an event is triggered.
@@ -23,7 +23,7 @@ configured to trigger Lambda functions for their events.
 * [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
-* **Using Lambda to Handle Service Events**
+* **Handling service events with Lambda**
   * [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
   * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)

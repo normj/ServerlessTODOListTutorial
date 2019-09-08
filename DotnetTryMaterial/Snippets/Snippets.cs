@@ -93,6 +93,9 @@ namespace Snippets
                 case "setup_streamprocessor_role":
                     IAMRoleSetups.SetupStreamProcessorRoleAsync().Wait();
                     break;
+                case "setup_ecs_frontend_role":
+                    IAMRoleSetups.SetupFargateRoleAsync().Wait();
+                    break;
             }
 
             switch (session)

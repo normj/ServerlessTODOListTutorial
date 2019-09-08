@@ -71,7 +71,7 @@ When you delete a table all of its data and indexes will be deleted as well.
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
 * [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
-* [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
+* [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
   * **Creating DynamoDB table**
   * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)

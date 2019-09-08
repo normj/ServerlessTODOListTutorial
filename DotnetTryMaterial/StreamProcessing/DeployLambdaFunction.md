@@ -46,12 +46,12 @@ the **Amazon.Lambda.Tools** .NET Core global tool.
 ![Lambda Wizard Page 2](./images/LambdaWizardPage2.png)
 
 #### IAM Role (Required)
-The IAM role that you want to use to 
-provide AWS credentials to the Lambda function.
+The IAM role that you want to use to provide AWS credentials to the Lambda function. If you created the IAM role from the **Create Role** 
+section on this page then select the **ServerlessTODOList.StreamProcessor** role.
 
 #### Environment (Required for Tutorial)
 Configuration values can be set as environment variables for the Lambda function. For our Lambda function the **FROM_EMAIL** variable must be set
-to the address that the email will be sent from._
+to the address that the email will be sent from.
 
 
 
@@ -111,8 +111,7 @@ If you also add `--persist-config-file true` to the command then all of the sett
 
 This code can be used to create an IAM Role with the appropriate permissions required for 
 the ServerlessTODOList.StreamProcessor Lambda function. If you already have a role then this
-section is not necessary 
-**ServerlessTODOList.StreamProcessor** function.
+section is not necessary.
 
 ```cs --source-file ../Snippets/IAMRoleSetups.cs --project ../Snippets/Snippets.csproj --region setup_streamprocessor_role
 ```
@@ -126,7 +125,7 @@ section is not necessary
 * [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
-* [Using Lambda to Handle Service Events](../StreamProcessing/ServiceEvents.md)
+* [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
   * [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
   * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)

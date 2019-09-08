@@ -37,7 +37,7 @@ text box and push **Execute Function**.
 * [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
-* [Using Lambda to Handle Service Events](../StreamProcessing/ServiceEvents.md)
+* [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
   * [TODO List Task Assignments](../StreamProcessing/TODOTaskListAssignment.md)
   * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)

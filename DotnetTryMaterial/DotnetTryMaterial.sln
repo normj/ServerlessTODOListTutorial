@@ -57,9 +57,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeployingFrontend", "Deploy
 		DeployingFrontend\AspNetCoreAsLambda.md = DeployingFrontend\AspNetCoreAsLambda.md
 		DeployingFrontend\DeployingFrontend.md = DeployingFrontend\DeployingFrontend.md
 		DeployingFrontend\FargateDeploy.md = DeployingFrontend\FargateDeploy.md
-		DeployingFrontend\FargatePrepare.md = DeployingFrontend\FargatePrepare.md
 		DeployingFrontend\LambdaDeploy.md = DeployingFrontend\LambdaDeploy.md
 		DeployingFrontend\LambdaPrepare.md = DeployingFrontend\LambdaPrepare.md
+		DeployingFrontend\WhatIsFargate.md = DeployingFrontend\WhatIsFargate.md
 	EndProjectSection
 EndProject
 Global

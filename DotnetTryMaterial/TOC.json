@@ -52,7 +52,7 @@
       "AspNetCoreAsLambda.md",
       "LambdaPrepare.md",
       "LambdaDeploy.md",
-      "FargatePrepare.md",
+      "WhatIsFargate.md",
       "FargateDeploy.md"
     ]
   },

@@ -177,7 +177,7 @@ Now when you right click on the project in Visual Studio you can see it is ready
   * [ASP.NET Core as a Lambda Function?](../DeployingFrontend/AspNetCoreAsLambda.md)
   * **Preparing for Lambda Deployment**
   * [Deploy to Lambda using CloudFormation](../DeployingFrontend/LambdaDeploy.md)
-  * [Preparing for Fargate (Container) Deployment](../DeployingFrontend/FargatePrepare.md)
+  * [What is for Fargate](../DeployingFrontend/WhatIsFargate.md)
   * [Deploying to Fargate](../DeployingFrontend/FargateDeploy.md)
 * [Final Wrap Up](../FinalWrapup.md)
 

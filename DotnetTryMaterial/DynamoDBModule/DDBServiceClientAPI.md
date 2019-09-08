@@ -111,7 +111,7 @@ Backup tables on demand and restore them to new tables.
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
 * [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
-* [What is Amazon DynamoDB](../DynamoDBModule/WhatIsDynamoDB.md)
+* [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
   * [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)
   * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * **CRUD operations with Amazon DynamoDB Service Client**
