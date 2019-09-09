@@ -96,6 +96,10 @@ namespace Snippets
                 case "setup_ecs_frontend_role":
                     IAMRoleSetups.SetupFargateRoleAsync().Wait();
                     break;
+
+                case "resources_to_tear_down":
+                    new TearDown().TearDownResourcesAsync().Wait();
+                    break;
             }
 
             switch (session)
