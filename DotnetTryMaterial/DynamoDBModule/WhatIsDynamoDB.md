@@ -1,7 +1,7 @@
 # Using DynamoDB to store TODO Lists
 
-As we mentioned before we are going to use [DynamoDB](https://aws.amazon.com/dynamodb/) to store our TODO list. DynamoDB was chosen because it provides us
-fast access to our data, it simplifies our development with its schemaless design and provisioning without managing servers.
+As we mentioned before we are going to use [DynamoDB](https://aws.amazon.com/dynamodb/) to store our TODO lists. DynamoDB was chosen because it provides
+fast access to our data, it simplifies our development with its schemaless design and provisioning because we don't have to database manage servers.
 
 ## Fully managed NoSQL datastore
 * Define Key and Indexes

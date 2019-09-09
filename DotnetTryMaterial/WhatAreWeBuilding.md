@@ -15,7 +15,7 @@ directory.
 ## AWS Toolkit for Visual Studio
 
 If you following along with Visual Studio it is recommended you have the [AWS Toolkit for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017) installed 
-to make it easy to deploy your code. If you are not using Visual Studio command line instructions will also be provided.
+to make it easy to deploy your code. If you are not using Visual Studio, command line instructions will also be provided for most sections.
 
 <!-- Generated Navigation -->
 ---
