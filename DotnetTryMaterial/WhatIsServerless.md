@@ -28,6 +28,7 @@ Serverless provides built-in availability and fault tolerance. You don't need to
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)
 * [Getting ASP.NET Core ready for Serverless](./ASP.NETCoreFrontend/TheFrontend.md)
 * [Deploying ASP.NET Core as a Serverless Application](./DeployingFrontend/DeployingFrontend.md)
+* [Tear Down](./TearDown.md)
 * [Final Wrap Up](./FinalWrapup.md)
 
 Continue on to next page: [Common AWS Serverless Services](./CommonServerlessServices.md)

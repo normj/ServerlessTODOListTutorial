@@ -29,6 +29,7 @@ to make it easy to deploy your code. If you are not using Visual Studio command 
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)
 * [Getting ASP.NET Core ready for Serverless](./ASP.NETCoreFrontend/TheFrontend.md)
 * [Deploying ASP.NET Core as a Serverless Application](./DeployingFrontend/DeployingFrontend.md)
+* [Tear Down](./TearDown.md)
 * [Final Wrap Up](./FinalWrapup.md)
 
 Continue on to next page: [TODO List AWS Services Used](./TODOListServices.md)

@@ -37,6 +37,7 @@ when they are started.
   * [Deploy to Lambda using CloudFormation](../DeployingFrontend/LambdaDeploy.md)
   * **What is for Fargate**
   * [Deploying to Fargate](../DeployingFrontend/FargateDeploy.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Deploying to Fargate](../DeployingFrontend/FargateDeploy.md)

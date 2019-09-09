@@ -95,6 +95,7 @@ well as configuring an auto reload of data from Parameter store.
   * **AWS Systems Manager Parameter Store for Managing Configuration**
   * [ASP.NET Core wrap up](../ASP.NETCoreFrontend/FrontendWrapup.md)
 * [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [ASP.NET Core wrap up](../ASP.NETCoreFrontend/FrontendWrapup.md)

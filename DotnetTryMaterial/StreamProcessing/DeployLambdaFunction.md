@@ -137,6 +137,7 @@ section is not necessary.
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
 * [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)

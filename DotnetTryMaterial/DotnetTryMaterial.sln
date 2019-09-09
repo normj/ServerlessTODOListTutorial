@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Markdown", "Markdown", "{B0
 		CommonServerlessServices.md = CommonServerlessServices.md
 		FinalWrapup.md = FinalWrapup.md
 		..\README.md = ..\README.md
+		TearDown.md = TearDown.md
 		TOC.json = TOC.json
 		TODOListServices.md = TODOListServices.md
 		WhatAreWeBuilding.md = WhatAreWeBuilding.md

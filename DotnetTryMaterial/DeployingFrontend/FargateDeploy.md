@@ -210,7 +210,8 @@ that can be selected for the IAM role during the Fargate deployment.
   * [Deploy to Lambda using CloudFormation](../DeployingFrontend/LambdaDeploy.md)
   * [What is for Fargate](../DeployingFrontend/WhatIsFargate.md)
   * **Deploying to Fargate**
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
-Continue on to next page: [Final Wrap Up](../FinalWrapup.md)
+Continue on to next page: [Tear Down](../TearDown.md)
 

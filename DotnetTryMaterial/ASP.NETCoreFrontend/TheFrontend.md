@@ -63,6 +63,7 @@ Once that is done you should be able to run the application locally.
   * [AWS Systems Manager Parameter Store for Managing Configuration](../ASP.NETCoreFrontend/ParameterStoreConfigurationProvider.md)
   * [ASP.NET Core wrap up](../ASP.NETCoreFrontend/FrontendWrapup.md)
 * [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Dependency Injection](../ASP.NETCoreFrontend/DependencyInjection.md)

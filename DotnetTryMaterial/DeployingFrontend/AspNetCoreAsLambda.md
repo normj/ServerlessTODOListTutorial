@@ -96,6 +96,7 @@ Bucket for static content resource paths like **images**, **lib**  and **css** t
   * [Deploy to Lambda using CloudFormation](../DeployingFrontend/LambdaDeploy.md)
   * [What is for Fargate](../DeployingFrontend/WhatIsFargate.md)
   * [Deploying to Fargate](../DeployingFrontend/FargateDeploy.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Preparing for Lambda Deployment](../DeployingFrontend/LambdaPrepare.md)

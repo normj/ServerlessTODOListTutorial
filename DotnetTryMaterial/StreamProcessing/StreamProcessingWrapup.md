@@ -33,6 +33,7 @@ To recap in this section we covered:
   * **Stream processing wrap up**
 * [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)

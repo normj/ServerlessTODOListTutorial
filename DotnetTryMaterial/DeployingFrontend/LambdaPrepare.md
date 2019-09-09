@@ -179,6 +179,7 @@ Now when you right click on the project in Visual Studio you can see it is ready
   * [Deploy to Lambda using CloudFormation](../DeployingFrontend/LambdaDeploy.md)
   * [What is for Fargate](../DeployingFrontend/WhatIsFargate.md)
   * [Deploying to Fargate](../DeployingFrontend/FargateDeploy.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Deploy to Lambda using CloudFormation](../DeployingFrontend/LambdaDeploy.md)

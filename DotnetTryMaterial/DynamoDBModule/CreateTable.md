@@ -80,6 +80,7 @@ When you delete a table all of its data and indexes will be deleted as well.
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
 * [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)

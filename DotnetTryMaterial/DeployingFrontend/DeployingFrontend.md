@@ -26,8 +26,6 @@ your application does not fit the Lambda model then fallback to Fargate.
 
 Ahead in this tutorial are steps for both Lambda and Fargate. You can choose to follow either or both depending on what you want to learn.
 
-
-
 <!-- Generated Navigation -->
 ---
 
@@ -45,6 +43,7 @@ Ahead in this tutorial are steps for both Lambda and Fargate. You can choose to 
   * [Deploy to Lambda using CloudFormation](../DeployingFrontend/LambdaDeploy.md)
   * [What is for Fargate](../DeployingFrontend/WhatIsFargate.md)
   * [Deploying to Fargate](../DeployingFrontend/FargateDeploy.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [ASP.NET Core as a Lambda Function?](../DeployingFrontend/AspNetCoreAsLambda.md)

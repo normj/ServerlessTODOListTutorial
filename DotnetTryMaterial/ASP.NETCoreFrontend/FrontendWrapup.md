@@ -21,6 +21,7 @@ easy to scale based on our usage.
   * [AWS Systems Manager Parameter Store for Managing Configuration](../ASP.NETCoreFrontend/ParameterStoreConfigurationProvider.md)
   * **ASP.NET Core wrap up**
 * [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)

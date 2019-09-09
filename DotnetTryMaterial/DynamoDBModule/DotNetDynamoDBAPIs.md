@@ -26,6 +26,7 @@ The NuGet package [AWSSDK.DynamoDBv2](https://www.nuget.org/packages/AWSSDK.Dyna
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
 * [Getting ASP.NET Core ready for Serverless](../ASP.NETCoreFrontend/TheFrontend.md)
 * [Deploying ASP.NET Core as a Serverless Application](../DeployingFrontend/DeployingFrontend.md)
+* [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
 Continue on to next page: [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
