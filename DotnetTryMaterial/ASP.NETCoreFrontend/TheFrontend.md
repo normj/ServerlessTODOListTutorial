@@ -8,7 +8,7 @@ section we will focus on making this application ready to run in AWS and replace
 
 Before we can run the application locally we need to configure in our application what AWS region and profile to use. The region and profile we use 
 for development might be different then what we use when deployed to AWS. So we will configure the region and profile in the **appsettings.Development.json** file
-so that region and profile are only set during development. ASP.NET Core will ignore this fill when not run in development. 
+so that region and profile are only set during development. ASP.NET Core will ignore this file when not run in development. 
 
 In the **appsettings.Development.json** file add the **Region** and **Profile** field in the AWS section like you see below and set the values of those fields to the same value used
 as the start of this tutorial.
@@ -36,15 +36,16 @@ Alternatively to using **appsettings.Development.json** you could also set these
 
 ### Run the app
 
-As mention before the application is currently configured to use SQL Server for identity. To ensure the database exist run the command below in the project directory
-to create the database. If you don't have the **dotnet ef** available or are getting errors with it don't worry. We will be removing 
-the SQL Server dependency very soon in this tutorial.
+As mentioned before the application is currently configured to use SQL Server for identity. To ensure the database exist locally run the command below in the project directory
+to create the database. Once that is done you should be able to run the application locally.
 
 ```
 dotnet ef database update
 ```
 
-Once that is done you should be able to run the application locally.
+If you don't have the **dotnet ef** available or are getting errors with it don't worry. Its not important and we will be removing 
+the SQL Server dependency very soon in this tutorial.
+
 
 <!-- Generated Navigation -->
 ---

@@ -24,10 +24,10 @@ the **Amazon.AspNetCore.DataProtection.SSM** NuGet package. This package will us
 The first thing need to do is add the [Amazon.AspNetCore.DataProtection.SSM](https://www.nuget.org/packages/Amazon.AspNetCore.DataProtection.SSM/) NuGet package to our ASP.NET Core application.
 
 ```
-dotnet add package Amazon.AspNetCore.DataProtection.SSM
+~/ServerlessTODOList.Frontend> dotnet add package Amazon.AspNetCore.DataProtection.SSM
 ```
 
-Once the package is added we just need to add the code to enable it. This is done in the Startup's `ConfigureServices` method by calling `PersistKeysToAWSSystemsManager`.
+Once the package is added we need to add the code to enable it. This is done in the Startup's `ConfigureServices` method by calling `PersistKeysToAWSSystemsManager`.
 The parameter passed into `PersistKeysToAWSSystemsManager` will be the parameter name prefix for the keys stored in Parameter Store.
 
 ```csharp

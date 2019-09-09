@@ -3,7 +3,8 @@
 Currently the application is using the default SQL Server Entity Framework based provider to handle identity. This requires us to manage a SQL Server instance
 when we deploy. Since we want to take advantage of serverless technologies and not have to maintain a SQL Server instance we need another option. 
 
-Amazon Cognito handles identity without requiring any infrastructure. We just need to create a user pool within Cognito and configure our ASP.NET Core application to use it.
+[Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html) handles identity without requiring 
+any infrastructure. We just need to create a user pool within Cognito and configure our ASP.NET Core application to use it.
 
 Here we are going to do a brief setup to configure our application to use Cognito. For further information check out the 
 [ASP.NET Core Identity Provider for Amazon Cognito](https://github.com/aws/aws-aspnet-cognito-identity-provider) repository.
@@ -17,7 +18,7 @@ Before we create our user pool lets add the empty user pool configuration fields
 * In the AWS section add the **UserPoolId, UserPoolClientId and UserPoolClientSecret** fields.
 * Be sure to leave Region and Profile fields set to the values previously set in the tutorial.
 
-Don't worry about the user pool config fields for now, we will fill them in as we setup the user pool.
+We will set the values for these fields as we create the user pool. 
 
 ```json
 {
@@ -78,9 +79,9 @@ Lets create a client for our web application.
 Cognito has its own API to register and login users and ASP.NET Core also has its own framework for handling user registration and login. The 
 **Amazon.AspNetCore.Identity.Cognito** NuGet package bridges Cognito API and ASP.NET Core framework so they can work seemless together.
 
-To get started add the **Amazon.AspNetCore.Identity.Cognito** NuGet package to **ServerlessTODOList.Frontend**.
+To get started add the **Amazon.AspNetCore.Identity.Cognito** NuGet package to the **ServerlessTODOList.Frontend** project.
 ```
-dotnet add package Amazon.AspNetCore.Identity.Cognito
+~/ServerlessTODOList.Frontend> dotnet add package Amazon.AspNetCore.Identity.Cognito
 ```
 
 ### Edit Startup.cs

@@ -51,7 +51,7 @@ will do it without the **/ServerlessTODOList/** prefix.
 You can add parameter through the [System Manager console](https://console.aws.amazon.com/systems-manager/parameters). Be sure to select the region you plan on deploying the application to. 
 
 You can also set the values with any AWS SDK or CLI. Here is the .NET code to add the Cognito configuration data to Parameter Store. You must
-set the **userPoolId, userPoolClientId** and **userPoolClientSecret** to the values that you sent in **appsettings.Development.json** in the 
+set the **userPoolId, userPoolClientId** and **userPoolClientSecret** variables to the values that you set in **appsettings.Development.json** in the 
 previous section.
 
 
@@ -68,12 +68,7 @@ If the parameters have been added to Parameter Store then the following code tha
 ```cs --source-file ../Snippets/ParameterStoreSetup.cs --project ../Snippets/Snippets.csproj --region test_parameter_store_values
 ```
 
-## Wrap up
-
-The Cognito identity provider for ASP.NET Core that we talked about
-access configuration from the IConfiguration. That means after adding
-the Parameter Store provider to IConfiguration we don't have to make
-any changes to our code for setting up the Cognito identity provider.
+## AddSystemsManager overloads
 
 If you take a look at some of the overloads of **AddSystemsManager** you can see there are more options to how the data is retrieved as
 well as configuring an auto reload of data from Parameter store.

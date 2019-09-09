@@ -1,11 +1,10 @@
 # Dependency Injection
 
 ASP.NET Core has a built in dependency injection framework to make it easy for your Controllers and Razor pages to get
-services they require. The services available to the ASP.NET Core application is configured in the **Startup** 
+services they require. Services are registered with the dependency injection framework in the **Startup** 
 class's `ConfigureServices` method.
 
-The AWS services have already been configured for this application but we will explain how it was done so you know how 
-to use the feature in the future.
+The services for our DynamoDB data access layer have already been registered in the provided code but lets take look at how it was done.
 
 ## Injecting AWS Services
 
@@ -16,17 +15,17 @@ new extension methods to the `IServiceCollection` object. We can add DynamoDB by
 services.AddAWSService<Amazon.DynamoDBv2.IAmazonDynamoDB>();
 ```
 
-The `AddAWSService` method use the service interface, in this case `IAmazonDynamoDB`, to identify the AWS service. When an object is created that 
+The `AddAWSService` method uses the service interface, in this case `IAmazonDynamoDB`, to identify the AWS service. When an object is created that 
 takes in an `IAmazonDynamoDB` as part of the constructor the service client will be create from the `IServiceCollection`.
 Since the `IConfiguration` object is also added to the `IServiceCollection` the AWSSDK.Extensions.NETCore.Setup package
 will look for the configuration values like region and profile that we recently set to construct the service client.
 
 ## Adding our data access interface
 
-In the DynamoDB section we showed `ITODOListDataAccess` interface and its implementation `TODOListDataAccess` which provides our APIs to
-access our TODO lists. This `ITODOListDataAccess` is also added to the `IServiceCollection` with the following line of code.
+In the DynamoDB section of this tutorial we showed `ITODOListDataAccess` interface and its implementation `TODOListDataAccess` which provides our APIs to
+access our TODO lists. The interface `ITODOListDataAccess` is also added to the `IServiceCollection` with the following line of code.
 
-```
+```csharp
 services.AddSingleton(typeof(ITODOListDataAccess), typeof(TODOListDataAccess));
 ```
 
@@ -35,11 +34,11 @@ services.AddSingleton(typeof(ITODOListDataAccess), typeof(TODOListDataAccess));
 Now that we have both the AWS DynamoDB service client and our custom data access layer registered lets take a look at how the dependency injection work.
 
 If we take a look at the file **ServerlessTODOList.Frontend\Pages\MyLists.cshtml.cs** which contains the class **MyListsModel** you can see it 
-takes in an instance of **ITODOListDataAccess** as part of its constructor. When MyListsModel is created by the ASP.NET Core framework it looks
+takes in an instance of **ITODOListDataAccess** as part of its constructor. When MyListsModel is created by the ASP.NET Core framework looks
 to **IServiceCollection** for an instance of **ITODOListDataAccess**. 
 
 Since **ITODOListDataAccess** was registered as a singleton to the **IServiceCollection** it will be created the first time it is requested. 
-**TODOListDataAccess** was specified to **IServiceCollection** as the implementor of **ITODOListDataAccess** but that class takes in an 
+**TODOListDataAccess** was specified to **IServiceCollection** as the implementor of **ITODOListDataAccess** but TODOListDataAccess takes in an 
 instance of **IAmazonDynamoDB**. So now **IServiceCollection** will create an instance of **IAmazonDynamoDB** and pass that into the constructor of 
 TODOListDataAccess which will then be passed in **MyListsModel**.
 
