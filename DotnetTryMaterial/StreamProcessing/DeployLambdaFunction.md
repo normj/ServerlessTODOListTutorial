@@ -9,7 +9,7 @@ When this function is deployed an IAM role is required. The role provides AWS cr
 that can be used to access other AWS services. When you construct a service client from the 
 AWS SDK for .NET without specifing credentials the SDK will locate the credentials for the assigned role.
 
-All roles used for Lambda should have access to **CloudWatch Logs** to support Lambda saving logs. In this Lambda
+All roles used for Lambda should have access to **CloudWatch Logs** to support Lambda writing logs. In this Lambda
 function we also need to access to **Amazon Simple Email Service** to send emails and read access for the **DynamoDB Stream**.
 
 If you don't have an IAM role that has the required permissions then skip down to the [Create Role](#create-role)
@@ -56,7 +56,7 @@ to the address that the email will be sent from.
 
 
 #### Memory
-This controls how much memory will be allocated to Lambda function while it is processing an event. The amount of memory you allocate also controls
+This controls how much memory will be allocated to Lambda the function while it is processing an event. The amount of memory you allocate also controls
 how much CPU power the Lambda function will get. If a Lambda function is not processing fast enough for your requirements try increasing the
 memory settings for the function.
 
@@ -75,7 +75,8 @@ Dead Letter Queue (DLQ) can be either an SQS queue or SNS Topic. When a Lambda f
 ### Push Upload
 
 Once you push upload under the covers the tooling will execute the `dotnet publish` command to build
-the project and then create zip file of the .NET assembly and all of its required dependencies.
+the project then create zip file of the .NET assemblies and all of its required dependencies. The
+zip file is uploaded to Lambda and the function is created.
 
 ## Amazon.Lambda.Tools .NET Core Global Tool
 

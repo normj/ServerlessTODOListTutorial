@@ -9,7 +9,7 @@ for each task in the list.
 
 ## Context Object
 
-The **DynamoDBContext** object is used to save and load .NET object from DynamoDB. The class takes care of translating 
+The **DynamoDBContext** object is used to save and load .NET objects from DynamoDB. **DynamoDBContext** takes care of translating 
 the data from the properties on the **TODOList** and **TODOListItem** to the service clients AttributeValue objects.
 
 | Property | DynamoDB Type |

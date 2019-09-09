@@ -11,3 +11,4 @@
 **/*.trydotnet-builderror
 
 .vscode/*
+**/.ionide/*

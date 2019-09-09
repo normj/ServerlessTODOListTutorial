@@ -4,7 +4,7 @@ A DynamoDB Stream is enabled by updating the DynamoDB table.
 
 ### Stream View Type
 
-When you configure an event you can choose what data is sent in the event. The less you send in the stream the less read capacity units consumed.
+When you configure a DynamoDB Stream you can choose what data is sent into the stream. The less you send in the stream the less read capacity units consumed.
 
 | View Type | Description |
 |-|-|
@@ -31,9 +31,9 @@ the service provisions the stream. The table will be accessible while the stream
 
 ## Testing DynamoDB Stream
 
-This code below a is simplistic version of what it takes to read from a DynamoDB stream that does not
-handle failures and scaling issues. When we use Lambda to handle reading from a DynamoDB Stream all we have to write 
-is what the `foreach` inside the `shardReader` Func<>. Lambda takes care of managing the scaling and failures 
+This code below a is simplistic version of what it takes to read from a DynamoDB stream. It does does not
+handle failures and scaling concerns. When we use Lambda to handle reading from a DynamoDB Stream all we have to write 
+is our business logic in the `foreach` for the `shardReader` Func<>. Lambda takes care of managing the scaling and failures 
 for the shards of a DynamoDB Stream.
 
 ```cs --source-file ../Snippets/EnableDynamoDBStream.cs --project ../Snippets/Snippets.csproj --region test_stream_read

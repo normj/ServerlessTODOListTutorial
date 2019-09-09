@@ -23,14 +23,14 @@ one property should be set.
 
 ## Put Item
 
-The **PutItem** operation either creates a new item or replaces an existing item with the item in the request. 
+The **PutItem** operation either creates a new item or replaces an entire existing item. 
 
 ```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_put
 ```
 
 ## Get Item
 
-Using the Hash and range key the item is returned as a **Dictionary<string, AttrubuteValue>**. 
+Using the Hash and range key, if a range key was set for the table, the item is returned as a **Dictionary<string, AttrubuteValue>**. 
 
 #### AttributesToGet
 
@@ -54,8 +54,10 @@ TODO lists will be returned for the user.
 #### Paging
 
 Many operations in AWS like the query operation use paging to support large return 
-payloads. Operation that support paging will have a property on the response object containing the state of where the search stopped. To request the next page set the marker 
-property from the response object to the same request object and call the operation again. For the query operation the **LastEvaluatedKey** property on the response needs to be set to the **ExclusiveStartKey** on the request.
+payloads. Operation that support paging will have a property marking the last point searched on the response object. To continuing the query set the marker 
+property from the response object to on request object and call the operation again. 
+
+For the query operation the **LastEvaluatedKey** property on the response needs to be set to the **ExclusiveStartKey** on the request.
 
 ```csharp
 request.ExclusiveStartKey = response?.LastEvaluatedKey;
@@ -84,7 +86,7 @@ For more information about DynamoDB expressions check out the [Developer Guide](
 
 ## Delete Item
 
-To delete the item pass in the table name and the key information.
+To delete the item, pass in the table name and the key information.
 
 ```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_delete
 ```
@@ -99,9 +101,6 @@ Allows fast queries on other attributes besides hash key.
 
 Search for items based on any attributes. This will cause a full table scan so use sparingly.
 
-### [Backup and Restore](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html)
-
-Backup tables on demand and restore them to new tables.
 
 <!-- Generated Navigation -->
 ---

@@ -11,20 +11,20 @@ A table key is made of 2 parts. The first is a **Hash key** which is used by Dyn
 that evenly distributes the data to avoid having large partitions that can cause hot spots. The second part of the key is optional 
 which is a **Range key**. The range key can be used to do queries within a hash key.
 
-For our TODO List app we are using to use **User** as the hash key and **ListId** for the range key. This will allow us to quickly get 
+For our TODO List app we are to use **User** as the hash key and **ListId** for the range key. This will allow us to quickly get 
 the TODO lists for a particular user.
 
 ### Table Indexes
 DynamoDB also supports [local indexes and global indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html) to provide more query capabilities. Local indexes allow you to choose another
-range key along with the table hash key and a global indexes allows you choose both a new hash and range key. For the TODO list app 
+range key with the table's hash key. A global indexes allows you choose both a new hash and range key. For the TODO list app 
 we will not use indexes.
 
 ### Provisioning
 
-A table has 2 possible billing modes. The first mode called Provisioned where you set the read and write capacity needed for the table. Amazon CloudWatch and Autoscaling can be
+A table has 2 possible billing modes. The first mode is called **Provisioned** where you set the read and write capacity needed for the table. Amazon CloudWatch and AAWS Auto Scaling can be
 used to monitor the usage versus what has been provisioned and automatically adjust the provisioning. The second mode is called 
 [On-Demand](https://aws.amazon.com/blogs/aws/amazon-dynamodb-on-demand-no-capacity-planning-and-pay-per-request-pricing/) where you pay per
-request instead of for provision requests. The guidance is to use provisioned mode if the usage is predictable and on-demand when the traffic
+request instead of for provision requests. DynamoDB's guidance is to use provisioned mode if the usage is predictable and on-demand when the traffic
 is difficult to predict.
 
 

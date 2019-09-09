@@ -4,7 +4,7 @@ In our application's solution the **ServerlessTODOList.StreamProcessor** project
 You can see none of the shard management code is here, we just implement the `foreach` statement.
 
 ## Passed in Configuration
-Notice in the constructor **FROM_EMAIL** environment variable is read. This is set during deployment time
+Notice in the constructor the **FROM_EMAIL** environment variable is read. This is set during deployment time
 to configure the from address for the emails that are being sent through Simple Email Service.
 
 ```csharp
