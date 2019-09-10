@@ -1,8 +1,5 @@
 version: 0.2
 
-env:
-    parameter-store:
-        S3_BUCKET: "/ServerlessTODOList-CICD/BuildArtifactsBucket"
 phases:
   install:
     runtime-versions:
