@@ -1,7 +1,7 @@
 # ASP.NET Core as a Lambda Function?
 
 When you want to expose a Lambda function to the web you register the Lambda function to either an API Gateway REST api or an ELB Application Load Balancer.
-The http request that come into the REST API or the Application load balancer will sent to the Lambda function as events just like we saw earlier with
+The HTTP request that come into the REST API or the Application load balancer will be sent to the Lambda function as events just like we saw earlier with
 the DynamoDB stream sample. The man difference is that a response object is returned from the Lambda function which will be returned back as the HTTP response
 through API Gateway or Application Load Balancer.
 
@@ -77,7 +77,7 @@ IIS deployment. We didn't have to make architecture decisions to our software th
 
 One final recommendation. The ASP.NET Core adaptor is most commonly used for Web APIs, if you are using it for a full application and have a lot
 of static content I recommend pushing the static content to an S3 bucket. The API Gateway REST API can be configured to forward request to the S3 
-Bucket for static content resource paths like **images**, **lib**  and **css** to forward to the S3 bucket. That is beyond the scope of this tutorial.
+Bucket for static content resource paths like **images**, **lib**  and **css** to forward to the S3 bucket. Configuring this is beyond the scope of this tutorial.
 
 <!-- Generated Navigation -->
 ---

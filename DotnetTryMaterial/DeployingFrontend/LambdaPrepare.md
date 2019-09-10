@@ -8,12 +8,12 @@ how the project runs locally so you can continue to run and debug locally.
 The first thing we need to do is add the Amazon.Lambda.AspNetCoreServer NuGet package to our ServerlessTODOList.Frontend project.
 
 ```
-dotnet add package Amazon.Lambda.AspNetCoreServer
+~/ServerlessTODOList.Frontend> dotnet add package Amazon.Lambda.AspNetCoreServer
 ```
 
 ## Add a Lambda entry point
 
-When we run our application locally the **Program.s** contains the `Main` method which builds and runs the **IWebHost**. This serves as the
+When we run our application locally the **Program.cs** file contains the `Main` method which builds and runs the **IWebHost**. This serves as the
 entry point when running locally. For Lambda we need a different entry point that will enable API Gateway as the server instead of Kestrel.
 
 Create a class in the project called `LambdaEntryPoint` and add the following code to the project.
@@ -49,11 +49,11 @@ when it gets an event from API Gateway.
 Back when we deployed our Lambda function for DynamoDB stream processing we deployed our code straight to Lambda and then later setup
 our event mapping to the DynamoDB stream.
 
-Another option for deploying a serverless application is using CloudFormation. This will allow us to define our API Gateway REST API, Lambda function
+Another option for deploying a serverless application is using CloudFormation. This will allow us to define our API Gateway REST API, Lambda function,
 IAM Roles and any other resources we might need and create all the AWS resources as one unit called a CloudFormation Stack. It also allows us to
 delete all of the resources together when we delete our CloudFormation stack.
 
-In our project add a file called `serverless.template` and add the following JSON.
+In our project add a file called **serverless.template** and add the following JSON.
 ```json
 {
    "AWSTemplateFormatVersion":"2010-09-09",
@@ -127,7 +127,7 @@ for all other requests.
 ## Updating the Project Type
 
 The last thing we need to do to turn on the Lambda deployment features in Visual Studio is edit the project file for ServerlessTODOList.Frontend and
-add the property `AWSProjectType` with a value of **Lambda** to a `PropertyGroup`. Below is an example.
+add the property `AWSProjectType` with a value of **Lambda** to a `PropertyGroup`. Below shows the current state of our project file.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
