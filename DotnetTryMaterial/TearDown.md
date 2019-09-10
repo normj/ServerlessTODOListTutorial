@@ -1,6 +1,6 @@
 # Tear Down
 
-Before you end this tutorial it is be sure to tear down the AWS resources created during the tutorial. 
+Before you end this tutorial be sure to tear down the AWS resources created during the tutorial. 
 This will avoid any unexpected charges for resources left on like the DynamoDB table or Fargate container.
 
 ## Tear Down Fargate Container

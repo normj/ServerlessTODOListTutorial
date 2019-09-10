@@ -5,12 +5,22 @@ You have reached the end. Throughout this tutorial we covered:
 
 * Amazon DynamoDB
   * How to create tables and what are the different data types.
-  * How to access with the AWS SDK for .NET
-  * How to enabled Streams
+  * How to access items from a table with the AWS SDK for .NET
+  * How to enabled Streams for a table
+* ASP.NET Core Providers
+  * AWSSDK.Extensions.NETCore.Setup - Adding AWS services to dependency injection framework.
+  * [Amazon.AspNetCore.Identity.Cognito](https://github.com/aws/aws-aspnet-cognito-identity-provider) - Using Amazon Cognito for identity.
+  * [Amazon.AspNetCore.DataProtection.SSM](https://github.com/aws/aws-ssm-data-protection-provider-for-aspnet) - Storing encryption keys for data protection.
+  * [Amazon.Extensions.Configuration.SystemsManager](https://github.com/aws/aws-dotnet-extensions-configuration) - Integrating Parameter Store to configuration framework.
 * Building a Lambda function to process service events in this case DynamoDB
+  * Enabling Lambda for an ASP.NET Core application
   * Deploying functions
   * Configuring event sources
   * Troubleshooting
+* Deploy to AWS Fargate
+  * Adding Dockerfile to ASP.NET Core Application.
+  * Publishing from Visual Studio to Elastic Container Service with Fargate.
+  * Configuring an Application Load Balancer for containers running application.
 
 Useful Links .NET developers interesting in AWS.
 
