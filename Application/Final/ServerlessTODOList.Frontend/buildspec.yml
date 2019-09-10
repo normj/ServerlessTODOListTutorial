@@ -1,8 +1,8 @@
 version: 0.2
 
 env:
-    variables:
-        S3_BUCKET: "/CloudMosaic/prod/AppOptions/MosaicStorageBucket"
+    parameter-store:
+        S3_BUCKET: "/ServerlessTODOList-CICD/BuildArtifactsBucket"
 phases:
   install:
     runtime-versions:
