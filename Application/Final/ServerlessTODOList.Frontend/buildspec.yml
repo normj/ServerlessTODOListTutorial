@@ -5,6 +5,8 @@ env:
         S3_BUCKET: "/CloudMosaic/prod/AppOptions/MosaicStorageBucket"
 phases:
   install:
+    runtime-versions:
+      dotnet: 2.2
     commands:
       - dotnet tool install -g Amazon.Lambda.Tools
   build:
