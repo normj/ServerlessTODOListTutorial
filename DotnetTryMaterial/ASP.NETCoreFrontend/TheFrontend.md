@@ -46,7 +46,6 @@ dotnet ef database update
 If you don't have the **dotnet ef** available or are getting errors with it don't worry. Its not important and we will be removing 
 the SQL Server dependency very soon in this tutorial.
 
-
 <!-- Generated Navigation -->
 ---
 

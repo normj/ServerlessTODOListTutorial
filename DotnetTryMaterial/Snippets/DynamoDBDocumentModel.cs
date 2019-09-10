@@ -10,9 +10,9 @@ namespace Snippets
 {
     public class DynamoDBDocumentModel
     {
-        public async Task SaveTODOListAsync()
+        public static async Task PutTODOListAsync()
         {
-            #region document_model_save
+            #region document_model_put
             using (var client = new AmazonDynamoDBClient())
             {
                 var table = Table.LoadTable(client, "TODOList", DynamoDBEntryConversion.V2);
@@ -26,7 +26,6 @@ namespace Snippets
                 todoList["UpdateDate"] = DateTime.UtcNow;
 
                 var tasks = new List<Document>();
-                todoList["Tasks"] = tasks;
                 
                 var task1 = new Document();
                 task1["Description"] = "Task1";
@@ -38,29 +37,74 @@ namespace Snippets
                 task2["Complete"] = false;
                 tasks.Add(task2);
 
+                todoList["Tasks"] = tasks;
+
                 await table.PutItemAsync(todoList);
+                Console.WriteLine($"TODO List saved with Document Model");
             }
             #endregion
         }
-        
-        public async Task LoadTODOListAsync()
+
+        public static async Task GetTODOListAsync()
         {
-            #region document_model_load
+            #region document_model_get
             using (var client = new AmazonDynamoDBClient())
             {
                 var table = Table.LoadTable(client, "TODOList", DynamoDBEntryConversion.V2);
 
                 var todoList = await table.GetItemAsync("document-testuser", "generated-list-id");
-                Console.WriteLine($"Found list {todoList["Name"]}");
+                Console.WriteLine($"Found list: {todoList["Name"]}");
                 
-                var tasks = todoList["Tasks"] as IList<Document>;
-
+                var tasks = todoList["Tasks"].AsListOfDocument();
+                Console.WriteLine($"Number of tasks: {tasks.Count}");
                 foreach (var task in tasks)
                 {
                     Console.WriteLine($"\t{task["Description"]}");
                 }
             }            
             #endregion
-        }        
+        }
+
+        public static async Task QueryTODOListAsync()
+        {
+            #region document_model_query
+            using (var client = new AmazonDynamoDBClient())
+            {
+                var table = Table.LoadTable(client, "TODOList", DynamoDBEntryConversion.V2);
+
+                var queryFilter = new QueryFilter();
+                //queryFilter.AddCondition("ListId", QueryOperator.BeginsWith, "custom");
+
+                var search = table.Query("document-testuser", queryFilter);
+
+                var lists = await search.GetRemainingAsync();
+
+                Console.WriteLine($"Total lists found: {lists.Count}");
+                foreach (var todoList in lists)
+                {
+                    Console.WriteLine($"List Name: {todoList["Name"]}");
+                    Console.WriteLine($"List ID:{todoList["ListId"]}");
+                    var tasks = todoList["Tasks"].AsListOfDocument();
+                    foreach (var task in tasks)
+                    {
+                        Console.WriteLine($"\t{task["Description"]}");
+                    }
+                }
+            }
+            #endregion
+        }
+
+        public static async Task DeleteTODOListAsync()
+        {
+            #region document_model_delete
+            using (var client = new AmazonDynamoDBClient())
+            {
+                var table = Table.LoadTable(client, "TODOList", DynamoDBEntryConversion.V2);
+
+                await table.DeleteItemAsync("document-testuser", "generated-list-id");
+                Console.WriteLine("Deleted list");
+            }
+            #endregion
+        }
     }
 }

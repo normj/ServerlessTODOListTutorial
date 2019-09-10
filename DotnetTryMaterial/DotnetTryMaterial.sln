@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamoDBModule", "DynamoDBM
 		DynamoDBModule\DDBServiceClientAPI.md = DynamoDBModule\DDBServiceClientAPI.md
 		DynamoDBModule\DotNetDynamoDBAPIs.md = DynamoDBModule\DotNetDynamoDBAPIs.md
 		DynamoDBModule\DotNetDynamoDBDataModel.md = DynamoDBModule\DotNetDynamoDBDataModel.md
+		DynamoDBModule\DotNetDynamoDBDocumentModel.md = DynamoDBModule\DotNetDynamoDBDocumentModel.md
 		DynamoDBModule\DynamoDBWrapUp.md = DynamoDBModule\DynamoDBWrapUp.md
 		DynamoDBModule\WhatIsDynamoDB.md = DynamoDBModule\WhatIsDynamoDB.md
 	EndProjectSection

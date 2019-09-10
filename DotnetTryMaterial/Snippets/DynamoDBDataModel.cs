@@ -9,11 +9,11 @@ using Amazon.DynamoDBv2.DataModel;
 
 namespace Snippets
 {
-    public class DotNetDynamoDBDataModel
+    public class DynamoDBDataModel
     {
         private DynamoDBContext Context { get; set; }
 
-        public DotNetDynamoDBDataModel( )
+        public DynamoDBDataModel( )
         {
             #region datamodel_construct_client
             var config = new DynamoDBContextConfig

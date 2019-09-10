@@ -101,7 +101,6 @@ Allows fast queries on other attributes besides hash key.
 
 Search for items based on any attributes. This will cause a full table scan so use sparingly.
 
-
 <!-- Generated Navigation -->
 ---
 
@@ -114,6 +113,7 @@ Search for items based on any attributes. This will cause a full table scan so u
   * [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)
   * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * **CRUD operations with Amazon DynamoDB Service Client**
+  * [CRUD operations with Document Model API](../DynamoDBModule/DotNetDynamoDBDocumentModel.md)
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
   * [Amazon DynamoDB wrap up](../DynamoDBModule/DynamoDBWrapUp.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
@@ -122,5 +122,5 @@ Search for items based on any attributes. This will cause a full table scan so u
 * [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
-Continue on to next page: [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
+Continue on to next page: [CRUD operations with Document Model API](../DynamoDBModule/DotNetDynamoDBDocumentModel.md)
 

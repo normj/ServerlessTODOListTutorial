@@ -60,6 +60,20 @@ namespace Snippets
                     DDBServiceClientAPI.DeleteItemAsync().Wait();
                     break;
 
+                case "document_model_put":
+                    DynamoDBDocumentModel.PutTODOListAsync().Wait();
+                    break;
+                case "document_model_get":
+                    DynamoDBDocumentModel.GetTODOListAsync().Wait();
+                    break;
+                case "document_model_query":
+                    DynamoDBDocumentModel.QueryTODOListAsync().Wait();
+                    break;
+                case "document_model_delete":
+                    DynamoDBDocumentModel.DeleteTODOListAsync().Wait();
+                    break;
+
+
                 case "enable_stream_status":
                     EnableDynamoDBStream.EnableAsync().Wait();
                     break;
@@ -112,7 +126,7 @@ namespace Snippets
 
         private static async Task ExecuteDataModelSession()
         {
-            var d = new DotNetDynamoDBDataModel();
+            var d = new DynamoDBDataModel();
             await d.SaveTODOListAsync();
             await d.LoadTODOListAsync();
             await d.QueryTODOListAsync();

@@ -12,6 +12,7 @@
       "CreateTable.md",
       "DotNetDynamoDBAPIs.md",
       "DDBServiceClientAPI.md",
+      "DotNetDynamoDBDocumentModel.md",
       "DotNetDynamoDBDataModel.md",
       "DynamoDBWrapUp.md"
     ]

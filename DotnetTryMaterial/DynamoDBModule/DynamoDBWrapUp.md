@@ -104,6 +104,7 @@ namespace ServerlessTODOList.DataAccess
   * [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)
   * [Accessing DynamoDB items with the AWS SDK for .NET](../DynamoDBModule/DotNetDynamoDBAPIs.md)
   * [CRUD operations with Amazon DynamoDB Service Client](../DynamoDBModule/DDBServiceClientAPI.md)
+  * [CRUD operations with Document Model API](../DynamoDBModule/DotNetDynamoDBDocumentModel.md)
   * [CRUD operations with Data Model API](../DynamoDBModule/DotNetDynamoDBDataModel.md)
   * **Amazon DynamoDB wrap up**
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)

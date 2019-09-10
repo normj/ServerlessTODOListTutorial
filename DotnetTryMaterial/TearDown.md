@@ -20,7 +20,6 @@ For the other resources if you used the names suggest in the tutorial then runni
 resources. If you changed the names then update the properties in the code box and then execute to delete
 the resources.
 
-
 <!-- Generated Navigation -->
 ---
 
