@@ -17,6 +17,7 @@ namespace Snippets
             {
                 var table = Table.LoadTable(client, "TODOList", DynamoDBEntryConversion.V2);
                 
+                // Create TODO List
                 var todoList = new Document();
                 todoList["User"] = "document-testuser";
                 todoList["ListId"] = "generated-list-id";
@@ -25,18 +26,20 @@ namespace Snippets
                 todoList["CreateDate"] = DateTime.UtcNow;
                 todoList["UpdateDate"] = DateTime.UtcNow;
 
-                var tasks = new List<Document>();
-                
+                // Create task 1 as a completed task
                 var task1 = new Document();
                 task1["Description"] = "Task1";
                 task1["Complete"] = true;
-                tasks.Add(task1);
                 
+                // Create task 2 as an incomplete task
                 var task2 = new Document();
                 task2["Description"] = "Task2";
                 task2["Complete"] = false;
-                tasks.Add(task2);
 
+                // Create a collection
+                var tasks = new List<Document>();
+                tasks.Add(task1);
+                tasks.Add(task2);
                 todoList["Tasks"] = tasks;
 
                 await table.PutItemAsync(todoList);
@@ -53,7 +56,9 @@ namespace Snippets
                 var table = Table.LoadTable(client, "TODOList", DynamoDBEntryConversion.V2);
 
                 var todoList = await table.GetItemAsync("document-testuser", "generated-list-id");
-                Console.WriteLine($"Found list: {todoList["Name"]}");
+                Console.WriteLine($"Found list: {(string)todoList["Name"]}");
+                Console.WriteLine($"List is complete: {(bool)todoList["Complete"]}");
+                Console.WriteLine($"List create date: {(DateTime)todoList["CreateDate"]}");
                 
                 var tasks = todoList["Tasks"].AsListOfDocument();
                 Console.WriteLine($"Number of tasks: {tasks.Count}");
