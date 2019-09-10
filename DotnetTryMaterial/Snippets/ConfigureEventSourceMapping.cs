@@ -21,7 +21,7 @@ namespace Snippets
             using (var streamClient = new AmazonDynamoDBStreamsClient())
             using (var lambdaClient = new AmazonLambdaClient())
             {
-                // TODO: Enter Lambda function name;
+                // TODO: Enter Lambda function name, this is most likely: ServerlessTODOListStreamProcessor
                 var functionName = "";
                 if(string.IsNullOrEmpty(functionName))
                 {
