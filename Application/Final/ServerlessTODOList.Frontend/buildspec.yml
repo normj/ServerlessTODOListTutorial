@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - cd ./Application/Final/ServerlessTODOList.Frontend
-      - dotnet lambda package-ci --serverless-template serverless.template --output-template updated.template --s3-bucket $S3_BUCKET --s3-prefix ServerlessTODOList.Frontend
+      - dotnet lambda package-ci --template serverless.template --output-template updated.template --s3-bucket $S3_BUCKET --s3-prefix ServerlessTODOList.Frontend
 artifacts:
   files:
     - ./Application/Final/ServerlessTODOList.Frontend/updated.template
