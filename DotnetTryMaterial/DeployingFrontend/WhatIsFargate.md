@@ -16,8 +16,8 @@ the service monitors the tasks. If any of the tasks stop running the service wil
 
 Tasks for an ECS service will get unique IP address and public DNS when they are started. Because we will potentially have
 more then one task supporting our application and the HTTP endpoints are unique for each task we will need
-a load balancer for the Elastic Load Balancing service to provide a single consistent HTTP/HTTPS endpoint.
-The ECS service managing the tasks for the service will also ensure the task are registered to the load balancer
+a load balancer from the Elastic Load Balancing service to provide a single consistent HTTP/HTTPS endpoint.
+The ECS service managing the tasks for the service will also ensure the tasks are registered to the load balancer
 when they are started.
 
 <!-- Generated Navigation -->

@@ -20,8 +20,8 @@ The Stack Name field will be used to name the CloudFormation stack. A CloudForma
 the CloudFormation template. Lets call our stack **ServerlessTODOList**.
 
 ### S3 Bucket
-The name of an S3 bucket must be set and the bucket must be in the same region as the CloudFormation stack will be created in. When the deployment happens the **ServerlessTODOList.Frontend**
-will be compiled, zipped up and upload to this S3 bucket. The CloudFormation template will then be updated to point the Lambda function defined in the template to point to the compiled
+The name of an S3 bucket must be set and the bucket must be in the same region as the CloudFormation stack will be created in. When the deployment happens the **ServerlessTODOList.Frontend** project
+will be compiled, zipped up and uploaded to this S3 bucket. The CloudFormation template will then be updated to point the Lambda function defined in the template to the compiled
 code in the S3 bucket.
 
 ### Profile and Region
@@ -34,7 +34,7 @@ template parameters.
 
 
 ### Push Publish
-When the wizard fields are set push the **Publish** to start the deployment. This will be build the project and upload the built project to S3. Then update the CloudFormation template
+When the wizard fields are set push the **Publish** button to start the deployment. This will build the project, upload the built project to S3 and update the CloudFormation template
 to point to the S3 location. With the updated CloudFormation template it will tell CloudFormation to create the Stack.
 
 ![Wizard Gif](./images/ServerlessWizard.gif)

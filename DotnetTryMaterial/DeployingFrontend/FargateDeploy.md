@@ -5,11 +5,11 @@
 
 When the application is deployed to Fargate an IAM role is required. The role provides AWS credentials to the container
 that can be used to access other AWS services. When you construct a service client from the 
-AWS SDK for .NET without specifing credentials the SDK will locate the credentials for the assigned role.
+AWS SDK for .NET without specifying credentials the SDK will locate the credentials for the assigned role.
 
 Our application needs access to DynamoDB, Systems Manager and Cognito. Fargate will log messages written to standard out 
 and standard error to CloudWatch Logs so make sure the IAM role we use during deployment has access to 
-CloudWatch Logs to the IAM role.
+CloudWatch Logs.
 
 If you don't have an IAM role that has the required permissions then skip down to the [Create Role](#create-role)
 section at the bottom of this page to create an IAM role and then return back here.
@@ -18,10 +18,10 @@ section at the bottom of this page to create an IAM role and then return back he
 ## Adding Dockerfile
 
 
-To deploy to Fargate Docker must be installed and running on our machine. The next step is the **ServerlessTODOList.Frontend**
+To deploy to Fargate, Docker must be installed and running on our machine. The next step is the **ServerlessTODOList.Frontend**
 project needs to have a **Dockerfile** in it to tell Docker how to build ServerlessTODOList.Frontend as a Docker image.
 
-In Visual Studio a quick way to create a Dockerfile that right click on the ServerlessTODOList.Frontend project and
+In Visual Studio a quick way to create a Dockerfile is to right click on the ServerlessTODOList.Frontend project and
 select **Add -> Docker Support**.
 
 ![Add Docker](./images/add-docker.png)
@@ -55,7 +55,7 @@ ENTRYPOINT ["dotnet", "ServerlessTODOList.Frontend.dll"]
 
 ## Deployment Wizard
 
-Now that the project file has a Dockerfile when we right click on the ServerlessTODOList.Frontend project we will
+Now that the project file has a Dockerfile, when we right click on the ServerlessTODOList.Frontend project we will
 see a new menu item to **Publish Container to AWS...**.
 
 ![Add Docker](./images/solution-explorer-container.png)
@@ -72,7 +72,7 @@ are:
 
 | Name | Description |
 | --- | --- |
-| Service on  an ECS Cluster | For projects like our web application where the process should run indefinitely. |
+| Service on an ECS Cluster | For projects like our web application where the process should run indefinitely. |
 | Run Task on an ECS Cluster | For projects like batch processing that do a define amount of work and exit when the work is done. |
 | Schedule Task on an ECS Cluster | This is the same as the run task option but but allows the task to be run on a schedule. |
 | Push only the Docker image to Amazon Elastic Container Registry | Only push the project to ECR. Then use other tooling to run the new container image in ECS |
@@ -86,7 +86,7 @@ repository in ECR and choose to run the image as a service.
 ![Wizard Page 2](./images/ecs-wizard-page2.png)
 
 Here the ECS cluster that will run the project must be picked. For the tutorial select **Create an empty cluster** and set the 
-name to **ServerlessTODOList**. The term empty here refers to the fact that no EC2 instances will be added to the cluster. 
+name to **ServerlessTODOList**. The term "empty" refers to the fact that no EC2 instances will be added to the cluster. 
 In our case we are going to use Fargate instead of EC2 to provide the compute power to run our application. In the 
 [ECS web console](https://console.aws.amazon.com/ecs) you can create ECS clusters with EC2 instances if you prefer EC2
 over Fargate.
@@ -95,8 +95,8 @@ The rest of the settings in the wizard configure how much compute power Fargate 
 and the VPC and Security Group the Fargate compute environment will launch in. By default these fields will be set 
 the minimum compute power and the default VPC and security group.
 
-As long as you have a default VPC in your account you can leave everything on this page except ECS Cluster being set to 
-**Create an empty cluster** and set the name to **ServerlessTODOList**.
+As long as you have a default VPC in your account you can leave everything at the default on this page except ECS Cluster being set to 
+**Create an empty cluster** and the name set to **ServerlessTODOList**.
 
 ### Wizard page 3 - ECS service configuration
 
@@ -106,7 +106,7 @@ Here we we are going to select **Create new** for the Service and set the name t
 
 To ensure we have some redundancy lets set the **Number of Tasks** to 2.
 
-**Minimum Healthy Percent** and **Maximum Percent** can be left at the defaults. These fields are used  when publishing
+**Minimum Healthy Percent** and **Maximum Percent** can be left at the defaults. These fields are used when publishing
 new versions of the project. By setting Minimum Healthy Percent to 50 percent ensures ECS won't remove both of our 
 existing tasks until at least one new task using the new container image has launched. By having Maximum Percent
 set to 200 allows ECS to add 2 new tasks running the project before shutting down the old ones getting the total count of task
@@ -148,11 +148,11 @@ Values to set on this page:
 
 | <div style="width:200px">Name</div> | Description |
 | ------| --- |
-| Task Definition | Set to Create New with a name of ServerlessTODOListFrontend |
+| Task Definition | Set to Create New with a name of **ServerlessTODOListFrontend** |
 | Container | Set to Create New with a name of ServerlessTODOListFrontend |
 | Task Role | Select the IAM role that the application will assume. This is likely the IAM role created at the start of this page. |
 | Task Execution Role | Set to Create New or ecsTaskExecutionRole if you have one. This is the role the ECS service will assume to manage your tasks, like registering with the Target Group. |
-| Port Mapping | With Fargate there is not a mapping between container port and host port. Here you list the ports to expose. |
+| Port Mapping | With Fargate there is no a mapping between container port and host port. Here you list the ports to expose. |
 | Environment Variables | Environment variables to set before the container is run. For convenience the Visual Studio publishing wizard presets ASPNETCORE_ENVIRONMENT to production for ASP.NET Core projects. |
 
 When all of the fields are set push the **Publish** button to start deploying our application.
@@ -168,7 +168,7 @@ Once the publishing button is pushed the wizard will launch doing the following 
 * Create the ECS cluster
 * Create the ECS service within the cluster
 
-Once it has done all of those steps it will display the ECS cluster view from the AWS Explorer. This will the load balancer
+Once it has done all of those steps it will display the ECS cluster view from the AWS Explorer. This will show the load balancer
 being provisioned and 2 tasks in pending status. In about a minute the 2 tasks will be in running state and 
 the load balancer will be active. Once it is active you can click on the link to view our deployed Serverless TODO List
 application using Fargate.
@@ -180,7 +180,7 @@ application using Fargate.
 **Important,** unlike a Lambda deployment, where the charges are based on actual invocations of the Lambda function, the cost
 for Fargate and Application Load Balancer is based on the length they have been provisioned. To avoid getting unexpected
 charges be sure to delete the application when you are done testing. In the ECS Cluster view click the **Delete** button
-for the **ServerlessTODOListFrontend** service. The visual studio tooling will also delete the associated
+for the **ServerlessTODOListFrontend** service. The Visual Studio tooling will also delete the associated
 Application Load Balancer when the last service using the load balancer is deleted.
 
 ## Create Role
