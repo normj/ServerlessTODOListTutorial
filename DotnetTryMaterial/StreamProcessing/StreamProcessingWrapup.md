@@ -1,9 +1,9 @@
 # Stream processing wrap up
 
 We have completed deploying a Lambda function that handles processing service events. In this example we
-handled changes done to our DynamoDB Table but we could just as easily used Lambda to handle events 
-from S3 when objects are upload or when messages are sent to a SQS queues. Lambda takes care of 
-our scaling needs we can focus on our business logic.
+handled changes done to our DynamoDB Table but we could have just as easily used Lambda to handle events 
+from S3 when objects are uploaded or when messages are sent to SQS queues. Lambda takes care of 
+our scaling needs and we can focus on our business logic.
 
 To recap in this section we covered:
 

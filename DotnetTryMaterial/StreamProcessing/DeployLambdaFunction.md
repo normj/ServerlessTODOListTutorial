@@ -1,16 +1,15 @@
 # Deploy Lambda Function
 
-To deploy the Lambda function we can use either the [AWS Toolkit for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017) or the 
-[Amazon.Lambda.Tools](https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools) .NET Core global tool.
+To deploy the Lambda function we can use either the <a href="https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017" target="_blank">AWS Toolkit for Visual Studio</a> or the <a href="https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools" target="_blank">Amazon.Lambda.Tools</a> .NET Core global tool.
 
 ## AWS Identity and Access Management (IAM) Role
 
 When this function is deployed an IAM role is required. The role provides AWS credentials to the Lambda function 
 that can be used to access other AWS services. When you construct a service client from the 
-AWS SDK for .NET without specifing credentials the SDK will locate the credentials for the assigned role.
+AWS SDK for .NET without specifying credentials the SDK will locate the credentials for the assigned role.
 
 All roles used for Lambda should have access to **CloudWatch Logs** to support Lambda writing logs. In this Lambda
-function we also need to access to **Amazon Simple Email Service** to send emails and read access for the **DynamoDB Stream**.
+function we also need access to the **Amazon Simple Email Service** to send emails and read access for the **DynamoDB Stream**.
 
 If you don't have an IAM role that has the required permissions then skip down to the [Create Role](#create-role)
 section at the bottom of this page to create an IAM role and then return back here.
@@ -37,7 +36,7 @@ the DynamoDB table was created.
 #### Persist Settings
 Note the bottom checkbox to **"Save settings to aws-lambda-tools-defaults.json for future deployments"**.
 With this value checked all of the settings made in the wizard will be persisted into the aws-lambda-tools-defaults.json
-file. This makes it so redeployments can reuse all of the previous settings as well make it easy to switch to
+file. This makes it so redeployments can reuse all of the previous settings as well as make it easy to switch to
 the **Amazon.Lambda.Tools** .NET Core global tool.
 
 
@@ -53,8 +52,6 @@ section on this page then select the **ServerlessTODOList.StreamProcessor** role
 Configuration values can be set as environment variables for the Lambda function. For our Lambda function the **FROM_EMAIL** variable must be set
 to the address that the email will be sent from.
 
-
-
 #### Memory
 This controls how much memory will be allocated to Lambda the function while it is processing an event. The amount of memory you allocate also controls
 how much CPU power the Lambda function will get. If a Lambda function is not processing fast enough for your requirements try increasing the
@@ -65,11 +62,11 @@ How much time a Lambda function will have to process an event before Lambda will
 
 #### VPC Subnets and Security Groups
 If a function needs to access resources that are inside a VPC, like an RDS database, then select subnets and security groups for the VPC to allow
-the Lambda function to access the resources. An Elastic Network Interface (ENI) will be attached to the VPC to provide access into the VPC. Additional IAM
-permissions are required for the IAM role to create the ENI. Check out the Lambda [developer guide](https://docs.aws.amazon.com/lambda/latest/dg/vpc.html) for more info.
+the Lambda function to access the resources. Existing network interfaces in your VPC are mapped to a Hyperplane Elastic Network Interface (ENI) and the functions connect using it. Additional IAM
+permissions are required for the IAM role to create the ENI. Check out the Lambda <a href="https://docs.aws.amazon.com/lambda/latest/dg/vpc.html" target="_blank">developer guide</a> for more info.
 
 #### DLQ Resource
-Dead Letter Queue (DLQ) can be either an SQS queue or SNS Topic. When a Lambda function throws an unhandled exception while processing an event Lambda will retry the event a few times. If the function still fails Lambda will send the event to the DLQ if one is assigned. This can be useful troubleshooting and debugging failed events.
+Dead Letter Queue (DLQ) can be either an SQS queue or SNS Topic. When a Lambda function throws an unhandled exception while processing an event Lambda will retry the event a few times. If the function still fails Lambda will send the event to the DLQ if one is assigned. This can be useful for troubleshooting and debugging failed events.
 
 
 ### Push Upload

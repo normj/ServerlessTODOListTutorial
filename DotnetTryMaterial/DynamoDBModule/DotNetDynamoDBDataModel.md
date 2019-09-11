@@ -33,14 +33,14 @@ created before those types existed and switching the default to V2 would be a br
 
 ## Save a TODO List
 
-To save a TODOList we need to create the TODOList object and then call the SaveAsync method on the context.
+To save a TODOList we need to create the TODOList object and then call the `SaveAsync` method on the context.
 
 ```cs --source-file ../Snippets/DynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region datamodel_construct_save --session datamodel
 ```
 
 ## Load a TODO List
 
-To load an object we need to call the LoadAsync method passing in the values for the key.
+To load an object we need to call the `LoadAsync` method passing in the values for the key.
 
 
 ```cs --source-file ../Snippets/DynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region datamodel_construct_load --session datamodel
@@ -48,7 +48,7 @@ To load an object we need to call the LoadAsync method passing in the values for
 
 ## Query a user's TODO List
 
-The QueryAsync returns back a **AsyncSearch** object. This object can be used to get a page of data over an over again 
+The QueryAsync returns back an **AsyncSearch** object. This object can be used to get a page of data over and over again 
 by calling the **GetNextSetAsync**. Since we want all of the lists for the user we can skip dealing with
 pagination and call **GetRemainingAsync** to get all of the lists.
 
@@ -58,7 +58,7 @@ pagination and call **GetRemainingAsync** to get all of the lists.
 
 ## Delete a TODO List
 
-To delete an object we need to call the DeleteAsync method passing in the values for the key.
+To delete an object we need to call the `DeleteAsync` method passing in the values for the key.
 
 
 ```cs --source-file ../Snippets/DynamoDBDataModel.cs --project ../Snippets/Snippets.csproj --region datamodel_construct_delete --session datamodel

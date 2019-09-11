@@ -1,6 +1,6 @@
 # Amazon DynamoDB wrap up
 
-For our TODO List serverless application we will use the Data Model API. In your open solution for the application the **ServerlessTODOList.DataAccess** project
+For our TODO List serverless application we will use the Data Model API. In your open solution for the application, the **ServerlessTODOList.DataAccess** project
 has the **TODOListDataAccess.cs** file which contains all of the operations the application needs to access the TODO Lists stored in DynamoDB.
 
 

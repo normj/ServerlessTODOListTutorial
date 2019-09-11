@@ -30,7 +30,7 @@ The **PutItem** operation either creates a new item or replaces an entire existi
 
 ## Get Item
 
-Using the Hash and range key, if a range key was set for the table, the item is returned as a **Dictionary<string, AttrubuteValue>**. 
+Using the Hash and range key, if a range key was set for the table, the item is returned as a **Dictionary<string, AttributeValue>**. 
 
 #### AttributesToGet
 
@@ -47,15 +47,15 @@ the provision capacity.
 
 ## Query
 
-Query allows you search the range key within a the hash key. In this example the 
+Query allows you search the range key within the hash key. In this example the 
 expression set for **KeyConditionExpression** only includes the hash key so all 
 TODO lists will be returned for the user.
 
 #### Paging
 
 Many operations in AWS like the query operation use paging to support large return 
-payloads. Operation that support paging will have a property marking the last point searched on the response object. To continuing the query set the marker 
-property from the response object to on request object and call the operation again. 
+payloads. Operations that support paging will have a property marking the last point searched on the response object. To continue the query to the next page, set the marker 
+property from the response object equal to the request object and call the operation again. 
 
 For the query operation the **LastEvaluatedKey** property on the response needs to be set to the **ExclusiveStartKey** on the request.
 

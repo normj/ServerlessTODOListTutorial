@@ -1,20 +1,20 @@
 # Setting up Amazon Simple Email Service (SES)
 
 SES is a cloud-based email sending service. It designed to handle any size workloads whether that is marketers
-send large marketing message or for small applications like ours to send emails to people that 
+sending large amounts of marketing emails or for small applications like ours to send emails to people that 
 have been assigned a new task.
 
-AWS accounts that start using SES are initial in what is called sandbox mode. Where each mail that is sent has to be
+AWS accounts that start using SES are initially in what is called sandbox mode, where each mail that is sent has to be
 to a verified email address. The sandbox mode is used to help prevent fraud and abuse, and to help protect your reputation 
-as a sender, SES apply certain restrictions to new Amazon SES accounts.
+as a sender, SES applies certain restrictions to new Amazon SES accounts.
 
-Checkout the developer guide about [setting up email](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/setting-up-email.html) or [moving your account of the sandbox](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html).
+Checkout the developer guide about <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/setting-up-email.html" target="_blank">setting up email</a> or <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html" target="_blank">moving your account of the sandbox</a>.
 
 ## Verifing Email Address
 
 Your account is most likely in the sandbox mode. To see the emails our Lambda function will send, you
-need to verify each of the emails you plan on testing with for both the From and To addresses. You can verify
-emails either through the [AWS console](https://console.aws.amazon.com/ses/home?region=us-east-1#verified-senders-email:) or by entering an email in the code snippet below and executing it.
+need to verify each of the emails you plan on testing with both the From and To addresses. You can verify
+emails either through the <a href="https://console.aws.amazon.com/ses/home?region=us-east-1#verified-senders-email:" target="_blank">AWS console</a> or by entering an email in the code snippet below and executing it.
 
 ```cs --source-file ../Snippets/SESSnippets.cs --project ../Snippets/Snippets.csproj --region send_verification_email
 ```
