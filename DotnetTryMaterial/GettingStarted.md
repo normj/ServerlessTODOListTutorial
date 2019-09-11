@@ -13,7 +13,7 @@ AWS accounts. The resources created in this tutorial will qualify under the free
 To access AWS you will need AWS credentials which are made up of an Access Key ID and a Secret Key. The credentials need to be saved as a profile with either the <a target="_blank" href="https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/getting-set-up.html">AWS Toolkit for Visual Studio</a> or in the <a target="_blank" href="https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/net-dg-config-creds.html#creds-file">Shared Credentials</a> file. The AWS SDK for .NET will
 use the credentials stored with a profile to make authenticated calls to AWS.
 
-For new users setting up their first profile the name **default** is recommended for the profile name. When a profile isn't specified when using any of the AWS SDK and Toolkits they will use the **default** profile if it exists.
+For new users setting up their first profile the name **default** is recommended for the profile name. When a profile isn't specified when using any of the AWS sdks or tools they will use the **default** profile if it exists.
 
 ## Choosing a credentials profile and aws region
 

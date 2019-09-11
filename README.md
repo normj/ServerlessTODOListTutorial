@@ -7,7 +7,7 @@ This is a tutorial I created for a couple of AWS talks I gave in June 2019. It s
 
 At Microsoft's 2019 Build conference a new .NET Global tool called <a href="https://github.com/dotnet/try" target="_blank">dotnet try</a> was released which allows the creation of interactive .NET documentation. 
 
-In the interest of always trying new things the I decided to use dotnet try to create this tutorial. This tool is still in beta and breaking changes could still occur. The tutorial was written and tested with version <a href="https://www.nuget.org/packages/dotnet-try/1.0.19266.1" target="blank">1.0.19266.1</a>
+In the interest of always trying new things I decided to use dotnet try to create this tutorial. This tool is still in early development and breaking changes could still occur. The tutorial was written and tested with version <a href="https://www.nuget.org/packages/dotnet-try/1.0.19317.5" target="blank">1.0.19317.5</a>
 
 
 ## Setup
