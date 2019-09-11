@@ -1,6 +1,6 @@
 # Accessing DynamoDB items with the AWS SDK for .NET
 
-The NuGet package [AWSSDK.DynamoDBv2](https://www.nuget.org/packages/AWSSDK.DynamoDBv2/) contains 3 different APIs save and get items from tables. In our TODO list application we will use the Data Model API but we will briefly cover each of the 3 API to get an understanding what is available.
+The NuGet package <a href="https://www.nuget.org/packages/AWSSDK.DynamoDBv2/" target="_blank">AWSSDK.DynamoDBv2 </a> contains 3 different APIs save and get items from tables. In our TODO list application we will use the Data Model API but we will briefly cover each of the 3 API to get an understanding what is available.
 
 
 | Name           | Namespace | Description|

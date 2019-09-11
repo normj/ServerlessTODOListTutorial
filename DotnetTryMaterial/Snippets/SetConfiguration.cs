@@ -32,7 +32,7 @@ namespace Snippets
             string AWS_REGION;
             
             #region current_aws_region
-            AWS_REGION = "us-east-1";
+            AWS_REGION = "us-west-2";
             #endregion
 
             return  AWS_REGION;

@@ -24,6 +24,17 @@ common AWS services used that provide the foundational building blocks for a ser
 | AWS Lambda | Event driven continuous scaling serverless platform |
 | AWS Fargate | Fully managed containers within Amazon Elastic Container Service (ECS) |
 
+## Networking
+|Service|Description|
+|-|-|
+| Amazon API Gateway | Fully managed API creation service |
+| Application Load Balancer | Load Balancer to distribute traffic and can target Lambdas |
+
+## Authentication & Authorization
+|Service|Description|
+|-|-|
+| Amazon Cognito | Serverless authentication and authorization |
+
 <!-- Generated Navigation -->
 ---
 
