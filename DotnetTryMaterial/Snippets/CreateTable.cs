@@ -19,21 +19,32 @@ namespace Snippets
                 var request = new CreateTableRequest
                 {
                     TableName = "TODOList",
-                    AttributeDefinitions = new List<AttributeDefinition>
-                    {
-                        new AttributeDefinition{AttributeName = "User", AttributeType = ScalarAttributeType.S },
-                        new AttributeDefinition{AttributeName = "ListId", AttributeType = ScalarAttributeType.S }
-                    },
                     KeySchema = new List<KeySchemaElement>
                     {
                         new KeySchemaElement { KeyType = KeyType.HASH, AttributeName = "User" },
                         new KeySchemaElement { KeyType = KeyType.RANGE, AttributeName = "ListId" }
                     },
+                    AttributeDefinitions = new List<AttributeDefinition>
+                    {
+                        new AttributeDefinition{AttributeName = "User", AttributeType = ScalarAttributeType.S },
+                        new AttributeDefinition{AttributeName = "ListId", AttributeType = ScalarAttributeType.S }
+                    },
                     ProvisionedThroughput = new ProvisionedThroughput { ReadCapacityUnits = 4, WriteCapacityUnits = 1 }
                 };
 
-                var response = await ddbClient.CreateTableAsync(request);
-                Console.WriteLine($"Table {response.TableDescription.TableName} create and current status is {response.TableDescription.TableStatus}");
+                try
+                {
+                    var response = await ddbClient.CreateTableAsync(request);
+                    Console.WriteLine($"Table {response.TableDescription.TableName} create and current status is {response.TableDescription.TableStatus}");
+                }
+                catch(ResourceInUseException)
+                {
+                    Console.Error.WriteLine("Table already exists");
+                }
+                catch(Exception e)
+                {
+                    Console.Error.WriteLine($"Unknown error creating table: {e.Message}");
+                }
             }
             #endregion
         }

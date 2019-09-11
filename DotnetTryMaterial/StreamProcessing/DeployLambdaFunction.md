@@ -100,7 +100,10 @@ dotnet lambda deploy-function ServerlessTODOListStreamProcessor --environment-va
 If you also add `--persist-config-file true` to the command then all of the settings set during deployment will be saved in the 
 **aws-lambda-tools-defaults.json** file. That way future invocations can be done by just using the command `dotnet lambda deploy-function`.
 
+For any missing required arguments like `--function-role` the command line tool will prompt for the missing 
+required parameters.
 
+![alt text](./images/DDBStreamCommandLineDeployment.gif "dotnet lambda deploy-function")
 
 
 

@@ -19,7 +19,7 @@ the data from the properties on the **TODOList** and **TODOListItem** to the ser
 | Complete | BOOL |
 | CreateDate | S |
 | UpdateDate | S |
-| Items | L<M> |
+| Items | L&lt;M&gt; |
 | -> TODOListItem.Description | S |
 | -> TODOListItem.AssignedEmail | S |
 | -> TODOListItem.Complete | BOOL |
