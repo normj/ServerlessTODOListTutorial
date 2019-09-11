@@ -3,11 +3,10 @@
 Currently the application is using the default SQL Server Entity Framework based provider to handle identity. This requires us to manage a SQL Server instance
 when we deploy. Since we want to take advantage of serverless technologies and not have to maintain a SQL Server instance we need another option. 
 
-[Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html) handles identity without requiring 
+<a href-="https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html" target="_blank">Amazon Cognito</a> handles identity without requiring 
 any infrastructure. We just need to create a user pool within Cognito and configure our ASP.NET Core application to use it.
 
-Here we are going to do a brief setup to configure our application to use Cognito. For further information check out the 
-[ASP.NET Core Identity Provider for Amazon Cognito](https://github.com/aws/aws-aspnet-cognito-identity-provider) repository.
+Here we are going to do a brief setup to configure our application to use Cognito. For further information check out the <a href="https://github.com/aws/aws-aspnet-cognito-identity-provider" target="_blank">ASP.NET Core Identity Provider for Amazon Cognito</a> repository.
 
 
 ## Add config settings
@@ -77,7 +76,7 @@ Lets create a client for our web application.
 ## Add ASP.NET Core Cognito Identity Provider
 
 Cognito has its own API to register and login users and ASP.NET Core also has its own framework for handling user registration and login. The 
-**Amazon.AspNetCore.Identity.Cognito** NuGet package bridges Cognito API and ASP.NET Core framework so they can work seemless together.
+**Amazon.AspNetCore.Identity.Cognito** NuGet package bridges Cognito API and ASP.NET Core framework so they can work seamlessly together.
 
 To get started add the **Amazon.AspNetCore.Identity.Cognito** NuGet package to the **ServerlessTODOList.Frontend** project.
 ```
@@ -134,8 +133,8 @@ Replace this code with the following code. The rest of the code in the file shou
 By default the UI login pages available in ASP.NET Core are for the SQL Server Entity Framework provider. To use our Cognito ASP.NET Core provider we need to add
 custom login pages that uses the `CognitoUser` class.
 
-The simplest way to get the Cognito UI working is to copy the [Areas](https://github.com/aws/aws-aspnet-cognito-identity-provider/tree/master/samples/Samples/Areas) directory from the 
-sample provided in the [ASP.NET Core Identity Provider for Amazon Cognito](https://github.com/aws/aws-aspnet-cognito-identity-provider) repository to the `ServerlessTODOList.Frontend`. 
+The simplest way to get the Cognito UI working is to copy the <a href="https://github.com/aws/aws-aspnet-cognito-identity-provider/tree/master/samples/Samples/Areas" target="_blank">Areas</a> directory from the 
+sample provided in the <a href="https://github.com/aws/aws-aspnet-cognito-identity-provider" target="_blank">ASP.NET Core Identity Provider for Amazon Cognito</a> repository to the `ServerlessTODOList.Frontend`. 
 Once copied updated all of the namespaces in the files copied to the namespace used in the project. In this case that would be ServerlessTODOList.Frontend.
 
 To make this tutorial easier the **Application\IdentityScaffolding** directory in this repository has all of the files copied from the sample with the namespace

@@ -65,7 +65,7 @@ see a new menu item to **Publish Container to AWS...**.
 ![Wizard Page 1](./images/ecs-wizard-page1.png)
 
 In the first page of the wizard you will configure the Docker repository in the Amazon Elastic Container Registry (ECR) where
-the docker image that is about to be create will be pushed.
+the docker image that is about to be created will be pushed.
 
 Also on this page we will choose how we want to deploy the container via the **Deployment Target** drop down box. The options
 are:
@@ -87,9 +87,7 @@ repository in ECR and choose to run the image as a service.
 
 Here the ECS cluster that will run the project must be picked. For the tutorial select **Create an empty cluster** and set the 
 name to **ServerlessTODOList**. The term "empty" refers to the fact that no EC2 instances will be added to the cluster. 
-In our case we are going to use Fargate instead of EC2 to provide the compute power to run our application. In the 
-[ECS web console](https://console.aws.amazon.com/ecs) you can create ECS clusters with EC2 instances if you prefer EC2
-over Fargate.
+In our case we are going to use Fargate instead of EC2 to provide the compute power to run our application. In the <a href= "https://console.aws.amazon.com/ecs" target="_blank">ECS web console</a> you can create ECS clusters with EC2 instances if you prefer to configure your EC2 instances and have complete access to them vs Fargate creating them and controlling them for you.
 
 The rest of the settings in the wizard configure how much compute power Fargate should provide to the container
 and the VPC and Security Group the Fargate compute environment will launch in. By default these fields will be set 

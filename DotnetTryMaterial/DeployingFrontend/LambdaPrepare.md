@@ -1,6 +1,6 @@
 # Preparing for Lambda Deployment
 
-To get our ASP.NET Core project ready for Lambda there are a couple additions we need to make to the project. None of these additions affect
+To get our ASP.NET Core project ready for Lambda there are a couple of additions we need to make to the project. None of these additions affect
 how the project runs locally so you can continue to run and debug locally.
 
 ## Add the Amazon.Lambda.AspNetCoreServer package

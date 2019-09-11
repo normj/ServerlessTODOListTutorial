@@ -6,12 +6,12 @@ You have reached the end. Throughout this tutorial we covered:
 * Amazon DynamoDB
   * How to create tables and what are the different data types.
   * How to access items from a table with the AWS SDK for .NET
-  * How to enabled Streams for a table
+  * How to enable DynamoDB Streams for a table
 * ASP.NET Core Providers
   * AWSSDK.Extensions.NETCore.Setup - Adding AWS services to dependency injection framework.
-  * [Amazon.AspNetCore.Identity.Cognito](https://github.com/aws/aws-aspnet-cognito-identity-provider) - Using Amazon Cognito for identity.
-  * [Amazon.AspNetCore.DataProtection.SSM](https://github.com/aws/aws-ssm-data-protection-provider-for-aspnet) - Storing encryption keys for data protection.
-  * [Amazon.Extensions.Configuration.SystemsManager](https://github.com/aws/aws-dotnet-extensions-configuration) - Integrating Parameter Store to configuration framework.
+  * <a href="https://github.com/aws/aws-aspnet-cognito-identity-provider" target="_blank">Amazon.AspNetCore.Identity.Cognito</a> - Using Amazon Cognito for identity.
+  * <a href="https://github.com/aws/aws-ssm-data-protection-provider-for-aspnet" target="_blank">Amazon.AspNetCore.DataProtection.SSM</a> - Storing encryption keys for data protection.
+  * <a href="https://github.com/aws/aws-dotnet-extensions-configuration" target="_blank">Amazon.Extensions.Configuration.SystemsManager</a> - Integrating Parameter Store to configuration framework.
 * Building a Lambda function to process service events in this case DynamoDB
   * Enabling Lambda for an ASP.NET Core application
   * Deploying functions
@@ -22,7 +22,7 @@ You have reached the end. Throughout this tutorial we covered:
   * Publishing from Visual Studio to Elastic Container Service with Fargate.
   * Configuring an Application Load Balancer for containers running application.
 
-Useful Links .NET developers interesting in AWS.
+Useful Links for .NET developers interested in AWS.
 
 | Names | Links |
 |-|-|
@@ -31,6 +31,7 @@ Useful Links .NET developers interesting in AWS.
 |AWS Lambda for .NET Core|[https://github.com/aws/aws-lambda-dotnet](https://github.com/aws/aws-lambda-dotnet)|
 |AWS .NET Core Global Tools|[https://github.com/aws/aws-extensions-for-dotnet-cli](https://github.com/aws/aws-extensions-for-dotnet-cli)|
 |AWS .NET Twitter Handle|[https://twitter.com/awsfornet](https://twitter.com/awsfornet)|
+| All things .NET at AWS | [https://aws.amazon.com/net](https://aws.amazon.com/net)
 
 
 ### From the Author [Norm Johanson](https://twitter.com/socketnorm)

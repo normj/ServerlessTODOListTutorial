@@ -1,7 +1,6 @@
 # Deploy to Lambda using CloudFormation
 
-To deploy the Lambda function we can use either the [AWS Toolkit for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017) or the 
-[Amazon.Lambda.Tools](https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools) .NET Core global tool.
+To deploy the Lambda function we can use either the <a href="https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017" target="_blank">AWS Toolkit for Visual Studio</a> or the <a href="https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools" target="_blank">Amazon.Lambda.Tools.NET Core global tool</a>.
 
 When we deployed the DynamoDB Stream Lambda function we had to create an IAM role before deploying. This time our IAM role will be created as part of the CloudFormation template.
 
@@ -29,7 +28,7 @@ Be sure the profile and region are set to the profile and region that was set at
 the DynamoDB table was created.
 
 ### CloudFormation Parameters
-CloudFormation templates can defined parameters. In our case there are no parameters defined but if there were a second page would be added to the wizard to allow setting the
+CloudFormation templates can defined by parameters. In our case there are no parameters defined but if there were, a second page would be added to the wizard to allow setting the
 template parameters.
 
 

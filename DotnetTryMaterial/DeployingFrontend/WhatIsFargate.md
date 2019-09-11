@@ -1,6 +1,6 @@
 # What is for Fargate
 
-Fargate is a compute type for [Elastic Container Service (ECS)](https://docs.aws.amazon.com/ecs/?id=docs_gateway) that allows you to deploy Docker containers without
+Fargate is a compute type for <a href="https://docs.aws.amazon.com/ecs/?id=docs_gateway" target="_blank">Elastic Container Service (ECS)</a> that allows you to deploy Docker containers without
 managing any EC2 instances. When you deploy to ECS with Fargate you will specify the amount of CPU and Memory needed
 and Fargate will ensure the compute resources are made available and then run your docker container.
 

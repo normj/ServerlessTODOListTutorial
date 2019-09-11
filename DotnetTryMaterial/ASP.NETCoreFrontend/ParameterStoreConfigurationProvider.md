@@ -1,11 +1,11 @@
 # AWS Systems Manager Parameter Store for Managing Configuration
 
 In our application we have configuration elements like the Cognito user pool id stored in our **appsettings.Development.json**. This is
-fine for local development but when we are deployed to the Cloud we don't want to have our configuration embedded with our deployment bundle.
+fine for local development but when we are deployed to the cloud we don't want to have our configuration embedded with our deployment bundle.
 
 ## AWS Systems Manager Parameter Store
 
-[AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) provides secure, hierarchical storage for configuration data management and secrets management. You can store data such as passwords, database strings, and license codes as parameter values. You can store values as plain text or encrypted data. 
+<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html" target="_blank">AWS Systems Manager Parameter Store</a> provides secure, hierarchical storage for configuration data management and secrets management. You can store data such as passwords, database strings, and license codes as parameter values. You can store values as plain text or encrypted data. 
 
 
 ## Configuration in ASP.NET Core
@@ -14,7 +14,7 @@ ASP.NET Core has a built in configuration system that uses a **ConfigurationBuil
 
 ## Configuring Parameter Store as a provider
 
-The [Amazon.Extensions.Configuration.SystemsManager](https://www.nuget.org/packages/Amazon.Extensions.Configuration.SystemsManager/) is a configuration provider that will include parameters from Parameter Store to the IConfiguration object. This package is open source and can be found [here](https://github.com/aws/aws-dotnet-extensions-configuration)
+The <a href="https://www.nuget.org/packages/Amazon.Extensions.Configuration.SystemsManager/" target="_blank">Amazon.Extensions.Configuration.SystemsManager</a> is a configuration provider that will include parameters from Parameter Store to the IConfiguration object. This package is open source and can be found <a href="https://github.com/aws/aws-dotnet-extensions-configuration" target="_blank">here</a>
 
 
 To use the package add the NuGet reference to the **ServerlessTODOList.Frontend** through your IDE NuGet package management or use the command below in directory of ServerlessTODOList.Frontend:
@@ -48,7 +48,7 @@ will do it without the **/ServerlessTODOList/** prefix.
 
 ## Add values to Parameter Store
 
-You can add parameter through the [System Manager console](https://console.aws.amazon.com/systems-manager/parameters). Be sure to select the region you plan on deploying the application to. 
+You can add parameter through the <a href="https://console.aws.amazon.com/systems-manager/parameters" target="_blank">System Manager console</a>. Be sure to select the region you plan on deploying the application to. 
 
 You can also set the values with any AWS SDK or CLI. Here is the .NET code to add the Cognito configuration data to Parameter Store. You must
 set the **userPoolId, userPoolClientId** and **userPoolClientSecret** variables to the values that you set in **appsettings.Development.json** in the 
@@ -61,7 +61,7 @@ previous section.
 ### Test Parameter Store
 
 Below you can see the **IConfiguration** object is build similar to how
-ASP.NET Core's IWebHostBuilder builds the configuration. 
+ASP.NET Core's **IWebHostBuilder** builds the configuration. 
 
 If the parameters have been added to Parameter Store then the following code that builds an **IConfiguration** should pull the parameters out and display them.
 

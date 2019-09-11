@@ -4,11 +4,11 @@ ASP.NET Core has a built in dependency injection framework to make it easy for y
 services they require. Services are registered with the dependency injection framework in the **Startup** 
 class's `ConfigureServices` method.
 
-The services for our DynamoDB data access layer have already been registered in the provided code but lets take look at how it was done.
+The services for our DynamoDB data access layer have already been registered in the provided code but let's take look at how it was done.
 
 ## Injecting AWS Services
 
-The NuGet package [AWSSDK.Extensions.NETCore.Setup](https://www.nuget.org/packages/AWSSDK.Extensions.NETCore.Setup/) adds 
+The NuGet package <a href="https://www.nuget.org/packages/AWSSDK.Extensions.NETCore.Setup/" target="_blank">AWSSDK.Extensions.NETCore.Setup</a> adds 
 new extension methods to the `IServiceCollection` object. We can add DynamoDB by adding the following line of code.
 
 ```csharp
@@ -34,11 +34,11 @@ services.AddSingleton(typeof(ITODOListDataAccess), typeof(TODOListDataAccess));
 Now that we have both the AWS DynamoDB service client and our custom data access layer registered lets take a look at how the dependency injection work.
 
 If we take a look at the file **ServerlessTODOList.Frontend\Pages\MyLists.cshtml.cs** which contains the class **MyListsModel** you can see it 
-takes in an instance of **ITODOListDataAccess** as part of its constructor. When MyListsModel is created by the ASP.NET Core framework looks
+takes in an instance of **ITODOListDataAccess** as part of its constructor. When MyListsModel is created by the ASP.NET Core framework it looks
 to **IServiceCollection** for an instance of **ITODOListDataAccess**. 
 
 Since **ITODOListDataAccess** was registered as a singleton to the **IServiceCollection** it will be created the first time it is requested. 
-**TODOListDataAccess** was specified to **IServiceCollection** as the implementor of **ITODOListDataAccess** but TODOListDataAccess takes in an 
+**TODOListDataAccess** was specified to **IServiceCollection** as the implementer of **ITODOListDataAccess** but TODOListDataAccess takes in an 
 instance of **IAmazonDynamoDB**. So now **IServiceCollection** will create an instance of **IAmazonDynamoDB** and pass that into the constructor of 
 TODOListDataAccess which will then be passed in **MyListsModel**.
 

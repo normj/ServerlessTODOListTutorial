@@ -21,7 +21,7 @@ the **Amazon.AspNetCore.DataProtection.SSM** NuGet package. This package will us
 
 ## Setting up Amazon.AspNetCore.DataProtection.SSM
 
-The first thing need to do is add the [Amazon.AspNetCore.DataProtection.SSM](https://www.nuget.org/packages/Amazon.AspNetCore.DataProtection.SSM/) NuGet package to our ASP.NET Core application.
+The first thing we need to do is add the <a href="https://www.nuget.org/packages/Amazon.AspNetCore.DataProtection.SSM/" target="_blank">Amazon.AspNetCore.DataProtection.SSM</a> NuGet package to our ASP.NET Core application.
 
 ```
 ~/ServerlessTODOList.Frontend> dotnet add package Amazon.AspNetCore.DataProtection.SSM

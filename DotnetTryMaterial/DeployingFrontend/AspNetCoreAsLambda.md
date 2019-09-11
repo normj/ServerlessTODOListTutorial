@@ -1,8 +1,8 @@
 # ASP.NET Core as a Lambda Function?
 
-When you want to expose a Lambda function to the web you register the Lambda function to either an API Gateway REST api or an ELB Application Load Balancer.
-The HTTP request that come into the REST API or the Application load balancer will be sent to the Lambda function as events just like we saw earlier with
-the DynamoDB stream sample. The man difference is that a response object is returned from the Lambda function which will be returned back as the HTTP response
+When you want to expose a Lambda function to the web you register the Lambda function to either an API Gateway REST API or an ELB Application Load Balancer.
+The HTTP request that comes into the REST API or the Application load balancer will be sent to the Lambda function as events just like we saw earlier with
+the DynamoDB stream sample. The main difference is that a response object is returned from the Lambda function which will be returned back as the HTTP response
 through API Gateway or Application Load Balancer.
 
 For this tutorial we will use API Gateway to expose our Lambda function.
@@ -36,7 +36,7 @@ For the REST API defined in API Gateway you map the HTTP resource path and verb 
 
 ## ASP.NET Core application as a Lambda Function
 
-It is possible to run an ASP.NET Core application as a Lambda function. This is possible with the [Amazon.Lambda.AspNetCoreServer](https://www.nuget.org/packages/Amazon.Lambda.AspNetCoreServer/)
+It is possible to run an ASP.NET Core application as a Lambda function. This is possible with the <a href="https://www.nuget.org/packages/Amazon.Lambda.AspNetCoreServer/" target="_blank">Amazon.Lambda.AspNetCoreServer</a>
 NuGet package.
 
 This package contains a method similar to the one above that takes in the **APIGatewayProxyRequest** and returns back a **APIGatewayProxyResponse**.
@@ -54,28 +54,28 @@ into this replacing Kestrel with API Gateway and Lambda.
 
 ## Is ASP.NET Core on Lambda an AntiPattern?
 
-There are similar adaptors like Amazon.Lambda.AspNetCoreServer for other languages. For example there is a Spring adaptor for Java and an Express adaptor for
+There are similar adapters like Amazon.Lambda.AspNetCoreServer for other languages. For example there is a Spring adapter for Java and an Express adapter for
 Node.js. The serverless community is divided on whether this is an antipattern as the common intention is to use Lambda for microservices and bringing in 
 these large web frameworks can go against that idea.
 
 Here is my take as the author of this tutorial and the author of Amazon.Lambda.AspNetCoreServer but feel free to disagree. I believe there is never
 just one solution for all problems/scenarios. For some teams that want the benefit of the scaling and pricing model of serverless but have invested
-a lot of energy and time in ASP.NET Core, whether that is education or existing codebase, using the adaptor makes sense. For those that aren't as
+a lot of energy and time in ASP.NET Core, whether that is education or existing codebase, using the adapter makes sense. For those that aren't as
 invested in ASP.NET Core and are ready to design and manage a distributed microservice architecture then skip using Amazon.Lambda.AspNetCoreServer.
 
-ASP.NET Core has one big advantage over the other web framework adaptors and that ASP.NET Core is already built into
+ASP.NET Core has one big advantage over the other web framework adapters and that is ASP.NET Core is already built into
 .NET Core running in the Lambda environment. So the deployment bundle will not be excessively large. There are some limitations 
-in the environment. For example the request and response sizes are limited to 6MB at the time of this writing. This adaptor is not meant 
-for bringing huge monolithic ASP.NET Core applications that take a long time to start up. Cold starts can
+in the environment. For example the request and response sizes are limited to 6MB at the time of this writing. This adapter is not meant 
+for huge monolithic ASP.NET Core applications that take a long time to start up. Cold starts can
 be an issue so you should limit what is done during the Startup class's initialization. If you want to take advantage of the great features
-in ASP.NET Core and other support the .NET ecosystem has added to ASP.NET Core then using this package is a great way to get
-started with Serverless without having to completely rethink how you built applications.
+in ASP.NET Core and support all that the .NET ecosystem has added to ASP.NET Core then using this package is a great way to get
+started with Serverless without having to completely rethink how you build applications.
 
 Another benefit of using this package is it gives you options on how to build and deploy. As we have seen we have an ASP.NET Core application
 that we can easily run and test locally. This same code we can choose to deploy to either Lambda, Containers or Elastic Beanstalk for a traditional
 IIS deployment. We didn't have to make architecture decisions to our software that limited how we want to deploy the application.
 
-One final recommendation. The ASP.NET Core adaptor is most commonly used for Web APIs, if you are using it for a full application and have a lot
+One final recommendation. The ASP.NET Core adapter is most commonly used for Web APIs, if you are using it for a full application and have a lot
 of static content I recommend pushing the static content to an S3 bucket. The API Gateway REST API can be configured to forward request to the S3 
 Bucket for static content resource paths like **images**, **lib**  and **css** to forward to the S3 bucket. Configuring this is beyond the scope of this tutorial.
 
