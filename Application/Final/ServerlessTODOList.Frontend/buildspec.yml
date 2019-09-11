@@ -1,5 +1,8 @@
 version: 0.2
 
+env:
+  variable:
+    S3_BUCKET: "normj-east1"
 phases:
   install:
     runtime-versions:
