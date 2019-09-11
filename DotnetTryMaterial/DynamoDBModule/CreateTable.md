@@ -11,19 +11,19 @@ A table key is made of 2 parts. The first is a **Hash key** which is used by Dyn
 that evenly distributes the data to avoid having large partitions that can cause hot spots. The second part of the key is optional 
 which is a **Range key**. The range key can be used to do queries within a hash key.
 
-For our TODO List app we are to use **User** as the hash key and **ListId** for the range key. This will allow us to quickly get 
+For our TODO List app we will use **User** as the hash key and **ListId** for the range key. This will allow us to quickly get 
 the TODO lists for a particular user.
 
 ### Table Indexes
-DynamoDB also supports [local indexes and global indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html) to provide more query capabilities. Local indexes allow you to choose another
+DynamoDB also supports <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html" target="_blank">local indexes and global indexes</a> to provide more query capabilities. Local indexes allow you to choose another
 range key with the table's hash key. A global indexes allows you choose both a new hash and range key. For the TODO list app 
-we will not use indexes.
+we will not use indexes as we don't need them.
 
 ### Provisioning
 
-A table has 2 possible billing modes. The first mode is called **Provisioned** where you set the read and write capacity needed for the table. Amazon CloudWatch and AAWS Auto Scaling can be
+A table has 2 possible billing modes. The first mode is called **Provisioned** where you set the read and write capacity needed for the table. Amazon CloudWatch and AWS Auto Scaling can be
 used to monitor the usage versus what has been provisioned and automatically adjust the provisioning. The second mode is called 
-[On-Demand](https://aws.amazon.com/blogs/aws/amazon-dynamodb-on-demand-no-capacity-planning-and-pay-per-request-pricing/) where you pay per
+<a href="https://aws.amazon.com/blogs/aws/amazon-dynamodb-on-demand-no-capacity-planning-and-pay-per-request-pricing/" target="_blank">On-Demand</a> where you pay per
 request instead of for provision requests. DynamoDB's guidance is to use provisioned mode if the usage is predictable and on-demand when the traffic
 is difficult to predict.
 
@@ -53,7 +53,7 @@ care of the reprovisioning. The table will still be accessible during the reprov
 ## Delete Table
 
 Before deleting a table a backup can be made and the later restored to a new table. Checkout the 
-DynamoDB [developer guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html) for details.
+DynamoDB <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html" target="_blank">developer guide</a> for details.
 
 When you delete a table all of its data and indexes will be deleted as well.
 

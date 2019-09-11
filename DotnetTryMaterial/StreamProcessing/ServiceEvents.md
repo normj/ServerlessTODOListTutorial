@@ -1,7 +1,7 @@
 # Handling service events with Lambda
 
-Many AWS services trigger events when something changes. For example with Amazon S3 when a new object is uploaded 
-to an S3 bucket an event is triggered.
+Many AWS services can trigger events when something changes. For example with Amazon S3 when a new object is uploaded 
+to an S3 bucket an event can be triggered.
 
 A Lambda function can be configured to respond to the event. Here are some examples of AWS services that can be 
 configured to trigger Lambda functions for their events.
@@ -10,9 +10,10 @@ configured to trigger Lambda functions for their events.
 * Amazon SNS
 * Amazon SQS
 * AWS Step Functions
-* Kinesis
+* Amazon Kinesis
 * Amazon DynamoDB
-* [Others](https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html)
+* Amazon Eventbridge
+* <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html" target="_blank">Others</a>
 
 <!-- Generated Navigation -->
 ---

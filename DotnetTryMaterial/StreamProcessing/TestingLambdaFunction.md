@@ -1,6 +1,6 @@
 # Testing Lambda Function
 
-Now that everything is deployed and configured lets test our Lambda function. To do that lets save a TODO List to DynamoDB.
+Now that everything is deployed and configured let's test our Lambda function. To do that let's save a TODO List to DynamoDB.
 
 Be sure in the code below to set the **assignedEmail** variable to an email address that you have verified with Amazon Simple Email Service.
 

@@ -31,7 +31,7 @@ the service provisions the stream. The table will be accessible while the stream
 
 ## Testing DynamoDB Stream
 
-This code below a is simplistic version of what it takes to read from a DynamoDB stream. It does does not
+This code below is simplistic version of what it takes to read from a DynamoDB stream. It does does not
 handle failures and scaling concerns. When we use Lambda to handle reading from a DynamoDB Stream all we have to write 
 is our business logic in the `foreach` for the `shardReader` Func<>. Lambda takes care of managing the scaling and failures 
 for the shards of a DynamoDB Stream.

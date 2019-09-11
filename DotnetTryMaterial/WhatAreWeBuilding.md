@@ -1,6 +1,6 @@
-# What are we going to build in this tutorial
+# What are we going to build in this tutorial?
 
-In this tutorial we are going to be a very simple serverless application to manage TODO lists. It will have the following features:
+In this tutorial we are going to be building a very simple serverless application to manage TODO lists. It will have the following features:
 
 * Register and authenticate users
 * Create, update and delete lists with tasks
@@ -14,7 +14,7 @@ directory.
 
 ## AWS Toolkit for Visual Studio
 
-If you following along with Visual Studio it is recommended you have the [AWS Toolkit for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017) installed 
+If you following along with Visual Studio it is recommended you have the <a href="https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017" target="_blank">AWS Toolkit for Visual Studio</a> installed 
 to make it easy to deploy your code. If you are not using Visual Studio, command line instructions will also be provided for most sections.
 
 <!-- Generated Navigation -->

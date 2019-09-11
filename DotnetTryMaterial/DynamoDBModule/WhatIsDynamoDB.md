@@ -1,27 +1,27 @@
 # Using DynamoDB to store TODO Lists
 
-As we mentioned before we are going to use [DynamoDB](https://aws.amazon.com/dynamodb/) to store our TODO lists. DynamoDB was chosen because it provides
-fast access to our data, it simplifies our development with its schemaless design and provisioning because we don't have to database manage servers.
+As we mentioned before we are going to use <a href="https://aws.amazon.com/dynamodb/" target="_blank">DynamoDB</a> to store our TODO lists. DynamoDB was chosen because it provides
+fast access to our data, it simplifies our development with its schemaless design and provisioning because we don't have to manage database servers.
 
 ## Fully managed NoSQL datastore
 * Define Key and Indexes
 * Provisioning
   * Write / Read capacity units
   * Pay per request
+  * On Demand
 
 ## Fast performance
 * Provides single-digit millisecond performance
-* Amazon DynamoDB Accelerator (DAX) for even faster performance.
-  * .NET NuGet package: [AWSSDK.DAX.Client](https://www.nuget.org/packages/AWSSDK.DAX.Client/)
+* Amazon DynamoDB Accelerator (DAX) for even faster performance. It's in-memory cache for your Dynamo Tables.
+  * .NET NuGet package: <a href="https://www.nuget.org/packages/AWSSDK.DAX.Client/" target="_blank">AWSSDK.DAX.Client</a>
 
 ## Support multi region
 *  Multi region replication
 *  Multi master
 
-
 ## AWS SDK for .NET Access
 
-To access DynamoDB with .NET the NuGet package [AWSSDK.DynamoDBv2](https://www.nuget.org/packages/AWSSDK.DynamoDBv2/) is used to access all of the operations the DynamoDB service provides. This includes both the control plane API like creating tables as well as the data plane API for putting and getting items from tables.
+To access DynamoDB with .NET the NuGet package <a href="https://www.nuget.org/packages/AWSSDK.DynamoDBv2/" target="_blank">AWSSDK.DynamoDBv2</a> is used to access all of the operations the DynamoDB service provides. This includes both the control plane API like creating tables as well as the data plane API for putting and getting items from tables.
 
 <!-- Generated Navigation -->
 ---

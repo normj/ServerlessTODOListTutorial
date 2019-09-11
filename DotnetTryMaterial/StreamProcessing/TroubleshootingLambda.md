@@ -17,8 +17,8 @@ the **Refresh** button.
 
 ## Replaying events in Visual Studio
 
-The [AWS .NET Mock Lambda Test Tool](https://github.com/aws/aws-lambda-dotnet/tree/master/Tools/LambdaTestTool)
-allows you to replay events with a .NET debugger attached. For Visual Studio users this tool will be automatically
+The <a href="https://github.com/aws/aws-lambda-dotnet/tree/master/Tools/LambdaTestTool" target="_blank">AWS .NET Mock Lambda Test Tool</a>
+allows you to replay events with a .NET debugger attached. For Visual Studio users this tool will automatically be
 configured for Lambda projects when they are opened. For other .NET IDEs, like Visual Studio for Code,
 checkout the [README.md](https://github.com/aws/aws-lambda-dotnet/tree/master/Tools/LambdaTestTool) for instructions
 on how to configure the tool for it.

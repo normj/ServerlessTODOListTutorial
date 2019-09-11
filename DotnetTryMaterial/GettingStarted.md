@@ -5,16 +5,15 @@ To get started with this tutorial you need a few things setup first.
 ## Have an AWS Account
 
 To follow along with this tutorial you will need an AWS account. An AWS 
-account can be setup [here](https://portal.aws.amazon.com/billing/signup). There is a [free tier](https://aws.amazon.com/free/) for the first year of
+account can be setup <a href="https://portal.aws.amazon.com/billing/signup" target="_blank">here</a>. There is a <a href="https://aws.amazon.com/free/" target="_blank">free tier</a> for the first year of
 AWS accounts. The resources created in this tutorial will qualify under the free tier. 
 
 ## AWS Credentials
 
-To access AWS you will need AWS credentials which are made up of an Access Key ID and a Secret Key. The credentials need to be saved as a profile with either the [AWS Toolkit for Visual Studio](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/getting-set-up.html) or in the 
-[Shared Credentials](https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/net-dg-config-creds.html#creds-file) file. The AWS SDK for .NET will
+To access AWS you will need AWS credentials which are made up of an Access Key ID and a Secret Key. The credentials need to be saved as a profile with either the <a target="_blank" href="https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/getting-set-up.html">AWS Toolkit for Visual Studio</a> or in the <a target="_blank" href="https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/net-dg-config-creds.html#creds-file">Shared Credentials</a> file. The AWS SDK for .NET will
 use the credentials stored with a profile to make authenticated calls to AWS.
 
-For new users setting up their first profile the name **default** is recommended for the profile name. When a profile isn't specified when using any of the AWS SDK and Tools they will use the **default** profile if it exists.
+For new users setting up their first profile the name **default** is recommended for the profile name. When a profile isn't specified when using any of the AWS sdks or tools they will use the **default** profile if it exists.
 
 ## Choosing a credentials profile and aws region
 
@@ -33,7 +32,7 @@ Enter the profile you wish to use for this tutorial and click the execute button
 
 # Set AWS Region
 
-Enter the region you wish to use for this tutorial and click the execute button. Regions are set with a string like us-east-1 for east coast US (Virginia) , us-west-2 for west coast US (Oregon) and eu-west-1 for Dublin. For a full list of regions look [here](https://docs.aws.amazon.com/general/latest/gr/rande.html).
+Enter the region you wish to use for this tutorial and click the execute button. Regions are set with a string like us-east-1 for east coast US (Virginia) , us-west-2 for west coast US (Oregon) and eu-west-1 for Dublin. For a full list of regions look <a target="_blank" href="https://docs.aws.amazon.com/general/latest/gr/rande.html">here</a>.
 
 ```cs --source-file ./Snippets/SetConfiguration.cs --project ./Snippets/Snippets.csproj --region current_aws_region
 ```

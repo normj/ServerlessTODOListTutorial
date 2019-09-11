@@ -48,9 +48,9 @@ other **As** method to see how you can force conversion.
 
 ## Query a user's TODO List
 
-This example shows how to perform a query. Remember a query is when search for DynamoDB using the range key under a certain hash key.
+This example shows how to perform a query. Remember a query is when you search in your DynamoDB table using the range key under a certain hash key.
 
-When you start a query it returns back a **Search** object. The data from DynamoDB will be return back in pages. To get a page of 
+When you start a query it returns back a **Search** object. The data from DynamoDB will be returned back in pages. To get a page of 
 data call the `GetNextSetAsync` method. In our case we want to return back all of the lists for a user so we call `GetRemainingAsync`
 which will traverse through all of the pages to return our data. Sometimes a page will contain no data because all the items 
 DynamoDB search through during page request failed to match the query filter. That doesn't mean there is no more data. 

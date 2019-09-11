@@ -27,7 +27,7 @@ LATEST means start reading items starting from the point the mapping event sourc
 
 Instructions for configuring with the AWS Lambda Console:
 
-1. Log on to the [AWS Lambda Lambda Console](https://us-east-2.console.aws.amazon.com/lambda/home)
+1. Log on to the <a href="https://us-east-2.console.aws.amazon.com/lambda/home" target="_blank">AWS Lambda Lambda Console</a>
 2. Choose the region you deployed to
 3. Select the deployed function
 4. In the **Add triggers** panel select DynamoDB
