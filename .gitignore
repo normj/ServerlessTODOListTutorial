@@ -1,3 +1,6 @@
+.cdk.staging
+cdk.out
+
 *.suo
 *.user
 
