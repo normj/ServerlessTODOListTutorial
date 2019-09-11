@@ -13,7 +13,7 @@ have many differences in their application lifecycle and how you scale them.
 
 | | Lambda | Fargate
 | - | - | - |
-| Cost | Cost per request, no charge for idle time. | Cost for the length container is running including idle time |
+| Cost | Cost per request, no charge for idle time. | Cost for the time the container is running, including idle time |
 | Scaling | Horizonal scaling by concurrent events<br />Vertical scaling by memory settings<br />Single request per execution environment | Horizonal scaling using AWS Auto Scaling <br />Vertical scaling by memory and cpu settings<br />Multiple request handled at a time by docker container |
 | Performance | Occasional cold start during horizonal scaling | No cold starts as docker containers is always on |
 | Programming Model | Restrictions on request and response payload size <br />No direct connection to the client | Runs as a regular ASP.NET Core application hosted by Kestrel the ASP.NET Core web server. |

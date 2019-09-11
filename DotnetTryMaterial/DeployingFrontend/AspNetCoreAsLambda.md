@@ -63,7 +63,7 @@ just one solution for all problems/scenarios. For some teams that want the benef
 a lot of energy and time in ASP.NET Core, whether that is education or existing codebase, using the adaptor makes sense. For those that aren't as
 invested in ASP.NET Core and are ready to design and manage a distributed microservice architecture then skip using Amazon.Lambda.AspNetCoreServer.
 
-ASP.NET Core has one big advantage over the other web framework adaptors and that ASP.NET Core is already builted into
+ASP.NET Core has one big advantage over the other web framework adaptors and that ASP.NET Core is already built into
 .NET Core running in the Lambda environment. So the deployment bundle will not be excessively large. There are some limitations 
 in the environment. For example the request and response sizes are limited to 6MB at the time of this writing. This adaptor is not meant 
 for bringing huge monolithic ASP.NET Core applications that take a long time to start up. Cold starts can
