@@ -9,7 +9,7 @@ If you went through the Fargate deployment sections the easiest way to tear down
 and the Application Load Balancer created during the the tutorial is to delete the ECS service in Visual Studio.
 To do that open the ECS Cluster view and click the **Delete** button.
 
-![ECS View](./images/delete-service.png)
+![alt text](./images/delete-service.png "Delete ECS service")
 
 ```cs --source-file ./Snippets/TearDown.cs --project ./Snippets/Snippets.csproj --region resources_to_tear_down
 ```

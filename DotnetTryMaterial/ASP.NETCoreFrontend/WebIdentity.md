@@ -47,7 +47,7 @@ We will set the values for these fields as we create the user pool.
 Cognito User pools have a lot of features that you can use to customize the login process. For this tutorial we are going to use the Cognito web console to create the user 
 pool using the default settings. Use the following steps to create the user pool and update the application's configuration.
 
-![Create User Pool](./images/CreateUserPool.gif)
+![alt text](./images/CreateUserPool.gif "Create User Pool")
 
 * Login to the [Cognito web console](https://console.aws.amazon.com/cognito/home)
 * Ensure region is set to the correct region
@@ -64,7 +64,7 @@ and web application client. For each client a client id and a client secret is g
 
 Lets create a client for our web application.
 
-![Create User Pool App Client](./images/CreateUserPoolAppClient.gif)
+![alt text](./images/CreateUserPoolAppClient.gif "Create User Pool App Client")
 
 * Click on **App clients** under **General Settings**
 * Click **Add an app client**
@@ -135,7 +135,7 @@ custom login pages that uses the `CognitoUser` class.
 
 The simplest way to get the Cognito UI working is to copy the <a href="https://github.com/aws/aws-aspnet-cognito-identity-provider/tree/master/samples/Samples/Areas" target="_blank">Areas</a> directory from the 
 sample provided in the <a href="https://github.com/aws/aws-aspnet-cognito-identity-provider" target="_blank">ASP.NET Core Identity Provider for Amazon Cognito</a> repository to the `ServerlessTODOList.Frontend`. 
-Once copied updated all of the namespaces in the files copied to the namespace used in the project. In this case that would be ServerlessTODOList.Frontend.
+Once copied, update all of the namespaces in the files copied to the namespace used in the project. In this case that would be ServerlessTODOList.Frontend.
 
 To make this tutorial easier the **Application\IdentityScaffolding** directory in this repository has all of the files copied from the sample with the namespace
 names already changed. **Copy** the **Areas** directory to **ServerlessTODOList.Frontend**. If you get a warning about potentially overwriting go and click okay to 

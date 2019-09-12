@@ -24,7 +24,7 @@ project needs to have a **Dockerfile** in it to tell Docker how to build Serverl
 In Visual Studio a quick way to create a Dockerfile is to right click on the ServerlessTODOList.Frontend project and
 select **Add -> Docker Support**.
 
-![Add Docker](./images/add-docker.png)
+![alt text](./images/add-docker.png "Add Docker")
 
 That will create a Dockerfile in the project with content below.
 
@@ -58,11 +58,11 @@ ENTRYPOINT ["dotnet", "ServerlessTODOList.Frontend.dll"]
 Now that the project file has a Dockerfile, when we right click on the ServerlessTODOList.Frontend project we will
 see a new menu item to **Publish Container to AWS...**.
 
-![Add Docker](./images/solution-explorer-container.png)
+![alt text](./images/solution-explorer-container.png "Solution Explorer")
 
 ### Wizard page 1 - Set deployment type
 
-![Wizard Page 1](./images/ecs-wizard-page1.png)
+![alt text](./images/ecs-wizard-page1.png "Wizard Page 1")
 
 In the first page of the wizard you will configure the Docker repository in the Amazon Elastic Container Registry (ECR) where
 the docker image that is about to be created will be pushed.
@@ -83,14 +83,14 @@ repository in ECR and choose to run the image as a service.
 
 ### Wizard page 2 - Fargate configuration
 
-![Wizard Page 2](./images/ecs-wizard-page2.png)
+![alt text](./images/ecs-wizard-page2.png "Wizard Page 2")
 
 Here the ECS cluster that will run the project must be picked. For the tutorial select **Create an empty cluster** and set the 
 name to **ServerlessTODOList**. The term "empty" refers to the fact that no EC2 instances will be added to the cluster. 
-In our case we are going to use Fargate instead of EC2 to provide the compute power to run our application. In the <a href= "https://console.aws.amazon.com/ecs" target="_blank">ECS web console</a> you can create ECS clusters with EC2 instances if you prefer to configure your EC2 instances and have complete access to them vs Fargate creating them and controlling them for you.
+In our case we are going to use Fargate instead of EC2 to provide the compute power to run our application. In the <a href= "https://console.aws.amazon.com/ecs" target="_blank">ECS web console</a> you can create ECS clusters with EC2 instances if you prefer to configure your EC2 instances and have complete access to them vs Fargate.
 
 The rest of the settings in the wizard configure how much compute power Fargate should provide to the container
-and the VPC and Security Group the Fargate compute environment will launch in. By default these fields will be set 
+and the VPC and Security Group the Fargate compute environment will launch in. By default these fields will be set to
 the minimum compute power and the default VPC and security group.
 
 As long as you have a default VPC in your account you can leave everything at the default on this page except ECS Cluster being set to 
@@ -98,7 +98,7 @@ As long as you have a default VPC in your account you can leave everything at th
 
 ### Wizard page 3 - ECS service configuration
 
-![Wizard Page 3](./images/ecs-wizard-page3.png)
+![alt text](./images/ecs-wizard-page3.png "Wizard Page 3")
 
 Here we we are going to select **Create new** for the Service and set the name to **ServerlessTODOListFrontend**.
 
@@ -112,7 +112,7 @@ temporary up to 4. Once the 2 new tasks are running ECS will shutdown the older 
 
 ### Wizard page 4 - Application Load Balancer configuration
 
-![Wizard Page 4](./images/ecs-wizard-page4.png)
+![alt text](./images/ecs-wizard-page4.png "Wizard Page 4")
 
 Since we have a web application that is going to be supported by multiple Fargate tasks and we need a constant
 HTTP endpoint we will enable **Configure Application Load Balancer**. 
@@ -133,7 +133,7 @@ certificate used. Once the load balancer and listener are created you can select
 
 ### Wizard page 5 - Task Definition configuration
 
-![Wizard Page 5](./images/ecs-wizard-page5.png)
+![alt text](./images/ecs-wizard-page5.png "Wizard Page 5")
 
 ECS deploys docker images through a Task Definition. The Task definition allows multiple docker images to deployed together as 
 a unit similar to a docker compose file. The Task Definition allows you to configure many settings for the containers such as
@@ -171,7 +171,7 @@ being provisioned and 2 tasks in pending status. In about a minute the 2 tasks w
 the load balancer will be active. Once it is active you can click on the link to view our deployed Serverless TODO List
 application using Fargate.
 
-![ECS View](./images/ecs-view.png)
+![alt text](./images/ecs-view.png "ECS View")
 
 ## Tear Down
 

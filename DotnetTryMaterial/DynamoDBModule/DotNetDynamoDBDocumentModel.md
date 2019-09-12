@@ -2,7 +2,7 @@
 
 The Document Model API is useful when the data for your DynamoDB items can be different for each 
 item. You use a **Document** object to store unstructured data very similar to working with a 
-IDocument<string, object>.
+IDictionary<string, object>.
 
 ## The Table class
 
@@ -31,7 +31,7 @@ created before those types existed and switching the default to V2 would be a br
 ## Put TODO List
 
 The example shows how to save a new TODO List. Notice how the child tasks stored with the TODO List Document as documents
-them selves. Under the covers the Table object is going to translate the task the DynamoDB types: **Tasks => L (List) -> M (Map) -> (S, B)**
+them selves. Under the covers the Table object is going to translate the task to the DynamoDB types: **Tasks => L (List) -> M (Map) -> (S, B)**
 
 ```cs --source-file ../Snippets/DynamoDBDocumentModel.cs --project ../Snippets/Snippets.csproj --region document_model_put
 ```
@@ -52,9 +52,7 @@ This example shows how to perform a query. Remember a query is when you search i
 
 When you start a query it returns back a **Search** object. The data from DynamoDB will be returned back in pages. To get a page of 
 data call the `GetNextSetAsync` method. In our case we want to return back all of the lists for a user so we call `GetRemainingAsync`
-which will traverse through all of the pages to return our data. Sometimes a page will contain no data because all the items 
-DynamoDB search through during page request failed to match the query filter. That doesn't mean there is no more data. 
-`GetNextSetAsync` will return back false when there is no more data to search through.
+which will traverse through all of the pages to return our data. 
 
 ```cs --source-file ../Snippets/DynamoDBDocumentModel.cs --project ../Snippets/Snippets.csproj --region document_model_query
 ```

@@ -13,7 +13,7 @@ Push on the green download button to view the logs. There is a few seconds delay
 function write the log message to when it will show up in this view. If you don't see the expected messages keep pushing
 the **Refresh** button.
 
-![View CloudWatch Logs](./images/ToolkitViewLogs.png)
+![alt text](./images/ToolkitViewLogs.png "View CloudWatch Logs")
 
 ## Replaying events in Visual Studio
 

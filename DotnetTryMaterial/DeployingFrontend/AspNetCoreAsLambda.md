@@ -32,7 +32,7 @@ public APIGatewayProxyResponse Get(APIGatewayProxyRequest request, ILambdaContex
 For the REST API defined in API Gateway you map the HTTP resource path and verb to the Lambda function you want to call.
 
 
-![REST API](./images/example-rest-api.png)
+![alt text](./images/example-rest-api.png "REST API")
 
 ## ASP.NET Core application as a Lambda Function
 
@@ -45,11 +45,11 @@ transforms the ASP.NET Core response into the required **APIGatewayProxyResponse
 
 At a high level it basically changes the typical ASP.NET Core Kestrel server scenario
 
-![Normal Flow](./images/request-normal-flow.png)
+![alt text](./images/request-normal-flow.png "Normal Flow")
 
 into this replacing Kestrel with API Gateway and Lambda.
 
-![Serverless Flow](./images/request-serverless-flow.png)
+![alt text](./images/request-serverless-flow.png "Serverless Flow")
 
 
 ## Is ASP.NET Core on Lambda an AntiPattern?

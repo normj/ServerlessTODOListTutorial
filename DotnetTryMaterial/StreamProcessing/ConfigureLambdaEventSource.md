@@ -6,7 +6,7 @@ or the AWS Toolkit for Visual Studio.
 
 ## Configuring with AWS Toolkit for Visual Studio
 
-![View Event Sources](./images/ToolkitAddEventSource.png)
+![alt text](./images/ToolkitAddEventSource.png "Add event source")
 
 After the Lambda function was deployed the Lambda function view was displayed from the AWS Explorer. From this view
 you can create the event source mapping by:

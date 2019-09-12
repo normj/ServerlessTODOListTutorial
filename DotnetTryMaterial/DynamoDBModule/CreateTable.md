@@ -8,7 +8,7 @@ attributes must be defined.
 ### Table Key
 
 A table key is made of 2 parts. The first is a **Hash key** which is used by DynamoDB to partition the data. For best performance choose an attribute
-that evenly distributes the data to avoid having large partitions that can cause hot spots. The second part of the key is optional 
+that evenly distributes the data to avoid having large partitions or hot spots. The second part of the key is optional 
 which is a **Range key**. The range key can be used to do queries within a hash key.
 
 For our TODO List app we will use **User** as the hash key and **ListId** for the range key. This will allow us to quickly get 

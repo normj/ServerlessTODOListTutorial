@@ -9,7 +9,7 @@ When we deployed the DynamoDB Stream Lambda function we had to create an IAM rol
 In the solution explorer right click on the **ServerlessTODOList.Frontend** project and select 
 **Publish to AWS Lambda**. This will launch the deployment wizard.
 
-![Lambda Wizard Page 1](./images/lambda-wizard-page1.png)
+![alt text](./images/lambda-wizard-page1.png "Lambda Wizard Page 1")
 
 Notice the wizard page is different compared to when we deployed the DynamoDB Stream Lambda function. The wizard has detected there is a CloudFormation template in the project
 and has switched mode for a CloudFormation based deployment.
@@ -36,13 +36,13 @@ template parameters.
 When the wizard fields are set push the **Publish** button to start the deployment. This will build the project, upload the built project to S3 and update the CloudFormation template
 to point to the S3 location. With the updated CloudFormation template it will tell CloudFormation to create the Stack.
 
-![Wizard Gif](./images/ServerlessWizard.gif)
+![alt text](./images/ServerlessWizard.gif "Wizard deployment in action")
 
 After the wizard initiates the CloudFormation stack creation the wizard disappears and displays the view of the CloudFormation stack. The view will start scrolling events as 
 resources from the template start getting created.  Once the stack is created the URL to our deployed serverless application will be displayed. Go ahead and click on the link
 and test out our serverless TODO list application.
 
-![CloudFormation Stack View](./images/cloudformation-view.png)
+![alt text](./images/cloudformation-view.png "CloudFormation Stack View")
 
 ## Amazon.Lambda.Tools .NET Core Global Tool
 
@@ -55,9 +55,9 @@ dotnet tool install -g Amazon.Lambda.Tools
 ```
 
 When the DynamoDB Stream function was deployed we use the subcommand `deploy-function` to deploy straight to the Lambda service. Now
-that we are deploy with CloudFormation we need to use the `deploy-serverless` subcommand.
+that we are deploying with CloudFormation we need to use the `deploy-serverless` subcommand.
 
-The command below will deploy the function and create a CloudFormation stack called ServerlessTODOList.
+The command below will build and upload our project and then create a CloudFormation stack called ServerlessTODOList.
 
 Before we run this lets look at the arguments passed into the **deploy-serverless** subcommand.
 
@@ -76,7 +76,7 @@ for --s3-bucket, --profile and --region.
 dotnet lambda deploy-serverless ServerlessTODOList --s3-bucket <bucket-name> --profile <profile-name> --region <region-name> --persist-config-file true
 ```
 
-![Console Deploy Gif](./images/DeployServerless.gif)
+![alt text](./images/DeployServerless.gif "deploy-serverless command in action")
 
 Once the `dotnet-serverless` command is complete we can visit the URL output at the end to see our Serverless TODO List
 application.

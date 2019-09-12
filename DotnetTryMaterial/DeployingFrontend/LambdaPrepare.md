@@ -40,7 +40,7 @@ namespace ServerlessTODOList.Frontend
 ```
 
 Notice how this code is similar to the `CreateWebHostBuilder` method from **Program.cs** including registering Parameter Store
-as a configuration provider. The base class **APIGatewayProxyFunction** took care of replacing Kestrel with API Gateway. The base class
+as a configuration provider. The base class **APIGatewayProxyFunction** takes care of replacing Kestrel with API Gateway. The base class
 also contains the method `FunctionHandlerAsync` which will be the Lambda function handler that Lambda will call
 when it gets an event from API Gateway.
 
@@ -160,7 +160,7 @@ add the property `AWSProjectType` with a value of **Lambda** to a `PropertyGroup
 
 Now when you right click on the project in Visual Studio you can see it is ready to be deployed to Lambda.
 
-![Solution Explorer](./images/solution-explorer.png)
+![alt text](./images/solution-explorer.png "Solution Explorer")
 
 <!-- Generated Navigation -->
 ---
