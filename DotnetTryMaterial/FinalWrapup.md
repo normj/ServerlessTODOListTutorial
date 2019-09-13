@@ -34,7 +34,7 @@ Useful Links for .NET developers interested in AWS.
 | All things .NET at AWS | [https://aws.amazon.com/net](https://aws.amazon.com/net)
 
 
-### From the Author [Norm Johanson](https://twitter.com/socketnorm)
+### From the Author <a href="https://twitter.com/socketnorm" target="_blank">Norm Johanson</a> with a little help from <a href="https://twitter.com/kneekey23" target="_blank">Nicki Stone</a>
 Thank you for going through this tutorial and trying out this experiment of using **dotnet try**. I would greatly 
 appeciate feedback on using **dotnet try** and if this is something I should do more of. Feel free to open 
 up GitHub issues for feedback or fork the repo and send those PRs to fix my typos and grammar issues.
