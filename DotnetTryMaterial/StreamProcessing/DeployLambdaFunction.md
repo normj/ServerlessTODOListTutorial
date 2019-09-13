@@ -16,14 +16,14 @@ section at the bottom of this page to create an IAM role and then return back he
 
 ## Visual Studio
 
-![Publish from solution explorer](./images/SolutionExplorerPublishToLambda.png)
+![alt text](./images/SolutionExplorerPublishToLambda.png "Publish from solution explorer")
 
 In the solution explorer right click on the **ServerlessTODOList.StreamProcessor** project and select 
 **Publish to AWS Lambda**. This will launch the deployment wizard.
 
 ### Wizard Page 1
 
-![Lambda Wizard Page 1](./images/LambdaWizardPage1.png)
+![alt text](./images/LambdaWizardPage1.png "Lambda Wizard Page 1")
 
 In the first page we need to specify the name of the Lambda function and identify what .NET method to call. 
 To identify the .NET method we have to set the Assembly, Type and Method name. To Lambda this will
@@ -42,7 +42,7 @@ the **Amazon.Lambda.Tools** .NET Core global tool.
 
 ### Wizard Page 2
 
-![Lambda Wizard Page 2](./images/LambdaWizardPage2.png)
+![alt text](./images/LambdaWizardPage2.png "Lambda Wizard Page 2")
 
 #### IAM Role (Required)
 The IAM role that you want to use to provide AWS credentials to the Lambda function. If you created the IAM role from the **Create Role** 
@@ -100,7 +100,10 @@ dotnet lambda deploy-function ServerlessTODOListStreamProcessor --environment-va
 If you also add `--persist-config-file true` to the command then all of the settings set during deployment will be saved in the 
 **aws-lambda-tools-defaults.json** file. That way future invocations can be done by just using the command `dotnet lambda deploy-function`.
 
+For any missing required arguments like `--function-role` the command line tool will prompt for the missing 
+required parameters.
 
+![alt text](./images/DDBStreamCommandLineDeployment.gif "dotnet lambda deploy-function")
 
 
 
@@ -120,7 +123,7 @@ section is not necessary.
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
-* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
@@ -128,8 +131,8 @@ section is not necessary.
   * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * **Deploy Lambda Function**
-  * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
   * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
+  * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
   * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
@@ -138,5 +141,5 @@ section is not necessary.
 * [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
-Continue on to next page: [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
+Continue on to next page: [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
 

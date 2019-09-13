@@ -41,7 +41,7 @@ common AWS services used that provide the foundational building blocks for a ser
 * [Getting Started](./GettingStarted.md)
 * [What is a serverless application?](./WhatIsServerless.md)
 * **Common AWS Serverless Services**
-* [What are we going to build in this tutorial](./WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](./WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](./TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)
@@ -50,5 +50,5 @@ common AWS services used that provide the foundational building blocks for a ser
 * [Tear Down](./TearDown.md)
 * [Final Wrap Up](./FinalWrapup.md)
 
-Continue on to next page: [What are we going to build in this tutorial](./WhatAreWeBuilding.md)
+Continue on to next page: [What are we going to build in this tutorial?](./WhatAreWeBuilding.md)
 

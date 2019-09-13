@@ -15,6 +15,16 @@ use the credentials stored with a profile to make authenticated calls to AWS.
 
 For new users setting up their first profile the name **default** is recommended for the profile name. When a profile isn't specified when using any of the AWS sdks or tools they will use the **default** profile if it exists.
 
+## Security Concerns
+
+The dotnet try tool may look like it is running your code in the browser your AWS credentials are never accessed through the browser or sent over the network.
+At a high level what dotnet try is doing is using Blazor and SignalR to talk back to its ASP.NET Core backend. The backend is basically running Roslyn
+over the Snippets .NET project in this repository to get intellisense information. When you click the execute button in a code box the backend
+takes the code in the code box, injects into the Snippets project, builds it and then executes the console application.
+
+The code boxes are sending code over to be executed in the Snippets project which has access to the machine running this tutorial. For that reason
+this tutorial is only meant to run on localhost and not to be shared across a network.
+
 ## Choosing a credentials profile and aws region
 
 To build our application we need to choose which AWS credentials profile
@@ -43,7 +53,7 @@ Enter the region you wish to use for this tutorial and click the execute button.
 * **Getting Started**
 * [What is a serverless application?](./WhatIsServerless.md)
 * [Common AWS Serverless Services](./CommonServerlessServices.md)
-* [What are we going to build in this tutorial](./WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](./WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](./TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)

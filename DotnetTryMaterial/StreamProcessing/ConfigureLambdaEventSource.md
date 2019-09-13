@@ -6,7 +6,7 @@ or the AWS Toolkit for Visual Studio.
 
 ## Configuring with AWS Toolkit for Visual Studio
 
-![View Event Sources](./images/ToolkitAddEventSource.png)
+![alt text](./images/ToolkitAddEventSource.png "Add event source")
 
 After the Lambda function was deployed the Lambda function view was displayed from the AWS Explorer. From this view
 you can create the event source mapping by:
@@ -48,7 +48,7 @@ The code below uses the AWS SDK for .NET to add the event source. You must set t
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
-* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
@@ -56,8 +56,8 @@ The code below uses the AWS SDK for .NET to add the event source. You must set t
   * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
-  * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
   * **Configuring DynamoDB as an event source**
+  * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
   * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
@@ -66,5 +66,5 @@ The code below uses the AWS SDK for .NET to add the event source. You must set t
 * [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
-Continue on to next page: [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
+Continue on to next page: [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
 

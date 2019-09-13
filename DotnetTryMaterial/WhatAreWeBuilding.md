@@ -6,6 +6,8 @@ In this tutorial we are going to be building a very simple serverless applicatio
 * Create, update and delete lists with tasks
 * Assign tasks from a list to users
 
+![alt text](./images/AppInAction.gif "ServerlessTODO List In Action")
+
 ## The Code
 
 The code we will work with for this tutorial is under the **Application** directory in this repository. It is recommended you open the **ServerlessTODOList.sln** solution
@@ -23,7 +25,7 @@ to make it easy to deploy your code. If you are not using Visual Studio, command
 * [Getting Started](./GettingStarted.md)
 * [What is a serverless application?](./WhatIsServerless.md)
 * [Common AWS Serverless Services](./CommonServerlessServices.md)
-* **What are we going to build in this tutorial**
+* **What are we going to build in this tutorial?**
 * [TODO List AWS Services Used](./TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)

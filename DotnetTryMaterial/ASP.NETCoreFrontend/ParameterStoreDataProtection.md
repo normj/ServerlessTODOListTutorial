@@ -5,7 +5,7 @@ with a long cryptographic string. When this form is submitted the antiforgery to
 
 ASP.NET Core's data protection framework is used to create the antiforgery tokens using encryption keys generated at runtime.
 
-![Antiforgery Token](./images/AntiForgeryToken.png)
+![alt text](./images/AntiForgeryToken.png "Antiforgery Token")
 
 ## Keys for development
 
@@ -61,7 +61,7 @@ public void ConfigureServices(IServiceCollection services)
 Now when you run the application you can see in Parameter Store the data protection key stored as a secure string. All 
 the webservers supporting our application will share their keys through parameter store.
 
-![Parameter Store](./images/KeyStoredInParameterStore.png)
+![alt text](./images/KeyStoredInParameterStore.png "Parameter Store")
 
 <!-- Generated Navigation -->
 ---
@@ -69,7 +69,7 @@ the webservers supporting our application will share their keys through paramete
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
-* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)

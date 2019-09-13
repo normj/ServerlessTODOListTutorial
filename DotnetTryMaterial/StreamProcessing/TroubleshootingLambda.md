@@ -13,7 +13,7 @@ Push on the green download button to view the logs. There is a few seconds delay
 function write the log message to when it will show up in this view. If you don't see the expected messages keep pushing
 the **Refresh** button.
 
-![View CloudWatch Logs](./images/ToolkitViewLogs.png)
+![alt text](./images/ToolkitViewLogs.png "View CloudWatch Logs")
 
 ## Replaying events in Visual Studio
 
@@ -34,7 +34,7 @@ text box and push **Execute Function**.
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
-* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
@@ -42,8 +42,8 @@ text box and push **Execute Function**.
   * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
-  * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
   * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
+  * [Setting up Amazon Simple Email Service (SES)](../StreamProcessing/SettingUpSES.md)
   * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
   * **Tips for troubleshooting Lambda functions**
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)

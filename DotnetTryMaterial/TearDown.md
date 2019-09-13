@@ -9,7 +9,7 @@ If you went through the Fargate deployment sections the easiest way to tear down
 and the Application Load Balancer created during the the tutorial is to delete the ECS service in Visual Studio.
 To do that open the ECS Cluster view and click the **Delete** button.
 
-![ECS View](./images/delete-service.png)
+![alt text](./images/delete-service.png "Delete ECS service")
 
 ```cs --source-file ./Snippets/TearDown.cs --project ./Snippets/Snippets.csproj --region resources_to_tear_down
 ```
@@ -26,7 +26,7 @@ the resources.
 * [Getting Started](./GettingStarted.md)
 * [What is a serverless application?](./WhatIsServerless.md)
 * [Common AWS Serverless Services](./CommonServerlessServices.md)
-* [What are we going to build in this tutorial](./WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](./WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](./TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](./DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](./StreamProcessing/ServiceEvents.md)

@@ -78,7 +78,7 @@ namespace ServerlessTodoListPipelineCdk
                                 ActionName = "DeployFrontend",
                                 Capabilities = new CloudFormationCapabilities[]{ CloudFormationCapabilities.ANONYMOUS_IAM, CloudFormationCapabilities.AUTO_EXPAND },
                                 TemplatePath = ArtifactPath_.ArtifactPath("BuildOutput", "updated.template"),
-                                StackName = "ServerlessFrontend",
+                                StackName = "ServerlessFrontendCdk",
                                 AdminPermissions = true
                             })
                         }

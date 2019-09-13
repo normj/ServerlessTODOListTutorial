@@ -25,7 +25,7 @@ emails either through the <a href="https://console.aws.amazon.com/ses/home?regio
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
-* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
 * [Handling service events with Lambda](../StreamProcessing/ServiceEvents.md)
@@ -33,8 +33,8 @@ emails either through the <a href="https://console.aws.amazon.com/ses/home?regio
   * [Enable DynamoDB Stream](../StreamProcessing/EnableDynamoDBStream.md)
   * [Assign Task Lambda Function](../StreamProcessing/LookAtLambdaFunction.md)
   * [Deploy Lambda Function](../StreamProcessing/DeployLambdaFunction.md)
-  * **Setting up Amazon Simple Email Service (SES)**
   * [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
+  * **Setting up Amazon Simple Email Service (SES)**
   * [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
   * [Tips for troubleshooting Lambda functions](../StreamProcessing/TroubleshootingLambda.md)
   * [Stream processing wrap up](../StreamProcessing/StreamProcessingWrapup.md)
@@ -43,5 +43,5 @@ emails either through the <a href="https://console.aws.amazon.com/ses/home?regio
 * [Tear Down](../TearDown.md)
 * [Final Wrap Up](../FinalWrapup.md)
 
-Continue on to next page: [Configuring DynamoDB as an event source](../StreamProcessing/ConfigureLambdaEventSource.md)
+Continue on to next page: [Testing Lambda Function](../StreamProcessing/TestingLambdaFunction.md)
 

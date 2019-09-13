@@ -45,27 +45,6 @@ the provision capacity.
 ```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_get
 ```
 
-## Query
-
-Query allows you search the range key within the hash key. In this example the 
-expression set for **KeyConditionExpression** only includes the hash key so all 
-TODO lists will be returned for the user.
-
-#### Paging
-
-Many operations in AWS like the query operation use paging to support large return 
-payloads. Operations that support paging will have a property marking the last point searched on the response object. To continue the query to the next page, set the marker 
-property from the response object equal to the request object and call the operation again. 
-
-For the query operation the **LastEvaluatedKey** property on the response needs to be set to the **ExclusiveStartKey** on the request.
-
-```csharp
-request.ExclusiveStartKey = response?.LastEvaluatedKey;
-```
-
-```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_query
-```
-
 ## Update Item
 
 The **UpdateItem** operation can be used to do a partial update of the item in DynamoDB. This is really useful when you are only changing a few fields and can save you from consuming write units for attributes that you are not changing.
@@ -83,6 +62,27 @@ Items are updated using expressions that define how to update attributes. Expres
 ```
 
 For more information about DynamoDB expressions check out the [Developer Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.html)
+
+## Query
+
+Query allows you to search the range key within the hash key. In this example the 
+expression set for **KeyConditionExpression** only includes the hash key so all 
+TODO lists will be returned for the user.
+
+#### Paging
+
+Many operations in AWS like the query operation use paging to support large return 
+payloads. Operations that support paging will have a property marking the last point searched on the response object. To continue the query to the next page, set the marker 
+property from the response object equal to the request object and call the operation again. 
+
+For the query operation the **LastEvaluatedKey** property on the response needs to be set to the **ExclusiveStartKey** on the request.
+
+```csharp
+request.ExclusiveStartKey = response?.LastEvaluatedKey;
+```
+
+```cs --source-file ../Snippets/DDBServiceClientAPI.cs --project ../Snippets/Snippets.csproj --region service_client_query
+```
 
 ## Delete Item
 
@@ -107,7 +107,7 @@ Search for items based on any attributes. This will cause a full table scan so u
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
-* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
   * [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)
