@@ -26,8 +26,8 @@
       "EnableDynamoDBStream.md",
       "LookAtLambdaFunction.md",
       "DeployLambdaFunction.md",
-      "SettingUpSES.md",
       "ConfigureLambdaEventSource.md",
+      "SettingUpSES.md",
       "TestingLambdaFunction.md",
       "TroubleshootingLambda.md",
       "StreamProcessingWrapup.md"

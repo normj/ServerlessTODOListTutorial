@@ -64,14 +64,13 @@ To delete an item call the `DeleteItemAsync` method passing in the key informati
 ```cs --source-file ../Snippets/DynamoDBDocumentModel.cs --project ../Snippets/Snippets.csproj --region document_model_delete
 ```
 
-
 <!-- Generated Navigation -->
 ---
 
 * [Getting Started](../GettingStarted.md)
 * [What is a serverless application?](../WhatIsServerless.md)
 * [Common AWS Serverless Services](../CommonServerlessServices.md)
-* [What are we going to build in this tutorial](../WhatAreWeBuilding.md)
+* [What are we going to build in this tutorial?](../WhatAreWeBuilding.md)
 * [TODO List AWS Services Used](../TODOListServices.md)
 * [Using DynamoDB to store TODO Lists](../DynamoDBModule/WhatIsDynamoDB.md)
   * [Creating DynamoDB table](../DynamoDBModule/CreateTable.md)
