@@ -23,13 +23,15 @@ To get started with this tutorial follow the following steps.
 * Either the AWS Toolkit for Visual Studio or <a href="https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools" target="_blank">Amazon.Lambda.Tools</a> .NET Core Global Tool
   * <a href="https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017" target="_blank">AWS Toolkit for Visual Studio Download</a>
   * Amazon.Lambda.Tools .NET Core Global Tool - `dotnet tool install -g Amazon.Lambda.Tools`
-* Clone this repository
+  * **Note:** The AWS Toolkit for Visual Studio is not compatible with Visual Studio for Mac.
+* Clone this repository. Be sure to clone the repository in a directory you have write access.
   * `git clone https://github.com/normj/ServerlessTODOListTutorial.git`
 * Install dotnet try
   * `dotnet tool install -g dotnet-try`
 * Start dotnet try in the directory the repo was cloned
   * `dotnet try`
 
+![alt text](./DotnetTryMaterial/images/TutorialSetup.gif "Setup")
 
 ## Let's Start
 
