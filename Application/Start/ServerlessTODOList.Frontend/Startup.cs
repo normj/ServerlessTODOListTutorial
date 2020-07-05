@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
 using ServerlessTODOList.DataAccess;
 using ServerlessTODOList.Frontend.Data;
 
@@ -35,7 +37,7 @@ namespace ServerlessTODOList.Frontend
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddRazorPages();
 
             // AddAWSService is provided by the AWSSDK.Extensions.NETCore.Setup NuGet package.
             services.AddAWSService<Amazon.DynamoDBv2.IAmazonDynamoDB>();
@@ -52,7 +54,7 @@ namespace ServerlessTODOList.Frontend
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -67,11 +69,16 @@ namespace ServerlessTODOList.Frontend
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+            
+            app.UseRouting();
 
+            app.UseAuthorization();
             app.UseAuthentication();
 
-            app.UseMvc();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+            });
         }
     }
 }
