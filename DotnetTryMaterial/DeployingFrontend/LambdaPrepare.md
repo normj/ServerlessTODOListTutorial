@@ -70,7 +70,7 @@ In our project add a file called **serverless.template** and add the following J
          "Type":"AWS::Serverless::Function",
          "Properties":{
             "Handler":"ServerlessTODOList.Frontend::ServerlessTODOList.Frontend.LambdaEntryPoint::FunctionHandlerAsync",
-            "Runtime":"dotnetcore2.1",
+            "Runtime":"dotnetcore3.1",
             "CodeUri":"",
             "MemorySize":512,
             "Timeout":30,
