@@ -22,7 +22,8 @@ To get started with this tutorial follow the following steps.
 * Clone this repository. Be sure to clone the repository in a directory you have write access.
   * `git clone https://github.com/normj/ServerlessTODOListTutorial.git`
 * Install dotnet try
-  * `dotnet tool install -g dotnet-try`
+  * The current version publish to NuGet does not currently work for this project. The preview package **Microsoft.dotnet-try** has to be used from its myget feed.
+  * `dotnet tool install -g --add-source "https://dotnet.myget.org/F/dotnet-try/api/v3/index.json" Microsoft.dotnet-try`  
 * Start dotnet try in the directory the repo was cloned
   * `dotnet try`
 
